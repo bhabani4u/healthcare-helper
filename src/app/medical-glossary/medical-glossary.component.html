@@ -1,0 +1,150 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Medical Glossary
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showPrefixes && !showRootWords && !showSuffixes }">
+                <a href="/healthcare-resources/medical-terms?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showPrefixes }">
+                <a href="/healthcare-resources/medical-terms?numbers=1">Medical Prefixes</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showRootWords }">
+                <a href="/healthcare-resources/medical-terms?numbers=2">Medical Root Words</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showSuffixes }">
+                <a href="/healthcare-resources/medical-terms?numbers=4">Medical Suffixes</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <div *ngIf="!showPrefixes && !showRootWords && !showSuffixes">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Medical Glossary
+              </div>
+              <div class="card-body">
+                <p>There are many root words, prefixes, and suffixes that work together to form medical terms. Most words are derived from Greek or Latin. Understanding these can make medical conditions a little easier to follow. Below is a list of the most common terms and medical conditions. </p>
+                <p>A medical prefix is added at the beginning of a word to modify its meaning. For example, "hyper-" means "over" or "excessive," as in hypertension, meaning high blood pressure.</p>
+                <p>A medical root word forms the main part of the medical term and usually indicates the body part or system involved. For example, "derm-" refers to the skin, as in dermatology, the study of skin conditions. These words are usually derived from Greek or Latin.</p>
+                <p>A medical suffix is placed at the end of a word to alter its meaning, often indicating a condition, disease, or procedure. For example, "-ectomy" means "surgical removal," as in appendectomy, the surgical removal of the appendix.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Prefixes Section -->
+        <div *ngIf="showPrefixes">
+          <div class="card full-width m-0">
+            <div class="card-header bg-primary text-white">
+              Medical Prefixes
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>A-/An-: Without or lack of. Example: Anemia (lack of blood), Aseptic (without infection)</li>
+                <li>Anti-: Against. Example: Antibiotic (against bacteria), Antiviral (against viruses)</li>
+                <li>Dys-: Bad, painful, or difficult. Example: Dyspepsia (indigestion), Dysphagia (difficulty swallowing)</li>
+                <li>Hyper-: Over, excessive, or high. Example: Hypertension (high blood pressure), Hyperglycemia (high blood sugar)</li>
+                <li>Hypo-: Under, below, or deficient. Example: Hypotension (low blood pressure), Hypoglycemia (low blood sugar)</li>
+                <li>Tachy-: Fast. Example: Tachycardia (fast heart rate)</li>
+                <li>Sub-: Under, below. Example: Subcutaneous (under the skin), Sublingual (under the tongue)</li>
+                <li>Intra-: Within or inside. Example: Intravenous (within a vein), Intramuscular (within a muscle)</li>
+                <li>Inter-: Between. Example: Intercostal (between the ribs), Intercellular (between cells)</li>
+                <li>Pre-: Before. Example: Prenatal (before birth), Preoperative (before surgery)</li>
+                <li>Post-: After. Example: Postoperative (after surgery), Postpartum (after childbirth)</li>
+                <li>Auto-: Self. Example: Autoimmune (immune response against one's own body), Autogenous (originating from within the same individual)</li>
+                <li>Bi-: Two or double. Example: Bilateral (affecting both sides), Bicuspid (having two cusps or points)</li>
+                <li>Mono-: One or single. Example: Monocyte (a type of white blood cell), Mononucleosis (a condition characterized by an increase in monocytes)</li>
+                <li>Neo-: New. Example: Neoplasm (new growth or tumor), Neonate (newborn)</li>
+                <li>Leuk-: White. Example: Leukocyte (white blood cell)</li>
+                <li>Erythr-: Red. Example: Erythrocyte (red blood cell)</li>
+                <li>Melan-: Black. Example: Melanoma (black tumor)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Root Words Section -->
+        <div *ngIf="showRootWords">
+          <div class="card full-width m-0">
+            <div class="card-header bg-primary text-white">
+              Medical Root Words
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>Cardi-: Referring to the heart. Example: Cardiology (study of the heart), Cardiomegaly (enlargement of the heart)</li>
+                <li>Derm-: Referring to the skin. Example: Dermatology (study of the skin), Dermatitis (inflammation of the skin)</li>
+                <li>Gastro-: Referring to the stomach. Example: Gastroenterology (study of the stomach and intestines), Gastritis (inflammation of the stomach lining)</li>
+                <li>Hemat-: Referring to blood. Example: Hematology (study of blood), Hematoma (a collection of blood outside of blood vessels)</li>
+                <li>Neur-: Referring to nerves or the nervous system. Example: Neurology (study of the nervous system), Neuritis (inflammation of a nerve)</li>
+                <li>Oste-: Referring to bones. Example: Osteopathy (treatment of bone disorders), Osteoporosis (condition of porous bones)</li>
+                <li>Pulmon-: Referring to the lungs. Example: Pulmonology (study of the lungs), Pulmonary (relating to the lungs)</li>
+                <li>Rhin-: Referring to the nose. Example: Rhinoplasty (surgical repair of the nose), Rhinitis (inflammation of the nasal mucosa)</li>
+                <li>Arthr-: Referring to joints. Example: Arthritis (inflammation of the joints), Arthroscopy (visual examination of a joint)</li>
+                <li>Hepat-: Referring to the liver. Example: Hepatitis (inflammation of the liver), Hepatomegaly (enlargement of the liver)</li>
+                <li>Cerebr-: Referring to the brain. Example: Cerebral (relating to the brain), Cerebrovascular (pertaining to the blood vessels of the brain)</li>
+                <li>My- or Myo-: Referring to muscles. Example: Myopathy (disease of the muscles), Myocardial (pertaining to the heart muscle)</li>
+                <li>Neph-: Referring to the kidneys. Example: Nephrology (study of the kidneys), Nephrectomy (surgical removal of a kidney)</li>
+                <li>Onc-: Referring to tumors. Example: Oncology (study of tumors), Oncologist (specialist in treating tumors)</li>
+                <li>Psych-: Referring to the mind. Example: Psychology (study of the mind), Psychiatry (medical specialty dealing with mental disorders)</li>
+                <li>Gynec-: Referring to women or female reproductive organs. Example: Gynecology (study of female reproductive health), Gynecologist (specialist in female reproductive health)</li>
+                <li>Cyt-: Referring to cells. Example: Cytology (study of cells), Cytotoxic (toxic to cells)</li>
+                <li>Urin-: Referring to urine or the urinary system. Example: Urology (study of the urinary system), Urinalysis (analysis of urine)</li>
+                <li>Thorac-: Referring to the chest or thorax. Example: Thoracic (pertaining to the chest), Thoracotomy (surgical incision into the chest wall)</li>
+                <li>Phleb-: Referring to veins. Example: Phlebotomy (the process of making an incision in a vein), Phlebitis (inflammation of a vein)</li>
+                <li>Ven-: Referring to veins. Example: Intravenous (within a vein)</li>
+                <li>Epitheli/o-: Referring to a thin layer of connective tissue that lines a body cavity or a body surface. Example: Epithelium (the cells that line the internal and external surfaces of the body)</li>
+                <li>Kary-: Referring to nucleus. Example: Karyokinesis (division of a cell nucleus during mitosis)</li>
+                <li>Viscer-: Referring to internal organs. Example: Visceral (pertaining to internal organs)</li>
+                <li>Lip-: Referring to fat. Example: Lipoid (resembling fat, like a waxy substance)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Suffixes Section -->
+        <div *ngIf="showSuffixes">
+          <div class="card full-width m-0">
+            <div class="card-header bg-primary text-white">
+              Medical Suffixes
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>itis-: Refers to inflammation. Example: Appendicitis (inflammation of the appendix), Arthritis (inflammation of the joints)</li>
+                <li>ectomy-: Refers to the surgical removal of a part of the body. Example: Appendectomy (removal of the appendix), Mastectomy (removal of the breast)</li>
+                <li>oma-: Refers to a tumor or neoplasm. Example: Carcinoma (cancerous tumor), Adenoma (tumor of a gland)</li>
+                <li>pathy-: Refers to disease or disorder. Example: Neuropathy (disease of the nerves), Cardiomyopathy (disease of the heart muscle)</li>
+                <li>lysis-: Refers to the destruction or breakdown of something. Example: Hemolysis (breakdown of red blood cells), Thrombolysis (dissolving of a blood clot)</li>
+                <li>algia-: Refers to pain. Example: Neuralgia (nerve pain), Myalgia (muscle pain)</li>
+                <li>plasty-: Refers to surgical repair or reconstruction. Example: Rhinoplasty (surgical repair of the nose), Angioplasty (surgical repair of a blood vessel)</li>
+                <li>scopy-: Refers to visual examination using a scope. Example: Endoscopy (visual examination of the interior of a body organ), Colonoscopy (examination of the colon)</li>
+                <li>gram-: Refers to a record or picture. Example: Electrocardiogram (record of the electrical activity of the heart), Mammogram (X-ray of the breast)</li>
+                <li>graphy-: Refers to the process of recording or imaging. Example: Angiography (imaging of blood vessels), Radiography (imaging using X-rays)</li>
+                <li>logy-: Refers to the study of a subject. Example: Biology (study of life), Dermatology (study of the skin)</li>
+                <li>stomy-: Refers to the creation of an opening. Example: Colostomy (creating an opening in the colon), Tracheostomy (creating an opening in the trachea)</li>
+                <li>therapy-: Refers to treatment. Example: Chemotherapy (treatment with chemicals), Radiotherapy (treatment with radiation)</li>
+                <li>genic-: Refers to producing or causing. Example: Carcinogenic (causing cancer), Pathogenic (causing disease)</li>
+                <li>emia-: Refers to a blood condition. Example: Anemia (lack of red blood cells), Hyperglycemia (high blood sugar)</li>
+                <li>osis-: Refers to a condition, usually abnormal. Example: Cirrhosis (chronic liver disease), Sclerosis (hardening of tissue)</li>
+                <li>cyte-: Refers to a cell. Example: Leukocyte (white blood cell), Erythrocyte (red blood cell)</li>
+                <li>phobia-: Refers to an irrational fear. Example: Hydrophobia (fear of water), Claustrophobia (fear of confined spaces)</li>
+                <li>tic-: Refers to pertaining to something. Example: Neurotic (pertaining to the nervous system)</li>
+                <li>ium-: Refers to structure or tissue. Example: Epithelium (pertaining to skin tissue)</li>
+                <li>plasia-: Refers to formation, development, or growth. Example: Dysplasia (presence of abnormal cells within a tissue or organ)</li>
+                <li>plasm-: Refers to growth, substance, or formation. Example: Cytoplasm (the semifluid substance of a cell that is external to the nuclear membrane and internal to the cellular membrane)</li>
+                <li>stasis-: Refers to control or stop. Example: Homeostasis (maintenance of stable internal conditions)</li>
+                <li>oid-: Refers to resembling. Example: Lipoid (resembling fat, like a waxy substance)</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

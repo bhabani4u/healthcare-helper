@@ -1,0 +1,786 @@
+<!-- First Header with Blue Background -->
+<!-- First Header -->
+<!-- Example Divs to Show/Hide -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div *ngIf="visibleDiv === 'forPatients' || visibleDiv === 'forProviders' || visibleDiv === 'aboutMe'"
+        class="info-div">
+        <div style="position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: #0000009e;"></div>
+      </div>
+      <div
+        *ngIf="visibleDiv2 === 'insuranceOptions' || visibleDiv2 === 'planningYourRetirement' || visibleDiv2 === 'healthcareResources'"
+        class="info-div-2">
+        <div style="position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: #0000009e;"></div>
+      </div>
+      <a href="/">
+        <img class="logo-img" src="/assets/logo.png" class="logo-img d-none d-lg-block" />
+      </a>
+      <nav class="navbar navbar-expand-lg navbar-dark blue-background">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFirst"
+          aria-controls="navbarFirst" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFirst">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle" href="#" id="forPatientsMenu" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                For Patients
+              </a>
+              <!-- Full-width dropdown -->
+              <div class="dropdown-menu w-100 p-4" aria-labelledby="forPatientsMenu" style="left: -1px; right: -1px; top: 53px; width: auto !important; border-radius: unset;">
+                <div class="row pt-5">
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Medical Industry, Illuminated</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/for-patients/medical-industry-overview?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medical-industry-overview?numbers=1">How To Prioritize Your
+                          Healthcare</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medical-industry-overview?numbers=2">How to Select a Doctor</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medical-industry-overview?numbers=4">How to Select a Medical Group</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medical-industry-overview?numbers=8">How to Select an Insurance Plan</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medical-industry-overview?numbers=16">Your Pharmacist Matters</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medical-industry-overview?numbers=32">The Role of Your Health Insurance
+                          Agent</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medical-industry-overview?numbers=64">How Healthcare Technology &
+                          Innovation Has Improved Your Health</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medical-industry-overview?numbers=128">The Future of Healthcare</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Medicare</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicare?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicare?numbers=1">Medicare Parts: A, B, and D</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicare?numbers=2">What about Medicare Advantage, Part C?</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicare?numbers=4">What are My Base Costs with Medicare?</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicare?numbers=8">IRMAA</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicare?numbers=16">What Can I Do About the 20% Medicare Doesn’t
+                          Cover?</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicare?numbers=32">Medicare Advantage Plans</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicare?numbers=64">Medicare Supplement Plans (Medigap)</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicare?numbers=128">Medicare Part D Prescription Drug Plans</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicare?numbers=256">How to Compare Plans</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Individual & Family Health Insurance</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/for-patients/individual-family-health-insurance?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/individual-family-health-insurance?numbers=2">Health Insurance
+                          Markets</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/individual-family-health-insurance?numbers=4">How Do Plan Costs Work?</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/individual-family-health-insurance?numbers=8">HMOs, PPOs, and HDHPs</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/individual-family-health-insurance?numbers=16">Premiums, Deductibles, &
+                          Maximum Out of Pockets</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/individual-family-health-insurance?numbers=32">Dental Insurance</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/individual-family-health-insurance?numbers=64">Vision Insurance</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/individual-family-health-insurance?numbers=128">Supplemental
+                          Insurance</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Medicaid</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicaid?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicaid?numbers=1">Medicaid Eligibility & Enrollment</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicaid?numbers=2">Base Medicaid Benefits</a>
+                      </li>
+                      <li class="list-group-item" >
+                        <a href="/for-patients/medicaid?numbers=4">Expanded Medicaid Benefits</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicaid?numbers=8">Medicaid and Medicare Combined</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-patients/medicaid?numbers=16">Medicare & Medicare Advantage</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle" href="#" id="forProvidersMenu" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                For Providers
+              </a>
+              <div class="dropdown-menu w-100 p-4" aria-labelledby="forProvidersMenu" style="left: -1px; right: -1px; top: 53px; width: auto !important; border-radius: unset;">
+                <div class="row pt-5">
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Doctors</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/for-providers/doctors?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/doctors?numbers=1">What a Good Agent Should Know</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/doctors?numbers=2">What a Good Agent Should Do for Your Practice</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/doctors?numbers=4">Retention & Professional Development</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/doctors?numbers=8">FFS vs Managed Care</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/doctors?numbers=16">IPA Doctors</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/doctors?numbers=64">Pharmacy</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Medical Groups</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/for-providers/medical-groups?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/medical-groups?numbers=1">What a Good Agent Should Know</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/medical-groups?numbers=2">How to Utilize an Agent</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Pharmacists</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/for-providers/pharmacists?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/pharmacists?numbers=1">Role of Agents</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/pharmacists?numbers=2">Medicare Enrollment</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/pharmacists?numbers=4">Communication with Healthcare Providers</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/pharmacists?numbers=8">Navigating Insurance Challenges</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      News</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/for-providers/news?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/news?numbers=1">Latest Updates</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/for-providers/news?numbers=2">Market Trends</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle" href="#" id="aboutMeMenu" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                About Us
+              </a>
+              <div class="dropdown-menu w-100 p-4" aria-labelledby="aboutMeMenu" style="left: -1px; right: -1px; top: 53px; width: auto !important; border-radius: unset;">
+                <div class="row pt-5">
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      About Us</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/about-us/our-philosophy?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/about-us/our-philosophy?numbers=1">About the Founder</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Contact Us</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/about-us/contact-us?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/about-us/contact-us?numbers=1">Share Your Feedback</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/about-us/contact-us?numbers=2">Careers</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Second Header -->
+      <nav class="navbar navbar-expand-lg white-background">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSecond"
+          aria-controls="navbarSecond" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSecond">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle" href="#" id="insuranceOptionsMenu" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Insurance Options
+              </a>
+              <!-- Full-width dropdown -->
+              <div class="dropdown-menu w-100 p-4" aria-labelledby="insuranceOptionsMenu" style="left: -1px; right: -1px; top: 53px; width: auto !important; border-radius: unset;">
+                <div class="row pt-5">
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Medicare</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/insurance-options/medicare?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/medicare?numbers=1">Medicare 101 Trainings</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/medicare?numbers=2">Compare & Enroll</a>
+                      </li>
+                    </ul>
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Annuities</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/insurance-options/annuities?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/annuities?numbers=1">Types of Annuities</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/annuities?numbers=2">Benefits of Annuitization</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Individual and Family Plans</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/insurance-options/individual-and-family-plans?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/individual-and-family-plans?numbers=1">Compare plans</a>
+                      </li>
+                    </ul>
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Life Insurance</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/insurance-options/life-insurance?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/life-insurance?numbers=1">Term Life vs. Whole Life</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/life-insurance?numbers=2">Riders</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/life-insurance?numbers=4">Final Expense Policies</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/life-insurance?numbers=8">How Much Life Insurance Is Enough?</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Long Term Care</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/insurance-options/long-term-care?numbers=0">Who Will Take Care of You?</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/long-term-care?numbers=1">How Long Term Care Policies Work</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/long-term-care?numbers=2">Why Buy Long Term Care Insurance?</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/long-term-care?numbers=4">Questions to Consider For Long Term
+                          Care</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/long-term-care?numbers=8">Hybrid Annuity/Long Term Care Policies</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/long-term-care?numbers=16">Hybrid Life insurance/Long Term Care
+                          Policies</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0" style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">Other Insurance</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/insurance-options/other-insurance?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/other-insurance?numbers=1">Dental & Vision Coverage</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/other-insurance?numbers=2">Income Protection
+                          Insurance</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/other-insurance?numbers=4">How Do These Differ From My
+                          Medical Insurance?</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/insurance-options/other-insurance?numbers=8">Accident, Critical Illness, & Hospital Indemnity Policies</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle" href="#" id="planningYourRetirementMenu" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Planning Your Retirement
+              </a>
+              <div class="dropdown-menu w-100 p-4" aria-labelledby="planningYourRetirementMenu" style="left: -1px; right: -1px; top: 53px; width: auto !important; border-radius: unset;">
+                <div class="row pt-5">
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Turning 65?</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/turning-65?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/turning-65?numbers=1">Still Working?</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/turning-65?numbers=2">Medicare Enrollment</a>
+                      </li>
+                    </ul>
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Other Forms of Healthcare</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/other-forms-of-healthcare?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/other-forms-of-healthcare?numbers=1">Veteran’s Affairs (VA) Healthcare</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/other-forms-of-healthcare?numbers=2">TRICARE For Life</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/other-forms-of-healthcare?numbers=4">Retirement Plans, Union Coverage, and
+                          Public Employees' Retirement System (PERS)</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      How to Maximize Social Security
+                    </p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="planning-your-retirement/how-to-maximize-social-security?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="planning-your-retirement/how-to-maximize-social-security?numbers=1">Important Considerations</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/how-to-maximize-social-security?numbers=2">Retirement Ages & Income</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/how-to-maximize-social-security?numbers=4">Retirement Age Milestones</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/how-to-maximize-social-security?numbers=8">Retirement Factors To Consider</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/how-to-maximize-social-security?numbers=16">Surviving Spouse Benefits</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Preparing Your Estate</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/preparing-your-estate?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/preparing-your-estate?numbers=1">Create a Living Trust</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/preparing-your-estate?numbers=2">Create a Will</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/preparing-your-estate?numbers=4">Will vs. Living Trust</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/preparing-your-estate?numbers=8">Establish your Power of Attorney</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/preparing-your-estate?numbers=16">End of Life Expenses</a>
+                      </li>
+                    </ul>
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Who Will Take Care of You?</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/who-will-take-care-of-you">Overview</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0" style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">Taxes in Retirement</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/taxes-in-retirement?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/taxes-in-retirement?numbers=1">Social Security Taxes</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/taxes-in-retirement?numbers=2">Annuity Taxes</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/taxes-in-retirement?numbers=4">Life Insurance Taxes</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/taxes-in-retirement?numbers=8">401ks and IRAs & Taxes</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/taxes-in-retirement?numbers=16">Long Term Care and Taxes</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/taxes-in-retirement?numbers=32">Required Minimum Distributions</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/planning-your-retirement/taxes-in-retirement?numbers=64">Plans Subject to RMDs</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle" href="#" id="healthcareResourcesMenu" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Resources
+              </a>
+              <!-- Full-width dropdown -->
+              <div class="dropdown-menu w-100 p-4" aria-labelledby="healthcareResourcesMenu" style="left: -1px; right: -1px; top: 53px; width: auto !important; border-radius: unset;">
+                <div class="row pt-5">
+                  <div class="col-lg-4 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Articles</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/article">Overview</a>
+                      </li>
+                    </ul>
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Healthcare Terms</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/healthcare-resources/healthcare-terms">Overview</a>
+                      </li>
+                    </ul>
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Medical Terms</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/healthcare-resources/medical-terms?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/healthcare-resources/medical-terms?numbers=1">Medical Prefixes</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/healthcare-resources/medical-terms?numbers=2">Medical Root Words</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/healthcare-resources/medical-terms?numbers=4">Medical Suffixes</a>
+                      </li>
+                    </ul>
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Training Events, Videos, & Webinars</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/healthcare-resources/training-events-videos-webinars">Overview</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Resource Library</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/resources/resource-library">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/resources/resource-library?section=power-of-attorney-forms">Power of Attorney Forms</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/resources/resource-library?section=social-security-forms">Social Security Forms</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/resources/resource-library?section=medicare-forms">Medicare Forms</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-12">
+                    <p class="dropdown-header m-0 pb-0"
+                      style="font-size: 15px;font-weight: bold;word-wrap: break-word; word-break: break-word; white-space: normal;">
+                      Medicare Cost Calculators</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <a href="/healthcare-resources/medicare-calculators?numbers=0">Overview</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/healthcare-resources/medicare-calculators?numbers=1">Medicare Cost Calculator</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/healthcare-resources/medicare-calculators?numbers=2">Part B Late Enrollment Penalty
+                          Calculator</a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="/healthcare-resources/medicare-calculators?numbers=4">Part D Late Enrollment Penalty
+                          Calculator</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+<!-- Content Section -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <hr style="margin: 0px;" />
+      <a href="/">
+        <img src="/assets/logo.png" alt="Medicare Card" class="img-fluid mt-3 show-only-on-mobile" style="width: 100%;">
+      </a>
+
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<!-- Content Section -->
+<!-- <div class="container" *ngIf="currentYear != 0">
+  <div class="row">
+    <div class="col">
+      <hr />
+      <p class="text-center">&copy; {{currentYear}} Healthcare Helper. All rights reserved.</p>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="container mt-4 blue-background" *ngIf="currentYear != 0">
+  <div class="row">
+    <div class="col-12">
+      <hr />
+      <p class="text-center">&copy; {{currentYear}} Healthcare Helper. All rights reserved. <a href="/privacy-policy"
+          class="text-decoration-none">Privacy Policy</a></p>
+    </div>
+  </div>
+  <div class="row text-center mt-3">
+    <div class="col pb-4">
+      <a href="https://www.facebook.com" class="text-decoration-none mx-2" target="_blank">
+        <i class="fab fa-facebook-f fa-2x"></i>
+      </a>
+      <a href="https://www.twitter.com" class="text-decoration-none mx-2" target="_blank">
+        <i class="fab fa-twitter fa-2x"></i>
+      </a>
+      <a href="https://www.instagram.com" class="text-decoration-none mx-2" target="_blank">
+        <i class="fab fa-instagram fa-2x"></i>
+      </a>
+      <a href="https://www.linkedin.com" class="text-decoration-none mx-2" target="_blank">
+        <i class="fab fa-linkedin-in fa-2x"></i>
+      </a>
+    </div>
+  </div>
+</div> -->
+  <div class="container mt-4 blue-background p-4">
+    <div class="row">
+      <div class="col-md-4 mb-3" style="border-bottom: 1px solid #ddd;">
+        <h5>Insurance Support</h5>
+        <p>Need help or have questions about enrolling?</p>
+        <p>Call <a href="tel:8444633435">(844) 463-3435</a> 7am – 8pm PT Mon-Sat</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Shop Plans</h5>
+        <ul class="list-unstyled">
+          <li><a href="/insurance-options/medicare?numbers=4" class="text-white text-decoration-none">Medicare</a></li>
+          <li><a href="/insurance-options/individual-and-family-plans?numbers=1" class="text-white text-decoration-none">Individual and Family Plans</a></li>
+          <li><a href="/insurance-options/life-insurance?numbers=0" class="text-white text-decoration-none">Life Insurance</a></li>
+          <li><a href="/insurance-options/annuities?numbers=0" class="text-white text-decoration-none">Annuities</a></li>
+          <li><a href="/insurance-options/long-term-care?numbers=0" class="text-white text-decoration-none">Long Term Care</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>About Us</h5>
+        <ul class="list-unstyled">
+          <li><a href="/about-us/contact-us?numbers=0" class="text-white text-decoration-none">Contact Us</a></li>
+          <li><a href="/about-us/contact-us?numbers=1" class="text-white text-decoration-none">Feedback</a></li>
+          <li><a href="/about-us/contact-us?numbers=2" class="text-white text-decoration-none">Careers</a></li>
+          <li><a href="/privacy-policy" class="text-white text-decoration-none">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions" class="text-white text-decoration-none">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <p>&copy; {{currentYear}} Healthcare Helper. All rights reserved.</p>
+      </div>
+      <div class="col-md-8 mb-3 text-right">
+        <a href="https://www.facebook.com" class="text-decoration-none mx-2" target="_blank">
+          <i class="fab fa-facebook-f fa-2x"></i>
+        </a>
+        <a href="https://www.twitter.com" class="text-decoration-none mx-2" target="_blank">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com" class="text-decoration-none mx-2" target="_blank">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com" class="text-decoration-none mx-2" target="_blank">
+          <i class="fab fa-linkedin-in fa-2x"></i>
+        </a>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-12 text-center">
+        <a href="https://www.facebook.com" class="text-decoration-none mx-2" target="_blank">
+          <i class="fab fa-facebook-f fa-2x"></i>
+        </a>
+        <a href="https://www.twitter.com" class="text-decoration-none mx-2" target="_blank">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com" class="text-decoration-none mx-2" target="_blank">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com" class="text-decoration-none mx-2" target="_blank">
+          <i class="fab fa-linkedin-in fa-2x"></i>
+        </a>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+      <div class="col-12 text-center">
+        <p>&copy; {{currentYear}} Healthcare Helper. All rights reserved.</p>
+      </div>
+    </div> -->
+  </div>

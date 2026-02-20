@@ -1,0 +1,294 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Long Term Care
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showHowPoliciesWork && !showWhyBuyLTC && !showQuestions && !showHybridAnnuity && !showHybridLifeInsurance }">
+                <a href="/insurance-options/long-term-care?numbers=0">Who Will Take Care of You?</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showHowPoliciesWork }">
+                <a href="/insurance-options/long-term-care?numbers=1">How Long Term Care Policies Work</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showWhyBuyLTC }">
+                <a href="/insurance-options/long-term-care?numbers=2">Why Buy Long Term Care Insurance?</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showQuestions }">
+                <a href="/insurance-options/long-term-care?numbers=4">Questions to Consider For Long Term Care</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showHybridAnnuity }">
+                <a href="/insurance-options/long-term-care?numbers=8">Hybrid Annuity/Long Term Care Policies</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showHybridLifeInsurance }">
+                <a href="/insurance-options/long-term-care?numbers=16">Hybrid Life insurance/Long Term Care Policies</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showHowPoliciesWork && !showWhyBuyLTC && !showQuestions && !showHybridAnnuity && !showHybridLifeInsurance">
+          <div class="container">
+            <h2 class="display-4">Long Term Care</h2>
+            <p class="lead">Plan for the future with Long Term Care insurance to ensure peace of mind for you and your loved ones.</p>
+          </div>
+        </div>
+
+        <!-- Long Term Care Overview Section -->
+        <div class="row mb-4"  *ngIf="!showHowPoliciesWork && !showWhyBuyLTC && !showQuestions && !showHybridAnnuity && !showHybridLifeInsurance">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Who will take care of you when you are older?
+              </div>
+              <div class="card-body">
+                <img src="/assets/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg" />
+                <p>One of the most gaping shortcomings in our social security net has to do with what has been termed, the “Love” economy, or the informal economy. When a family member gets sick, there are few to no caretaking options available outside of the family. The amount of physical and emotional burden placed on family caretakers is high, which in itself may create health issues for the caretaker.</p>
+                <p>Seniors will require the continued support of a caretaker for a period of three months or less, at least once in their lives. But the cost of hiring a caretaker can be costly, especially for those on a fixed income with limited means.</p>
+                <p>It is estimated that among senior citizens today, the majority will need some type of long-term care assistance as they age. Long-term care insurance is available to plan for this need, but for many reasons, most individuals do not purchase long-term care insurance. Some end up paying for care with their own assets for as long as they can, while others may tap into the value of their home or life insurance policy to pay such expenses. Some mistakenly believe that Medicare, Medicare supplement insurance, or traditional health insurance policies, will cover all of their long-term care costs. And for some, long-term care insurance is simply not an affordable or practical choice.</p>
+                <p>Due to advances in medicine and science, Americans today are living longer than ever before. On average, men and women who reach age 65 can expect to live well into their 80s. As the average life expectancy has been increasing, so has the number of older individuals. The number of people age 65 and older is expected to grow from over 54 million in 2019 to nearly 95 million by 2060.</p>
+                <p>Long Term Care policies provide the financial support to hire a caretaker, greatly reducing the burden from a spouse or child. These policies also offer the benefits of a whole life policy, including a death benefit and cash accumulation. The accrued cash value can be used to further fund the cost of hiring a caretaker.</p>
+                <p><a href="https://acl.gov/ltc/costs-and-who-pays/costs-of-care" target="_blank">The costs of long term care on average exceeds $50,000 per year</a>, and unless you qualify for Medicaid, there is no long term care policy offered under Medicare.</p>
+                <p>Long Term Care policies are best purchased as early in your lifetime as possible. Once you reach your 60’s, it becomes less likely you will be insurable for a policy. Additionally, costs are lower when you begin funding a policy earlier in your life. Once you are approved for coverage, it is guaranteed, so long as you pay the premiums. This means the insurance company cannot cancel your policy.</p>
+                <p>Long Term Care insurance increases in cost as you age. It costs $73,000 annually for home care at age 65, $136,000 age 85, $120,000 for nursing home age 65, $240,000 age 85.</p>
+                <p><a href="/about-me/contact-me" class="btn btn-primary">Explore Long Term Care Costs</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How Long Term Care Policies Work Section -->
+        <div class="row mb-4" [hidden]="!showHowPoliciesWork">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                How do Long Term Care Policies Work?
+              </div>
+              <div class="card-body">
+                <img src="/assets/realistic-scene-with-health-worker-taking-care-elderly-patient (1).jpg" />
+                <p>When an individual on a policy is in need of long term care, their policy begins to pay out a contractually agreed upon cash amount.</p>
+                <h5>Long-term care insurance typically covers the cost of:</h5>
+                <ul>
+                  <li>Personal and medical-related care received in the home</li>
+                  <li>Adult day care services</li>
+                  <li>Respite care</li>
+                  <li>Assisted living</li>
+                  <li>Skilled, intermediate, and custodial care delivered in nursing homes</li>
+                  <li>Nursing home care</li>
+                  <li>Home health care</li>
+                  <li>Adult day care</li>
+                  <li>Hospice care</li>
+                  <li>Bed reservation</li>
+                  <li>Caregiver training</li>
+                  <li>Supportive equipment</li>
+                </ul>
+                <h5>Long-term care insurance typically excludes coverage:</h5>
+                <ul>
+                  <li>Provided by family members</li>
+                  <li>Normally provided without charge</li>
+                  <li>Provided outside the United States</li>
+                  <li>Required for alcoholism or drug addiction</li>
+                  <li>Required as a result of war, attempted suicide, or self-inflicted injury</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why Buy Long Term Care Insurance Section -->
+        <div class="row mb-4" [hidden]="!showWhyBuyLTC">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Why Buy Long Term Care Insurance?
+              </div>
+              <div class="card-body">
+                <img src="/assets/realistic-scene-with-health-worker-taking-care-elderly-patient (2).jpg" />
+                <p>People buy long-term care insurance for a variety of reasons. Some prefer to shift a risk that may be catastrophic financially from themselves to an insurance company. Others may be motivated to purchase long-term care insurance after having personally witnessed the effect long-term care expenses have had on family and friends. Family members who assume the primary role as caretaker have a high likelihood of developing significant health issues as a result.</p>
+                <p>Perhaps the most important reason for purchasing insurance is asset protection. Even if a person accumulates a sizeable estate, paying for uninsured long-term care expenses can quickly erode, or deplete, a person’s life savings.</p>
+                <p>The reasons to buy LTC insurance seem so compelling that consumers should be buying it like bread, and LTC insurance policies should be “flying off the shelves.” These compelling reasons include:</p>
+                <ul>
+                  <li><strong>The cost of long-term care is high.</strong> The costs of self-funding LTC are high—more than $100,000 per year on average for confinement in a private room in a nursing home—and are getting higher each year. For many families, shouldering such a financial responsibility would be catastrophic.</li>
+                  <li><strong>The risk of needing long-term care is great.</strong> When compared to other risks that are customarily insured, the risk of requiring long-term care is enormous. Approximately one of every two individuals is likely to need long-term care at some time in his or her life, and that risk increases with age. The U.S. population segment with the highest growth rate is comprised of individuals age 85 and older, whose long-term care risk is the greatest.</li>
+                  <li><strong>The ability of families to provide needed care is uncertain.</strong> Many older people require longterm care in a nursing home. For such individuals, the average time spent in a nursing home is about 2.5 years. Social and demographic changes over the last century have generally reduced the ability of extended families to provide informal long-term care to those family members needing it.</li>
+                  <li><strong>Long-term care is not generally covered by Medicare.</strong> Despite what many consumers believe, long-term care is not generally covered by Medicare. Though short-term care in a skilled nursing facility is covered, that care must be associated with a prior hospitalization. After 100 days in a skilled nursing facility, Medicare nursing home benefits cease.</li>
+                  <li><strong>Long-term care partnership programs are expanding.</strong> To encourage the purchase of LTC insurance and to reduce reliance on Medicaid, more and more states are creating LTC partnership programs. By participating in a state’s partnership program, consumers can protect a much greater share of their assets from the Medicaid spend-down and estate recovery requirements while accessing Medicaid to help pay for long-term care. All but a few states either have an LTC partnership program or are in the process of putting such a program in place. Although there is some variation in state partnership programs, all require that participating individuals purchase a qualifying long-term care insurance policy.</li>
+                </ul>
+                <strong>Assisted Living Facility Costs</strong>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Year</th>
+                      <th>Monthly Cost</th>
+                      <th>Annual Cost</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2016</td>
+                      <td>$3,628/mo</td>
+                      <td>$43,539/yr</td>
+                    </tr>
+                    <tr>
+                      <td>2017</td>
+                      <td>$3,750/mo</td>
+                      <td>$45,000/yr</td>
+                    </tr>
+                    <tr>
+                      <td>2018</td>
+                      <td>$4,000/mo</td>
+                      <td>$48,000</td>
+                    </tr>
+                    <tr>
+                      <td>2019</td>
+                      <td>$4,051/mo</td>
+                      <td>$48,612/yr</td>
+                    </tr>
+                    <tr>
+                      <td>2020</td>
+                      <td>$4,300/mo</td>
+                      <td>$51,600/yr</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>Change: 18.5%</p>
+                <strong>The Risk of Long Term Care</strong>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Risk</th>
+                      <th>Probability</th>
+                      <th>Percentage</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Automobile Accident</td>
+                      <td>1 in 240</td>
+                      <td>0.40%</td>
+                    </tr>
+                    <tr>
+                      <td>Fire Damage to a Home</td>
+                      <td>1 in 1,200</td>
+                      <td>0.08%</td>
+                    </tr>
+                    <tr>
+                      <td>Needing long-term care</td>
+                      <td>1 in 2</td>
+                      <td>50%</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p><a href="/about-me/contact-me" class="btn btn-primary">Explore Long Term Care Costs</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions to Consider For Long Term Care Section -->
+        <div class="row mb-4" [hidden]="!showQuestions">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Questions to Consider For Long Term Care
+              </div>
+              <div class="card-body">
+                <img src="/assets/portrait-women-sitting-couch.jpg" />
+                <ul>
+                  <li>The policy’s coverage should take into account the client’s need for community-based and home-based care, in addition to facility-based care.</li>
+                  <li>The daily benefit amount should be sufficient to pay the average cost of nursing home care in the client’s area or at least be enough that the client can pay from his or her own resources any long-term care expenses remaining above the benefit limit without financial hardship.</li>
+                  <li>The benefit period and maximum benefit should at least cover the average length and the average cost of a nursing home stay. (The average length of care in a nursing facility is 28 months. Average costs vary greatly from state to state and region to region.)</li>
+                  <li>The elimination period should not require the client to pay more out of pocket than the amount in his or her financial emergency fund.</li>
+                  <li>Provisions should be made to increase the benefit amount over time, either through inflation protection or a coverage-increase option.</li>
+                </ul>
+                <p><strong>Need for Long-Term Care in a Nursing Home</strong></p>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>At Age…</th>
+                      <th>Percentage Expected to Require Care in a Nursing Home</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>45 or older</td>
+                      <td>36%</td>
+                    </tr>
+                    <tr>
+                      <td>65 or older</td>
+                      <td>49%</td>
+                    </tr>
+                    <tr>
+                      <td>85 or older</td>
+                      <td>56%</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>All of these factors need to be balanced against the cost of the policy. Often, decisions are dictated by both the applicant’s coverage needs and his or her budgetary constraints. Proper plan design is critically important to ensure that coverage will be sufficient at claim time, and financial professionals play an important role in this process.</p>
+                <p><strong>Average Nursing Home Stay :</strong></p>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Duration</th>
+                      <th>Percentage</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Less than 3 months</td>
+                      <td>20%</td>
+                    </tr>
+                    <tr>
+                      <td>3 months to 1 year</td>
+                      <td>24.1%</td>
+                    </tr>
+                    <tr>
+                      <td>1 year +</td>
+                      <td>55.9%</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p><a href="/about-me/contact-me" class="btn btn-primary">Explore Long Term Care Costs</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions to Consider For Long Term Care Section -->
+        <div class="row mb-4" [hidden]="!showHybridAnnuity">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Hybrid Annuity/Long Term Care Policies
+              </div>
+              <div class="card-body">
+                <p>Long Term Care is one of the largest significant single costs that an individual can expect to have during their lifetime. Today, there are very few Long Term Care policies that are not hybridized.</p>
+                <p>A Long Term Care/Life Insurance Hybrid policy combines the financial benefit of long term care with the ability to provide a death benefit to those who survive you. They are in fact two separate policies combined into one. The life insurance aspect is typically financially much smaller in size compared to the long term care benefit.</p>
+                <p>These policies provide an either/or benefit, meaning that if you need long term care, you will first activate the life insurance, which will pay out to cover your long term care expenses. Then, once this benefit has been exhausted, the long term care side of the policy activates. Combined, you can expect to receive 5 years of long term care benefit. On the other hand, if you pass away before needing long term care, your beneficiaries will receive the death benefit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions to Consider For Long Term Care Section -->
+        <div class="row mb-4" [hidden]="!showHybridLifeInsurance">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Hybrid Life insurance/Long Term Care Policies
+              </div>
+              <div class="card-body">
+                Coming Soon
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

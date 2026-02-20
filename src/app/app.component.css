@@ -1,0 +1,177 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.hero {
+  text-align: center;
+  background: url('/assets/healthcare-hero.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 50px 20px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.router-outlet-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.blue-background {
+  background-color: #0047BB !important; /* Use the specific shade of blue you need */
+  color: white !important; /* Adjust text color for contrast */
+  z-index: 1300;
+}
+
+.blue-background a {
+  font-family: Montserrat;
+  text-decoration: none !important;
+  background-color: #0047BB !important;
+  color: white !important; /* Adjust text color for contrast */
+}
+.blue-background ul.list-group.list-group-flush > li.list-group-item > a{
+  color: #000 !important;
+  background: transparent !important;
+}
+.blue-background p.dropdown-header > a{
+  color: #000 !important;
+  background: transparent !important;
+}
+.blue-background ul.list-group.list-group-flush > li.list-group-item > a:hover, .white-background ul.list-group.list-group-flush > li.list-group-item > a:hover{
+  font-weight: bold !important;
+}
+.blue-background a.dropdown-item:hover,
+.blue-background a.dropdown-item:active {
+  background-color: #0056D2 !important; /* Use the specific shade you want for hover and active state */
+  color: #E0E0E0 !important; /* Adjust text color for contrast */
+}
+.info-div {
+  opacity: 0.9;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 750px;
+  background: #0047BB;
+  z-index: 1100;
+}
+.info-div-2 {
+  opacity: 0.9;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 750px;
+  background: #E0E0E0;
+  z-index: 1100;
+}
+
+.no-border{
+  border: none;
+}
+.white-background {
+  background-color: white !important; /* White background */
+  color: black !important; /* Adjust text color for contrast */
+  z-index: 1200;
+}
+
+.white-background a {
+  text-decoration: none !important;
+  background-color: white !important;
+  color: black !important; /* Adjust text color for contrast */
+}
+
+.white-background a.dropdown-item:hover,
+.white-background a.dropdown-item:active {
+  background-color: #f8f9fa !important; /* Light gray background for hover and active state */
+  color: black !important; /* Adjust text color for contrast */
+}
+.logo-img {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  z-index: 1350;
+  border-top: none;
+  border-bottom: none;
+  bottom: -25px;
+  height: auto;
+  width: 170px;
+}
+@media (min-width: 992px) {
+  #navbarFirst, #navbarSecond {
+    padding-left: 180px;
+  }
+}
+body > .container{
+  background-color: #fff;
+}
+.carousel-item {
+  display: flex;
+}
+
+.carousel-item .row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.testimonial-card {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-card footer {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+@media (max-width: 991px) {
+  .show-only-on-mobile{
+    display: show;
+  }
+}
+@media (min-width: 992px) {
+  .show-only-on-mobile{
+    display: none;
+  }
+}

@@ -1,0 +1,408 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Medicare
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"
+              [ngClass]="{ 'active': !showMedicarePartsSection && !showMedicareAdvantageSection && !showBaseCostsSection && !showIRMAASection && !showExpansionCoverageSection && !showMedicareAdvantagePlansSection && !showMedicareSupplementPlansSection && !showMedicarePartDSection && !showComparePlansSection }">
+              <a href="/for-patients/medicare?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showMedicarePartsSection }">
+              <a href="/for-patients/medicare?numbers=1">Medicare Parts: A, B, and D</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showMedicareAdvantageSection }">
+              <a href="/for-patients/medicare?numbers=2">What about Medicare Advantage, Part C?</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showBaseCostsSection }">
+              <a href="/for-patients/medicare?numbers=4">What are My Base Costs with Medicare?</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showIRMAASection }">
+              <a href="/for-patients/medicare?numbers=8">IRMAA</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showExpansionCoverageSection }">
+              <a href="/for-patients/medicare?numbers=16">What Can I Do About the 20% Medicare Doesn’t Cover?</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showMedicareAdvantagePlansSection }">
+              <a href="/for-patients/medicare?numbers=32">Medicare Advantage Plans</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showMedicareSupplementPlansSection }">
+              <a href="/for-patients/medicare?numbers=64">Medicare Supplement Plans (Medigap)</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showMedicarePartDSection }">
+              <a href="/for-patients/medicare?numbers=128">Medicare Part D Prescription Drug Plans</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showComparePlansSection }">
+              <a href="/for-patients/medicare?numbers=256">How to Compare Plans</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid"
+          *ngIf="!showMedicarePartsSection && !showMedicareAdvantageSection && !showBaseCostsSection && !showIRMAASection && !showExpansionCoverageSection && !showMedicareAdvantagePlansSection && !showMedicareSupplementPlansSection && !showMedicarePartDSection && !showComparePlansSection">
+          <div class="container">
+            <h2 class="display-4">Medicare Overview: The ABDs…and Cs?</h2>
+            <p class="lead">Understanding the basics of Medicare and how it works.</p>
+          </div>
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="row mb-4"
+          *ngIf="!showMedicarePartsSection && !showMedicareAdvantageSection && !showBaseCostsSection && !showIRMAASection && !showExpansionCoverageSection && !showMedicareAdvantagePlansSection && !showMedicareSupplementPlansSection && !showMedicarePartDSection && !showComparePlansSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-body">
+                <img src="/assets/doctor-helping-senior-patient.jpg" />
+                <p>While the Medicare system is far from perfect and there are many tradeoffs and financial costs which
+                  affect seniors on a fixed budget, the Centers for Medicare and Medicaid Services (CMS) takes a highly
+                  engaged approach to protecting seniors, through increasingly stricter rules which limit how insurance
+                  companies may spend the billions of dollars in public subsidies they receive, and stronger safeguards
+                  to prevent sales agents from scaring and scamming vulnerable seniors.</p>
+                <p>If you are preparing to enroll into Medicare within the next few years, you will want to read about
+                  <a href="/planning-your-retirement/how-to-maximize-social-security?numbers=0">Planning Your
+                    Retirement</a> first before diving into Medicare.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medicare Parts Section -->
+        <div class="row mb-4" [hidden]="!showMedicarePartsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Medicare Parts: A, B, and D
+              </div>
+              <div class="card-body">
+                <img src="/assets/senior-man-having-check-up-with-nurse.jpg" />
+                <p>To begin to understand how it all works, you must split Medicare into its three basic parts: Part A
+                  (Hospitalization), Part B (Routine Doctor Visits), and Part D (Prescription Drugs). Each of these
+                  three parts operate as completely separate Medicare entities with their own rules.</p>
+                <img src="/assets/medicare.jpg" alt="Medicare Card" class="img-fluid mt-3" style="width: 100%;">
+                <ul>
+                  <li><strong>Part A (Hospital)</strong> deals with inpatient hospitalization. This includes surgeries
+                    at a hospital and overnight stays at a hospital. If you get your blood drawn, see a doctor, or get
+                    x-rays at the hospital during surgery or due to hospitalization, this cost would also be billed
+                    under Part A.</li>
+                  <li>If you or your spouse has worked in the US for ten years and paid taxes into the Medicare system,
+                    the government subsidizes your cost for Part A.</li>
+                  <li><strong>Part B (Medical)</strong> will be most commonly used. It consists of routing appointments
+                    to see your Primary Care Physician (PCP) and any specialists you may see for serious issues such as
+                    orthopedists or cardiologists. If you get your blood drawn or get an x-ray at your doctor’s office,
+                    this will be billed under Part B.</li>
+                  <li>Part B has a monthly premium you must pay directly to Medicare, and it is mandatory. This premium
+                    varies each year. For {{currentYear}}, the Part B premium is $202.90. If you fail to have Part B
+                    coverage, or equivalent coverage through an employer plan, Medicare will levy a permanent monthly
+                    penalty on your account.</li>
+                  <li><strong>Part D (Prescription Drugs)</strong> includes not just prescription drugs, but also
+                    vaccines, such as the shingles and flu vaccine which a pharmacist may administer to you. It’s
+                    important to note that if you receive an injection at your doctor’s office, this would be billed as
+                    a Part B Drug.</li>
+                  <li>Part D drug plans come directly from private insurance carriers, and is mandatory. If you fail to
+                    have Part D coverage, or equivalent coverage through an employer plan, Medicare will levy a
+                    permanent monthly penalty on your account.</li>
+                </ul>
+                <p>If you decide to work past the age of 65 and your employer is willing to provide you will healthcare
+                  coverage acceptable to Medicare, you are not required to enroll in Medicare immediately. However, if
+                  you do not have suitable alternate coverage and you fail to enroll into all required pieces of
+                  Medicare, you will face a permanent penalty for going without them. Read on for more about penalties.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medicare Advantage Section -->
+        <div class="row mb-4" [hidden]="!showMedicareAdvantageSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                What about Medicare Advantage, Part C?
+              </div>
+              <div class="card-body">
+                <img src="/assets/doctor-talking-senior-man-indoors.jpg" />
+                <p>Since Part C is NOT required, it is not listed here as a basic required part of Medicare. Please
+                  click below to learn about Medicare Advantage:</p>
+                <p><a href="/for-patients/medicare?numbers=32">Medicare Advantage Plans</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Base Costs with Medicare Section -->
+        <div class="row mb-4" [hidden]="!showBaseCostsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                What are My Base Costs with Medicare?
+              </div>
+              <div class="card-body">
+                <img
+                  src="/assets/male-doctor-using-touchpad-explaining-medical-test-results-his-senior-patient-medical-appointment.jpg">
+                <h5>Part A Costs</h5>
+                <p>The government subsidizes your Part A premium of $600 per month, if you or your spouse have worked in
+                  the US for ten years and paid taxes into Medicare during that time. If you fall short of the ten-year
+                  work requirement, you can still get Part A by paying a premium for the shortfall. Additionally, there
+                  are programs that Healthcare Helper can assist you in applying for which may allow you to receive the
+                  full subsidy.</p>
+                <p>Once you have Part A, you will still have a hospital deductible, and you will still be required to
+                  pay 20% of your hospital costs. Other plans, such as Medicaid, Medicare Advantage, and Medicare
+                  Supplement, can address this 20% cost.</p>
+                <h5>Part B Costs</h5>
+                <p>Part B is mandatory unless you have what Medicare deems Creditable Coverage once you are eligible for
+                  Medicare at age 65. As of {{currentYear}}, Part B also has a monthly premium payment of $202.90, which
+                  you will pay directly to Medicare. Any other insurance you sign up for may have its own premium
+                  outside of the Part B premium. You will be penalized if you do not have Creditable Coverage or you do
+                  not enroll into Medicare Part B once you are eligible. Government-sponsored healthcare, such as COBRA
+                  or Affordable Care Act coverage are not considered creditable coverage, and you will be penalized if
+                  you remain with this coverage once you are Medicare eligible. Additionally, if you are a high-income
+                  earner, you may be required to pay more than this amount per year. Please read on about the <a
+                    href="/for-patients/medicare?numbers=8">Income Related Monthly Adjustment Amount (IRMAA)</a>.</p>
+                <p>If you do not enroll into Part B when required, you will have a permanent monthly penalty levied on
+                  your account.</p>
+                <p>Note that like Part A, you are also subjected to a deductible, and you will be required to pay 20% of
+                  your costs for all Part B medical care. Other plans, such as Medicaid, Medicare Advantage, and
+                  Medicare Supplement, can address this 20% cost.</p>
+                <h5>Part D Costs</h5>
+                <p>Part D is also subject to IRMAA, is also mandatory, and requires that you enroll in a drug plan
+                  offered by a private insurance company or you will have a permanent penalty on your account. <a
+                    href="/healthcare-resources/medicare-calculators">Click here</a> to use our Calculation Tool to
+                  determine your penalty.</p>
+                <p>Because Part D is offered by a private insurance company, your monthly premium, your deductible, the
+                  prescription drugs they offer, and what you must pay for each prescription varied by drug plan. On top
+                  of that, your costs may also vary significantly whether you use your preferred pharmacy, or your drug
+                  company’s preferred pharmacy. Calculating your cost for a drug plan ranges widely, so it helps to have
+                  an experienced agent who can run your prescriptions through the system and calculate what your
+                  estimated total annual costs will be.</p>
+                <p>Use our <a href="/healthcare-resources/medicare-calculators">Cost Worksheet</a> to calculate your
+                  total costs under Medicare.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- IRMAA Section -->
+        <div class="row mb-4" ID="IRMAA" [hidden]="!showIRMAASection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                IRMAA
+              </div>
+              <div class="card-body">
+                <img src="/assets/woman-hand-using-mobile-smart-phone-online-payment-banking-online-shopping-home.jpg">
+                <p>Social Security will increase the basic cost of your Medicare based on your earned income from two
+                  years ago. You will need to refer to your tax returns to ensure their calculations are accurate. For
+                  instance, if your annual income two years ago was higher than $109,000 as an individual tax filer, or
+                  $218,000 as a joint tax filer, you will have to pay more each month to Social Security for Part B and
+                  Part D.</p>
+                <p>If you earned less than $109,000 individually OR less than $218,000 filing jointly two years ago,
+                  then you would not be subject to IRMAA for this current year. But if your earnings last year exceeded
+                  this amount, then you would be subject to IRMAA next year. And if you plan to withdraw a large sum of
+                  money in the future, this may place you into the IRMAA category.</p>
+                <p>Healthcare Helper offers assistance with reducing your IRMAA payment. Please contact us for
+                  information.</p>
+                <p><a href="/healthcare-resources/medicare-calculators">Calculate your total costs here</a></p>
+                <img src="/assets/medicare.jpg" alt="Medicare Card" class="img-fluid mt-3" style="width: 100%;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expansion Coverage Section -->
+        <div class="row mb-4" [hidden]="!showExpansionCoverageSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                What Can I Do About the 20% Medicare Doesn’t Cover?
+              </div>
+              <div class="card-body">
+                <img src="/assets/rising-cost-living-concern-concept.jpg">
+                <img src="/assets/medicare.jpg" alt="Medicare Card" class="img-fluid float-left mr-3">
+                <p>Your Red, White, and Blue Medicare card is referred to as Original Medicare, and will cover 80% of
+                  your hospital and medical costs. Once you have figured out your Base Costs with Medicare, it’s time to
+                  figure out what your Expansion Coverage needs to be in order to cover that 20% shortfall.</p>
+                <p>For example, the going rate for a routine visit with a doctor may cost you $250. 80% of this cost
+                  will be covered by Medicare, leaving you with a bill for the remaining 20%, or $50. Now imagine being
+                  hospitalized for three days due to a broken leg. Hospitalization is the most expensive part of
+                  healthcare. Your hospital bill could be $130,000. 20% of that cost amounts to $26,000 bill which you
+                  would be required to pay.</p>
+                <p>To cover the remaining 20%, you have two primary options, Medicare Advantage (Part C), Medicare
+                  Supplement with a Drug Plan, or Medicaid.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medicare Advantage Plans Section -->
+        <div class="row mb-4" id="Medicare-Advantage-Plans" [hidden]="!showMedicareAdvantagePlansSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Medicare Advantage Plans
+              </div>
+              <div class="card-body">
+                <img src="/assets/mature-couple-meeting-with-financial-expert-develop-retirement-plan.jpg" />
+                <p>Part C (Medicare Advantage) is often the scary part for seniors because there is so much confusion
+                  and misinformation about how they work. But they often are effective in handling that 20% cost in a
+                  very affordable way.</p>
+                <p>Medicare Advantage plans generally consist of HMOs and PPOs, and are only offered by private
+                  insurance companies. You are not required to enroll in a Medicare Advantage plan. Because of the
+                  tremendous amount of profit to be made, sales agents often aggressively target seniors to persuade
+                  them into changing their plan in order to earn a commission. If your plan is working for you, you do
+                  not need to change plans.</p>
+                <p>Medicare Advantage Plans generally operate as either HMOs or PPOs. An HMO means you have a select
+                  network of doctors you can see, and in return your costs are lower and you may receive added benefits
+                  such as routine dental coverage, which Original Medicare does not cover. A PPO means you still have a
+                  select network of doctors you may see, but you can go out of that group as long as you are willing to
+                  pay a higher charge to see them.</p>
+                <p>So long as you are a part of a Medicare Advantage Plan, this means a private insurance company is
+                  managing your Medicare, and your Original Medicare has been made temporarily inactive as a result. You
+                  cannot use both Medicare Advantage and Original Medicare at the same time. When you opt for a Medicare
+                  Advantage plan with a private company, CMS, the organization which runs the Medicare Program, will pay
+                  the private insurance company each month in order for them to manage your Medicare Advantage plan. In
+                  exchange, Medicare relinquishes all responsibility for your care, and places it in the hands of the
+                  insurance company you choose.</p>
+                <p>Typical additional benefits provided by Medicare Advantage plans include a dental plan, allowance for
+                  eyeglasses, transportation, hearing aid coverage, a fitness membership, and an allowance for items
+                  such as vitamins and toothbrushes, all of which Original Medicare does not cover. Medicare Advantage
+                  Plans typically include prescription drug coverage as well, and offers lower pricing than a standalone
+                  Part D drug plan.</p>
+                <p>Note: for information on other types of Medicare Advantage plans such as Payment Fee For Service
+                  (PFFS) or Medicare Savings Accounts (MSAs), please refer to Healthcare Helper’s Medical Glossary.</p>
+                <p><a href="/healthcare-resources/medical-terms">Medical Glossary</a></p>
+                <p>Note that while you have the option to enroll, you do not have to enroll to compare your <a
+                    href="/insurance-options/medicare?numbers=4">plan options</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medicare Supplement Plans Section -->
+        <div class="row mb-4" [hidden]="!showMedicareSupplementPlansSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Medicare Supplement Plans (also called Medigap)
+              </div>
+              <div class="card-body">
+                <img src="/assets/senior-man-doing-online-shopping-through-laptop.jpg" />
+                <p>Medicare Supplement Plans work directly with Original Medicare. Original Medicare covers 80% of your
+                  cost, and Medicare Supplement will cover the remaining 20% (with exceptions). But, this is done at a
+                  price. Think of Medicare Supplement somewhat like car insurance. The closer to 65 you are, the lower
+                  your medical costs will be which means your supplement carrier will not have to pay as much out of
+                  their pocket to cover you. But every year, your Medicare Supplement rates will increase between 4-9%,
+                  because the older you get, the more likely you are to need healthcare, so insurance companies balance
+                  out this need by increasing your premium.</p>
+                <p>Medicare Supplement only works with Original Medicare, and you cannot enroll in both a Medicare
+                  Advantage plan and a Medicare Supplement plan.</p>
+                <p>Medicare Supplement is NOT PPO insurance. PPO insurance means you have a network of doctors you can
+                  see at a lower cost, but you can also see doctors outside of that network at a higher cost. In
+                  Medicare Supplement, there is no network, which means you can literally see anyone you want, anywhere
+                  in the country, and your costs will be covered by the plan. For instance, if see an oncologist in Los
+                  Angeles but you wanted to get a second opinion with the top oncologist at the Mayo Clinic in
+                  Minneapolis, you can do that under Medicare Supplement.</p>
+                <p>When you turn 65, Medicare Supplement will typically cost around $150 per month. By the time you are
+                  80 years old, this monthly cost will have more than doubled, calculated in today’s dollars.</p>
+                <p>Medicare Supplement plans do not cover mandatory Part D Prescription Drug Plans. They also do not
+                  cover Routine Dental. While you are not required to sign up for a dental plan, you are required to
+                  also purchase a standalone Part D drug plan. As you factor in these costs now and decades to come,
+                  this will give you a much clearer picture of your costs, and whether you are prepared to pay for them.
+                </p>
+                <p>If you would like to look at Medicare Supplement plan pricing, please <a
+                    href="/insurance-options/medicare?numbers=4">click here</a>.</p>
+                <p>Note that while you have the option to enroll, you do not have to enroll to compare your plan
+                  options.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medicare Part D Prescription Drug Plans Section -->
+        <div class="row mb-4" [hidden]="!showMedicarePartDSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Medicare Part D Prescription Drug Plans
+              </div>
+              <div class="card-body">
+                <img src="/assets/medium-shot-man-wearing-mask-chin.jpg" />
+                <p>With Medicare, you must be enrolled into a Part D Prescription Drug Plan. You can receive your
+                  prescription drug coverage through your employer, TRICARE, Medicare Advantage Plans, or a standalone
+                  Part D Prescription Drug Plan.</p>
+                <p>Individuals who sign up for Medicare Supplement coverage must generally enroll into a standalone
+                  Medicare Part D Prescription Drug Plan offered by a private insurance company, even if you do not take
+                  a single prescription drug. These plans come with a plan premium, and not all plans cover the same
+                  prescription drugs.</p>
+                <p>Each prescription drug plan will have different covered prescriptions, which is all listed in the
+                  Formulary. Even within the same insurance company, their formulary will differ by the different plans
+                  they offer. When selecting a prescription drug plan, it’s important that you have your agent price out
+                  your medications in order to determine what you can expect to pay. Because your medication costs vary
+                  significantly from one carrier to another, it’s especially valuable to do this every year if you take
+                  a number of expensive or brand name prescription drugs.</p>
+                <p>Additionally, take note that there are many discount drug programs that exist to help pay for your
+                  prescriptions. Some of these discount programs are offered directly by the drug manufacturer. Others
+                  work like a coupon which helps you to reduce your costs. But bear in mind that generally, these
+                  discount coupons sell your data in order to offer those discounted prices.</p>
+                <p>If you would like to look at Medicare Prescription Drug plan pricing, please <a
+                    href="/insurance-options/medicare?numbers=4">click here</a>.</p>
+                <p>Note that while you have the option to enroll, you do not have to enroll to compare your plan
+                  options.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to Compare Plans Section -->
+        <div class="row mb-4" [hidden]="!showComparePlansSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                How to Compare Plans
+              </div>
+              <div class="card-body">
+                <img
+                  src="/assets/candid-shot-stylish-experienced-senior-bearded-engineer-holding-technical-drawings-checking-measurements-calculations-engineering-project-having-focused-concentrated-facial-expression.jpg" />
+                <p>With so many half-truths and misinformation within the Medicare world, seniors are at risk of making
+                  poor choices that can hurt their health. The lack of understanding is a major flaw of the system. You
+                  must have a basis of knowledge for how the system works in order to protect yourself from being taken
+                  advantage of. Another limiting factor to understanding the system is that the healthcare industry is
+                  actually broken up into 5 industries, and expertise in one field does not convert to expertise in
+                  another. For instance, while medical staff constantly deal with insurance each day, only a small
+                  portion actually understand how insurance plans operate or differ. Instead, they must rely on a
+                  trusted insurance agent to provide correct information to patients.</p>
+                <p>To understand how to compare plans, you will want to first understand how to prioritize your
+                  healthcare. <a href="/for-patients/medical-industry-overview#Prioritize-Your-Healthcare">How to
+                    Prioritize Your Healthcare page</a></p>
+                <p>From there you will understand that, generally, your insurance plan operates as a middleman,
+                  receiving public funding from government agencies, and using these funds to provide certain plan
+                  benefits and select Medical Networks. Your cost for care is typically the same across similar
+                  insurance plans. So, how do you compare plans?</p>
+                <p>Start with deciding where you would like to receive your care. Is there a specific doctor you want to
+                  see? Is there a specific hospital you trust to take care of you in the event you are in critical
+                  condition? Once you determine this, then work your way forward. Figure out which medical groups your
+                  doctor works with, then get a referral for a trusted agent who can help you pick out the insurance
+                  plan that works with your doctor/hospital, and may also include some benefits that will be helpful for
+                  you.</p>
+                <p>With over 100 plan options available for seniors, it’s impossible to figure this out on your own and
+                  have confidence that you are picking the right plan. It’s important to have a competent agent whom you
+                  trust that understands the market and what your options are. If you need such an agent, please contact
+                  me.</p>
+                <p>Please <a href="/insurance-options/medicare?numbers=4">click here</a> to shop and compare plan
+                  options.</p>
+                <p>Note that while you have the option to enroll, you do not have to enroll to compare your plan
+                  options.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

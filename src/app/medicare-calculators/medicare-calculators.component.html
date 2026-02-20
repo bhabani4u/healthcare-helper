@@ -1,0 +1,229 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Medicare Calculators
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"
+              [ngClass]="{ 'active': !showMedicareCostCalculator && !showPartB && !showPartD }">
+              <a href="/healthcare-resources/medicare-calculators?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showMedicareCostCalculator }">
+              <a href="/healthcare-resources/medicare-calculators?numbers=1">Medicare Cost Calculator</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showPartB }">
+              <a href="/healthcare-resources/medicare-calculators?numbers=2">Part B Late Enrollment Penalty
+                Calculator</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showPartD }">
+              <a href="/healthcare-resources/medicare-calculators?numbers=4">Part D Late Enrollment Penalty
+                Calculator</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showMedicareCostCalculator && !showPartB && !showPartD">
+          <div class="container">
+            <h2 class="display-4">Medicare Calculators</h2>
+            <p class="lead">Use the following calculators to estimate your costs and potential penalties under Medicare.
+              <img src="/assets/calculator-stethoscope-medicine-bottles-white-background.jpg" />
+            </p>
+          </div>
+        </div>
+
+        <!-- Medicare Cost Calculator Section -->
+        <div class="row mb-4" *ngIf="showMedicareCostCalculator">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Medicare Cost Calculator
+              </div>
+              <div class="card-body">
+                <img src="/assets/closeup-hands-business-meeting.jpg" />
+                <div class="container">
+                  <form [formGroup]="premiumForm">
+                    <div class="form-group">
+                      <label>Select How You File Your Taxes:</label><br>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="individual" value="Individual"
+                          formControlName="filingStatus" (change)="onFilingStatusChange()" />
+                        <label class="form-check-label" for="individual">Individual</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="joint" value="Joint"
+                          formControlName="filingStatus" (change)="onFilingStatusChange()" />
+                        <label class="form-check-label" for="joint">Joint</label>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="incomeBracket">Select the income bracket you fall within:</label>
+                      <select class="form-control" id="incomeBracket" formControlName="incomeBracket">
+                        <option value="" selected>Income Bracket</option>
+                        <option *ngFor="let bracket of incomeBrackets" [value]="bracket.value">{{ bracket.label }}
+                        </option>
+                      </select>
+                    </div>
+
+                    <hr />
+
+                    <div class="form-group">
+                      <label>Your Total Monthly Part B Premium is:</label>
+                      <input class="form-control" readonly [value]="totalPartBPremium | currency" />
+                    </div>
+
+                    <div class="form-group">
+                      <label>Part B Breakdown:</label>
+                      <div class="row">
+                        <div class="col">
+                          <label>Standard Part B Premium:</label>
+                          <input class="form-control" readonly [value]="partBPremium | currency" />
+                        </div>
+                        <div class="col">
+                          <label>IRMAA Surcharge:</label>
+                          <input class="form-control" readonly [value]="irmaaB | currency" />
+                        </div>
+                        <div class="col">
+                          <label>Total Part B Premium:</label>
+                          <input class="form-control" readonly [value]="totalPartBPremium | currency" />
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <label>Part D Breakdown:</label>
+                      <label>Do you know your Part D premium?</label><br>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="yes" value="Yes"
+                          formControlName="partDKnown" />
+                        <label class="form-check-label" for="yes">Yes</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="no" value="No" formControlName="partDKnown" />
+                        <label class="form-check-label" for="no">No</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col">
+                          <label>Part D Plan Premium*:</label>
+                          <input class="form-control" readonly [value]="partDPremium | currency" />
+                        </div>
+                        <div class="col">
+                          <label>IRMAA Surcharge:</label>
+                          <input class="form-control" readonly [value]="irmaaD | currency" />
+                        </div>
+                        <div class="col">
+                          <label>Total Part D Premium*:</label>
+                          <input class="form-control" readonly [value]="totalPartDPremium | currency" />
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div *ngIf="costResult" class="mt-3">
+                  <h4>Estimated Costs</h4>
+                  <p>Part B Premium: {{ costResult.partBPremium | currency }}</p>
+                  <p>Part D Premium: {{ costResult.partDPremium | currency }}</p>
+                  <a href="/about-us/contact-us" class="btn blue-background mt-4">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Part B Late Enrollment Penalty Calculator Section -->
+        <div class="row mb-4" *ngIf="showPartB">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Part B Late Enrollment Penalty Calculator
+              </div>
+              <div class="card-body">
+                <img
+                  src="/assets/back-school-concept-with-magnifying-glass-glasses-school-supplies-calculator-white-wall-flat-lay.jpg" />
+                <p>The late enrollment penalty for Medicare Part B is 10% of the standard Part B premium for each full
+                  12-month period that you are eligible but do not enroll. This penalty is added to your monthly premium
+                  and is usually a lifelong penalty. For example, if you wait two years to sign up for Part B, you'll
+                  have to pay a 20% penalty (10% for each year you waited).</p>
+                <p>
+                  <strong>Note:</strong> The cost basis for this calculator was previously $174.70.
+                  It has been updated to reflect the current standard Part B premium of $202.90.
+                </p>
+                <form [formGroup]="partBCalculatorForm" (ngSubmit)="onSubmitPartBCalculator()">
+                  <div class="form-group">
+                    <label for="monthsWithoutPartB">Years without Part B</label>
+                    <input type="number" class="form-control" id="monthsWithoutPartB"
+                      formControlName="monthsWithoutPartB" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary mt-2">Calculate</button>
+                </form>
+                <div *ngIf="partBResult" class="mt-3">
+                  <h4>Estimated Part B Penalty</h4>
+                  <p>{{currentYear}} Part B Premium: $202.90 after</p>
+                  <p>Penalty Percentage: {{ partBResult.penaltyPercentage }}%</p>
+                  <p>Penalty Cost: {{ partBResult.penaltyCost | currency }}</p>
+                  <p>Total Part B Premium + Penalty: {{ partBResult.totalPartBPremium | currency }}</p>
+                  <a href="/about-us/contact-us" class="btn blue-background mt-4">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4" *ngIf="showPartD">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Part D Late Enrollment Penalty Calculator
+              </div>
+              <div class="card-body">
+                <img src="/assets/blank-notepad-with-pen-stethoscope-calculator-dollars-wooden-surface.jpg" />
+                <p>The Medicare Part D late enrollment penalty is a monthly premium add-on that applies to people who
+                  don't join a Medicare drug plan when they first become eligible or go without creditable drug coverage
+                  for 63 days or more. The penalty is calculated by multiplying 1% of the national base beneficiary
+                  premium by the number of uncovered months, rounded to the nearest 10 cents, and adding it to the
+                  monthly Part D premium. In {{currentYear}}, the national base beneficiary premium is $38.99, so the
+                  penalty would be $0.3899 per uncovered month. The penalty is recalculated each year based on the new
+                  base premium amount, so it may increase each year.
+                </p>
+                <p>
+                  <strong>Note:</strong> The cost basis for this calculator was previously $0.3470.
+                  It has been updated to reflect the current figure of $0.3899.
+                </p>
+                <p>The penalty is usually permanent, even if someone switches Part D plans, and they'll likely have to
+                  pay it for as long as they have Medicare drug coverage. However, there are some ways to avoid or
+                  reduce the penalty.</p>
+                <form [formGroup]="partDCalculatorForm" (ngSubmit)="onSubmitPartDCalculator()">
+                  <div class="form-group">
+                    <label for="monthsWithoutPartD">Months without Part D</label>
+                    <input type="number" class="form-control" id="monthsWithoutPartD"
+                      formControlName="monthsWithoutPartD" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="partDPremium">Enter your Part D monthly premium amount</label>
+                    <input type="number" class="form-control" id="partDPremium" formControlName="partDPremium" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary mt-2">Calculate</button>
+                </form>
+                <div *ngIf="partDResult" class="mt-3">
+                  <h4>Estimated Part D Penalty</h4>
+                  <p>Penalty Percentage: {{ partDResult.penaltyPercentage }}%</p>
+                  <p>Penalty Cost: {{ partDResult.penaltyCost | currency }}</p>
+                  <p>Total Part D Premium + Penalty: {{ partDResult.totalPartDPremium | currency }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

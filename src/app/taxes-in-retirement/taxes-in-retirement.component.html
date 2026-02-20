@@ -1,0 +1,213 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Taxes in Retirement
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showSocialSecurityTaxesSection && !showAnnuityTaxesSection && !showLifeInsuranceTaxesSection && !show401ksAndIRATaxesSection && !showLongTermCareAndTaxesSection && !showRequiredMinimumDistributionsSection && !showPlansSubjectToRMDsSection }">
+                <a href="/planning-your-retirement/taxes-in-retirement?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showSocialSecurityTaxesSection }">
+                <a href="/planning-your-retirement/taxes-in-retirement?numbers=1">Social Security Taxes</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showAnnuityTaxesSection }">
+                <a href="/planning-your-retirement/taxes-in-retirement?numbers=2">Annuity Taxes</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showLifeInsuranceTaxesSection }">
+                <a href="/planning-your-retirement/taxes-in-retirement?numbers=4">Life Insurance Taxes</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': show401ksAndIRATaxesSection }">
+                <a href="/planning-your-retirement/taxes-in-retirement?numbers=8">401ks and IRAs & Taxes</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showLongTermCareAndTaxesSection }">
+                <a href="/planning-your-retirement/taxes-in-retirement?numbers=16">Long Term Care and Taxes</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showRequiredMinimumDistributionsSection }">
+                <a href="/planning-your-retirement/taxes-in-retirement?numbers=32">Required Minimum Distributions</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showPlansSubjectToRMDsSection }">
+                <a href="/planning-your-retirement/taxes-in-retirement?numbers=64">Plans Subject to RMDs</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid"
+          *ngIf="!showSocialSecurityTaxesSection && !showAnnuityTaxesSection && !showLifeInsuranceTaxesSection && !show401ksAndIRATaxesSection && !showLongTermCareAndTaxesSection && !showRequiredMinimumDistributionsSection && !showPlansSubjectToRMDsSection">
+          <div class="container">
+            <h2 class="display-4">Taxes in Retirement</h2>
+            <p class="lead">Your tax plan during retirement can have a domino effect if not done properly. Keep in mind that any
+              reported income may affect your Medicare costs through IRMAA. (Refer to For Patients > Medicare >
+              IRMAA). Below is some guidance on different plans and their tax implications. Please consult your CPA
+              for detailed and direct advice.</p>
+              <img src="/assets/senior-man-holding-coffee-cup-hand-reading-newspaper.jpg" />
+          </div>
+        </div>
+
+        <!-- Social Security Taxes Section -->
+        <div class="row mb-4" *ngIf="showSocialSecurityTaxesSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Social Security Taxes
+              </div>
+              <div class="card-body">
+                <img src="/assets/directly-shot-calculator-with-block-shape-document.jpg" />
+                <p>You must pay taxes up to 85% of your Social Security benefits if you file a: Federal tax return as an “individual” and your “combined income” exceeds $25,000. Joint return, and you and your spouse have “combined income” of more than $32,000.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Annuity Taxes Section -->
+        <div class="row mb-4" *ngIf="showAnnuityTaxesSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Annuity Taxes
+              </div>
+              <div class="card-body">
+                <img src="/assets/person-is-using-pen-some-stacks-coins.jpg" />
+                <p>When deciding whether to take an annuity or a lump sum, taxes must also be considered. If a person
+                  takes a lump-sum distribution and doesn’t roll it over to an IRA, the amount received will be considered
+                  income for the year and subject to ordinary income tax. Depending on the amount distributed, the
+                  lump-sum payout could push a participant into a higher tax bracket. A 10 percent premature distribution
+                  penalty tax will also be imposed if the participant is under age 59½, unless an exception applies (e.g.,
+                  the 10 percent penalty does not apply to lump-sum payouts received if a person terminates employment
+                  during or after the year they turn age 55).</p>
+                <p>If a lump-sum distribution is paid directly to the plan participant, the plan sponsor is also required
+                  to withhold 20 percent of the payout for federal income taxes. (Although, again, the actual taxes owed
+                  will ultimately depend on the participants tax bracket.) The plan participant could avoid paying taxes
+                  on the amount received as long as they deposit the entire amount into a qualified IRA within 60 days,
+                  but they would have to use other funds to replace the 20 percent withheld. However, the 20 percent
+                  withholding can be avoided by requesting a direct rollover of the lump sum to the new IRA custodian,
+                  known as a trustee-to-trustee transfer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Life Insurance Taxes Section -->
+        <div class="row mb-4" *ngIf="showLifeInsuranceTaxesSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Life Insurance Taxes
+              </div>
+              <div class="card-body">
+                <img src="/assets/life-insurance-policy-terms-use-concept (1).jpg" />
+                <p>Generally, life insurance proceeds you receive as a beneficiary due to the death of the insured person,
+                  aren't includable in gross income and you don't have to report them. However, any interest you receive
+                  is taxable and you should report it as interest received.</p>
+                <p>For Whole Life Policies, it is possible to withdraw from your policy or take out a loan against its
+                  accrued value.</p>
+                <p>Withdrawals from a life insurance policy (which are actually partial surrenders, taken from the
+                  policy’s cash value) are tax free up to the amount that was paid into the contract in the form of
+                  premiums, less any prior withdrawals (i.e., the policy’s basis). Consequently, taking tax-free
+                  withdrawals from a life insurance policy to supplement retirement income will increase the policyowner’s
+                  income, but not his or her taxes. Nor will it not push the policyowner into a higher tax bracket. Only
+                  if and when withdrawals exceed basis are policy earnings deemed to be distributed, and taxable at
+                  ordinary rates. An exception to the tax-free status of withdrawals occurs for policies in force fewer
+                  than 15 years.</p>
+                <p>Life insurance policy loans are completely tax free as long as the policy remains in force. Policy
+                  loans are made by the insurance company to the policyowner, using the policy’s cash value as collateral.
+                  The policy remains in force, with the obligation to pay premium payments as usual and with cash values
+                  accumulating. Interest is charged on the loan, but there is no time or date required for its repayment.
+                  As long as the policy’s cash value is more than the amount of any unpaid loan or loans (plus interest),
+                  the policy will remain in force and the loans are not taxable, regardless of the owner’s basis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 401ks and IRAs & Taxes Section -->
+        <div class="row mb-4" *ngIf="show401ksAndIRATaxesSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                401ks and IRAs & Taxes
+              </div>
+              <div class="card-body">
+                <img src="/assets/401k-retirement-plan-document-desk-with-office-supplies.jpg" />
+                <p>Current tax law requires that qualified retirement funds—funds held in a traditional IRA or 401(k), for
+                  example—must begin to be distributed to the owner or plan participant once he or she reaches a certain
+                  age. The purpose of the required minimum distribution (RMD) rule is to prevent perpetual tax-sheltering
+                  of qualified funds and to force any not-yet-taxed dollars into a distribution mode, at which point taxes
+                  must be paid on those dollars.</p>
+                <p>Roth IRAs are not taxable. This is because Roth plans are funded with money that has already been taxed
+                  and provide for tax-free distributions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Long Term Care and Taxes Section -->
+        <div class="row mb-4" *ngIf="showLongTermCareAndTaxesSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Long Term Care and Taxes
+              </div>
+              <div class="card-body">
+                <img src="/assets/eco-store-vendor-sealing-bulk-items-jars.jpg" />
+                <p>Because qualified long-term care policies are considered a form of health insurance, the premiums are considered medical expenses. Individuals can deduct part of the premiums paid as a medical expense on their federal tax return, but only if they itemize deductions on Form 1040 Schedule A. To be eligible for an income tax deduction, total medical expenses must exceed 7.5 percent of an insured’s adjusted gross income (AGI). This means that insureds who do not itemize deductions or those whose total medical expenses are less than 7.5 percent of their AGI cannot take a deduction for premiums paid for long-term care insurance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Required Minimum Distributions Section -->
+        <div class="row mb-4" *ngIf="showRequiredMinimumDistributionsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Required Minimum Distributions
+              </div>
+              <div class="card-body">
+                <img src="/assets/smiling-senior-man-relaxing-chair-with-electronic-device-table.jpg" />
+                <p>The simple way to avoid getting hit with Medicare’s IRMAA or jumping higher on the tax bracket due to
+                  income is to delay collecting on your retirement accounts. However, current tax law requires that
+                  qualified retirement funds—funds held in a traditional IRA or 401(k), for example—must begin to be
+                  distributed to the owner or plan participant once he or she reaches a certain age. The purpose of the
+                  required minimum distribution (RMD) rule is to prevent perpetual tax-sheltering of qualified funds and
+                  to force any not-yet-taxed dollars into a distribution mode, at which point taxes must be paid on those
+                  dollars.</p>
+                <p>The RMD rules accomplish this by:</p>
+                <ul>
+                  <li>Establishing a date by which distributions must begin</li>
+                  <li>Defining minimum amounts that must be taken every year</li>
+                  <li>Imposing stiff penalties for noncompliance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Plans Subject to RMDs Section -->
+        <div class="row mb-4" *ngIf="showPlansSubjectToRMDsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Plans Subject to RMDs
+              </div>
+              <div class="card-body">
+                <img src="/assets/teacher-looking-laptop-writing-down.jpg" />
+                <p>A qualified retirement plan is any plan which provides for the tax advantages of pre-tax contributions
+                  and deferred tax growth. Virtually every type of qualified plan is subject to the required minimum
+                  distribution rules, including personally owned IRAs and IRA-based plans such as SEPs, SARSEPs, and
+                  SIMPLE IRAs. Employer plans are also subject to the RMD requirements, including 401(k), 403(b), and 457
+                  plans, as well as profit-sharing and defined contribution plans.</p>
+                <p>Once funds are distributed from a qualified plan or IRA, the IRS is able to claim its share of any
+                  money that had not been previously taxed, including funds that were contributed to the plan on a pre-tax
+                  basis as well as investment earnings that grew and accrued in the plan. Note that Roth IRAs and Roth
+                  401(k) plans are not qualified plans and are not subject to RMD rules. This is because Roth plans are
+                  funded with money that has already been taxed and provide for tax-free distributions.</p>
+                <p>RMDs typically begin at age 73</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

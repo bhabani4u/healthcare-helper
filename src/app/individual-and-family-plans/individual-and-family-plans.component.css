@@ -1,0 +1,10 @@
+.individual-and-family-plans-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* .individual-and-family-plans-card {
+  width: 100%;
+  max-width: 800px;
+} */

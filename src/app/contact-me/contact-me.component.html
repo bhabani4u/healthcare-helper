@@ -1,0 +1,259 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Contact Us
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item active" [ngClass]="{ 'active': !showFeedback && !showCareers }">
+              <a href="/about-us/contact-us?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item active" [ngClass]="{ 'active': showFeedback }">
+              <a href="/about-us/contact-us?numbers=1">Send us Feedback</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showCareers }">
+              <a href="/about-us/contact-us?numbers=2">Careers</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showFeedback && !showCareers">
+          <div class="container">
+            <h2 class="display-4">Contact Us</h2>
+            <p class="lead">Reach out with any questions or concerns.</p>
+          </div>
+        </div>
+        <!-- Email Section -->
+        <div class="row mb-4" *ngIf="!showFeedback && !showCareers">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Email Us
+              </div>
+              <div class="card-body">
+                <form (submit)="submitContactUsForm($event)">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name"
+                      required>
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name"
+                      required>
+                  </div>
+                  <div class="form-group">
+                    <label for="mobilePhone">Mobile Phone Number</label>
+                    <input type="tel" class="form-control" id="mobilePhone" name="mobilePhone"
+                      placeholder="Mobile Phone Number">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="3" placeholder="Your Message"
+                      required></textarea>
+                  </div>
+                  <div class="form-group pt-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="smsOptIn" name="smsOptIn">
+                      <label class="form-check-label" for="smsOptIn">
+                        By entering your mobile phone number above and clicking "SUBMIT", you agree to receive automated
+                        text messages from Healthcare Helper and agree to our <a href="/terms-and-conditions">Terms of
+                          Use</a> & <a href="/privacy-policy">Privacy Policy</a>. Consent is not a condition of any
+                        purchase. You may receive up to 5 automated msgs/wk. Additional Msg frequency varies. Msg and
+                        data rates may apply. Reply HELP for help and STOP to cancel.
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group pt-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="termsOfUse" name="termsOfUse" required>
+                      <label class="form-check-label" for="termsOfUse">
+                        I acknowledge that I agree to the <a href="/terms-and-conditions">Terms of Use</a> and have read
+                        the <a href="/privacy-policy">Privacy Policy</a>. <span class="text-danger pl-2">*</span>
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary mt-2" [disabled]="loading">Send</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="card full-width mt-5">
+              <div class="card-header bg-primary text-white">
+                Contact Information
+              </div>
+              <div class="card-body row">
+                <!-- First Column -->
+                <div class="col-12 col-md-6 mb-3">
+                  <p><strong>Fax:</strong> <a href="tel:3107446009">(310) 744-6009</a></p>
+                  <p><strong>Direct Line:</strong> (310) 744-6048</p>
+                </div>
+                <!-- Second Column -->
+                <div class="col-12 col-md-6 mb-3">
+                  <p><strong>National Number:</strong> <a href="tel:8444633435">(844) 463-3435</a></p>
+                </div>
+                <!-- Third Column for Additional Info -->
+                <div class="col-12 mb-3">
+                  <p><strong>Licensed Insurance Agent:</strong> CA 0M57873</p>
+                  <p>
+                    Medicare | Individual and Family Plans | Life Insurance | Annuities | Long Term Care |
+                    Business Health Plans | Cancer/Accident
+                  </p>
+                  <p>Serving States: CA, FL, AZ, OR, GA, MI, MN, NC, SC, TX, VA</p>
+                </div>
+                <!-- Contact Details -->
+                <div class="col-12">
+                  <p><strong>Email:</strong> <a
+                      href="mailto:info@healthcarehelper.net">info&#64;healthcarehelper.net</a></p>
+                  <p><strong>Phone:</strong> <a href="tel:8444633435">(844) 463-3435</a></p>
+                  <p>
+                    Feel free to reach out to us with any questions or concerns. I am here to help you navigate
+                    the complexities of healthcare and insurance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Loading Spinner Overlay -->
+        <div *ngIf="loading" class="spinner-overlay">
+          <mat-spinner></mat-spinner>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="row mb-4" *ngIf="!showFeedback && !showCareers">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Follow Us
+              </div>
+              <div class="card-body text-center">
+                <img src="/assets/medium-shot-senior-man-holding-smartphone.jpg" />
+                <p>Stay connected and follow us on social media for the latest updates and information:</p>
+                <a href="https://www.facebook.com" class="text-decoration-none mx-2" target="_blank">
+                  <i class="fab fa-facebook-f fa-2x"></i>
+                </a>
+                <a href="https://www.twitter.com" class="text-decoration-none mx-2" target="_blank">
+                  <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="https://www.instagram.com" class="text-decoration-none mx-2" target="_blank">
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com" class="text-decoration-none mx-2" target="_blank">
+                  <i class="fab fa-linkedin-in fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Feedback Form Section -->
+        <div class="row mb-4" *ngIf="showFeedback">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Share Your Feedback
+              </div>
+              <div class="card-body">
+                <form (submit)="submitFeedbackForm($event)">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="feedback">Feedback</label>
+                    <textarea class="form-control" id="feedback" name="feedback" rows="3" placeholder="Your Feedback"
+                      required></textarea>
+                  </div>
+                  <div class="form-group pt-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="featureUpdates" name="featureUpdates">
+                      <label class="form-check-label" for="featureUpdates">
+                        I want to receive new, feature updates, and marketing SMS and email messages. <span
+                          class="text-danger pl-2">*</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group pt-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="termsOfUse" name="termsOfUse" required>
+                      <label class="form-check-label" for="termsOfUse">
+                        I acknowledge that I agree to the <a href="/terms-and-conditions">Terms of Use</a> and have read
+                        the <a href="/privacy-policy">Privacy Policy</a>. <span class="text-danger pl-2">*</span>
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary mt-2" [disabled]="loading">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4" *ngIf="showCareers">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Join Our Team
+              </div>
+              <div class="card-body">
+                <form (submit)="submitCareersForm($event)">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="resumeLink">Resume Link</label>
+                    <input type="url" class="form-control" id="resumeLink" name="resumeLink"
+                      placeholder="Link to your resume (e.g., Google Drive, Dropbox)" required>
+                  </div>
+                  <div class="form-group pt-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="featureUpdates" name="featureUpdates">
+                      <label class="form-check-label" for="featureUpdates">
+                        I want to receive new, feature updates, and marketing SMS and email messages. <span
+                          class="text-danger pl-2">*</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group pt-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="termsOfUse" name="termsOfUse" required>
+                      <label class="form-check-label" for="termsOfUse">
+                        I acknowledge that I agree to the <a href="/terms-and-conditions">Terms of Use</a> and have read
+                        the <a href="/privacy-policy">Privacy Policy</a>. <span class="text-danger pl-2">*</span>
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary mt-2" [disabled]="loading">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

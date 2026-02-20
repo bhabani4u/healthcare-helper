@@ -1,0 +1,216 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          The Medical Industry, Illuminated
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showPrioritizeHealthcareSection && !showSelectDoctorSection && !showSelectMedicalGroupSection && !showSelectInsurancePlanSection && !showPharmacistMattersSection && !showRoleOfAgentSection && !showHealthcareTechnologySection && !showFutureOfHealthcareSection }">
+                <a href="/for-patients/medical-industry-overview?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showPrioritizeHealthcareSection }">
+                <a href="/for-patients/medical-industry-overview?numbers=1">How To Prioritize Your Healthcare</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showSelectDoctorSection }">
+                <a href="/for-patients/medical-industry-overview?numbers=2">How to Select a Doctor</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showSelectMedicalGroupSection }">
+                <a href="/for-patients/medical-industry-overview?numbers=4">How to Select a Medical Group</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showSelectInsurancePlanSection }">
+                <a href="/for-patients/medical-industry-overview?numbers=8">How to Select an Insurance Plan</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showPharmacistMattersSection }">
+                <a href="/for-patients/medical-industry-overview?numbers=16">Your Pharmacist Matters</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showRoleOfAgentSection }">
+                <a href="/for-patients/medical-industry-overview?numbers=32">The Role of Your Health Insurance Agent</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showHealthcareTechnologySection }">
+                <a href="/for-patients/medical-industry-overview?numbers=64">How Healthcare Technology & Innovation Has Improved Your Health</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showFutureOfHealthcareSection }">
+                <a href="/for-patients/medical-industry-overview?numbers=128">The Future of Healthcare</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showPrioritizeHealthcareSection && !showSelectDoctorSection && !showSelectMedicalGroupSection && !showSelectInsurancePlanSection && !showPharmacistMattersSection && !showRoleOfAgentSection && !showHealthcareTechnologySection && !showFutureOfHealthcareSection">
+          <div class="container">
+            <h2 class="display-4">The Medical Industry, Illuminated</h2>
+            <p class="lead">Insights into the dynamics and priorities within the healthcare industry.</p>
+          </div>
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="row mb-4" *ngIf="!showPrioritizeHealthcareSection && !showSelectDoctorSection && !showSelectMedicalGroupSection && !showSelectInsurancePlanSection && !showPharmacistMattersSection && !showRoleOfAgentSection && !showHealthcareTechnologySection && !showFutureOfHealthcareSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-body">
+                <img src="/assets/speech-therapist-standing-with-both-hands-hips-and-3.jpg" >
+                <p>Have you ever wondered why insurance companies can afford to spend hundreds of millions of dollars on television commercials and billboard advertisements?</p>
+                <p>The healthcare industry is worth $808 billion in the United States as of 2021. 65% of the industry's revenue comes from patient care. In 2021, Medicare Advantage insurers reported gross margins averaging $1,730 per enrollee, at least double the margins reported by insurers in the individual/non-group market ($745), the fully insured group/employer market ($689), and the Medicaid managed care market ($768).</p>
+                <p>Multiplied by the hundreds of thousands of patients per insurance company, this amounts to billions of dollars in annual profit, making you a primary business target. You are like gold to these companies. As a result, they spend millions of dollars to offer you plans with bells and whistles, including things such as a 24 hour nurse line and virtual doctor appointments to other things as eye-raising as AAA memberships or a robot pet comfort dog.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prioritizing Healthcare Section -->
+        <div class="row mb-4" id="Prioritize-Your-Healthcare" [hidden]="!showPrioritizeHealthcareSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                How To Prioritize Your Healthcare
+              </div>
+              <div class="card-body">
+                <img src="/assets/serious-doctor-discussing-with-senior-couple-about-their-medical-documents-appointment-clinic.jpg" />
+                <p>It's your doctors who are going to save your life, not your insurance company.</p>
+                <p>However, the way money flows throughout the healthcare industry places insurance companies at the top of the food chain, meaning most money passes through insurance before it ever reaches your doctors. Insurance companies are often nationwide companies, whereas the companies that manage doctors tend to be more local or regional, at most. This means you will likely see millions more spent on advertisements by insurance companies compared to medical groups, further skewing your perception that insurance companies matter most.</p>
+                <p>Untrained patients generally start their healthcare decision making process by deciding their Insurance Company first, then looking to see if their doctors work with that insurance plan. This is the wrong approach, because it does not prioritize the right things. Begin with the question, if I am in a life-threatening situation, which hospital do I want to go to? Which group of doctors do I want to see? From there, find out which insurance plan has the Medical Group which includes your preferred hospital and doctors:</p>
+                <ol>
+                  <li>Doctors/Hospital</li>
+                  <li>Medical Group</li>
+                  <li>Insurance Company</li>
+                </ol>
+                <p>If you begin with your priorities straight, this means that certain doctors and your hospital of choice should essentially be non-negotiable. If you are enrolling into an HMO, or even a PPO, the next step for you is critical: to see your preferred doctors and go to your preferred hospital, they must all belong to the same Medical Group. Your Medical Group determines everything in an HMO. And because you can only be in one medical group at a time, you must choose wisely.</p>
+                <p>Oftentimes, inexperienced agents or dishonest sales agents may tell you that your doctors and your hospital take the insurance plan they are selling you. However, what they may omit to tell you is that your doctor may be part of one medical group, but your specialists and your hospital are part of a completely different medical group. The end result is that you will lose your doctors or your hospital.</p>
+                <p>To do it right, you must verify that all of your doctors and your preferred hospital are part of the same medical group if you select an HMO.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selecting a Doctor Section -->
+        <div class="row mb-4" [hidden]="!showSelectDoctorSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                How to Select a Doctor
+              </div>
+              <div class="card-body">
+                <img src="/assets/happy-senior-black-man-talking-his-doctor-exam-room-checkup-medical-office-visit-concept.jpg">
+                <p>Front and center in the battle for your health is your Primary Care Doctor (PCP). Especially while you are healthy, now is the time to find one that you trust. This doctor should be one you feel comfortable will listen to your concerns and take the time to answer your questions. Keep in mind how packed the waiting rooms usually are. A PCP’s schedule is extremely tight, and they generally are slotted only 15 minutes of face to face time with you while medical assistants handle most testing and referrals.</p>
+                <p>A good doctor is compassionate, and is looking at the bigger picture of your health. They will not prescribe drugs unless necessary, and they should be straightforward with you, like a good friend who sometimes gives you advice you don’t want to hear. You should actually feel somewhat uncomfortable with them if there are habits on your part that you need to improve. Once you find that special doctor, you should feel certain that you never want to leave their care. If your doctor doesn’t match my description, you may want to look for a new doctor. Does your doctor care for you?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selecting a Medical Group Section -->
+        <div class="row mb-4" [hidden]="!showSelectMedicalGroupSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                How to Select a Medical Group
+              </div>
+              <div class="card-body">
+                <img src="/assets/torrance-memorial-medical-center-01-facade.jpg">
+                <p>Who does your doctor refer you to when you need to see a cardiologist or a podiatrist? Typically, they will refer you to someone in your Network, also known as a Medical Group. A Medical Group is a corporate entity that either contracts with a lot of doctors and a hospital, or they own a hospital and the doctors are their employees. So if you get referred from one doctor to another, or need surgery, all of this will happen with doctors and hospitals affiliated with the Medical Group). By avoiding doctors outside the network, medical groups can lower costs and ensure a profit.</p>
+                <p>All hospitals throughout the country will accept you for emergency treatment. But did you know that as soon as your health is stable, you will be sent to whichever hospital is in your network? So once you find a Primary Care Physician you trust, ask them what Medical Groups they contract with, and not which Insurance Company they accept.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selecting an Insurance Plan Section -->
+        <div class="row mb-4" [hidden]="!showSelectInsurancePlanSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                How to Select an Insurance Plan
+              </div>
+              <div class="card-body">
+                <img src="/assets/consultation-new-project.jpg" >
+                <p>As a general rule, Insurance Companies operate as a financial clearinghouse, accepting government funding and insurance plan premiums, then turning around and paying between 80-85% of their revenue to the Medical Groups in order to pay for patient treatment. They negotiate patient costs so you know how much a visit to a doctor will cost. And they negotiate medical costs among Medical Groups. Insurance Companies don’t employ many doctors, and they do not typically provide treatment.</p>
+                <p>In a sense, Insurance Companies act as general contractors. They determine which Medical Groups you can work with, and which prescription drugs you can take. Additionally, they subcontract with vendors who provide you with the bells and whistles you find in plans like dental coverage, transportation, and hearing aids.</p>
+                <p>Some Medical Groups are known to provide exceptional care, and they charge higher rates for their care. Insurance Companies, ever mindful of the bottom line, must make a choice between which Medical Groups to contract with, what benefits to offer, and how much customer service they are willing to provide. Not all insurance companies are equal, so I encourage you to consult with me, your doctor, or someone else you trust to make sure you are putting your healthcare first.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Importance of Your Pharmacist Section -->
+        <div class="row mb-4" [hidden]="!showPharmacistMattersSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Your Pharmacist Matters
+              </div>
+              <div class="card-body">
+                <img src="/assets/woman-working-pharmaceutical-industry.jpg">
+                <p>Mail Delivery prescription services are on the rise. You get a three-month supply with automatic refills, the cost of your drugs is cheaper, and you never have to wait in line. Plus, you can call and talk to a pharmacist if you need to. Every insurance company wants you to sign up for this. What are the drawbacks?</p>
+                <p>There are relatively few concerns when you only take one or two common medications, but like your Primary Care Physician, a long term relationship with your pharmacist can save your life. It’s important to know what a pharmacist actually does compared to the mail order service.</p>
+                <p>Pharmaceutics is one of many subjects medical students study on the road to becoming a doctor. Most of their training on pharmaceutics comes in the form of on the job training. Contrast that to pharmacists who receive their doctorate degree through the primary study of pharmaceutics. Their grasp on the drugs you take, side effects, and what is better for you may be significantly better than your doctors because it is their primary job.</p>
+                <p>In the mail order prescription drug system, no one is paying attention to you and your personal situation, instead relying on their computer’s automated AI modeling to catch red flags. For individuals who are actively seeking to reduce the number of drugs they are taking, a personal relationship with a pharmacist far more productive, albeit slightly more costly.</p>
+                <p>Your independent pharmacist can also provide mail-order delivery, and has time to sit with you and review how your medications interact with each other. They can also dispense your medication in person far quicker than you would find from a big box pharmacy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role of Health Insurance Agent Section -->
+        <div class="row mb-4" [hidden]="!showRoleOfAgentSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                The Role of Your Health Insurance Agent
+              </div>
+              <div class="card-body">
+                <img src="/assets/happy-older-family-couple-clients-make-sale-purchase-deal-sign-insurance-contract-meeting-estate-agent-lawyer-bank-manager-satisfied-senior-customers-make-business-financial-deal-buy-house-take-loan.jpg" >
+                <p>There is no added cost for the use of an insurance agent, and therefore it is in your best interest to utilize an agent whom you can trust and depend on.</p>
+                <p>Typically, insurance agents get paid directly by the insurance company they are representing. If they represent several insurance companies, those same insurance companies will pay the insurance agent a commission for bringing them new business. Due to this commission, you may have found many salespeople in general to be aggressive and tone-deaf to your concerns, and generally lacking in knowledge.</p>
+                <p>A good insurance agent will operate quite differently. Firstly, they will respond quickly to your calls, and will have immediate answers to most of your questions. They will not put you in a position where you feel pressured to sign up before you are ready. Instead, they will provide you with a base of knowledge for how the policy works, so that you can come to your own informed decision with the confidence that you are making a sound choice.</p>
+                <p>A competent agent will not sugar coat the realities of what you will experience with the insurance plan. Everything in the healthcare industry is complicated to navigate. Medical practices still have a working fax machine that they use! Changing your insurance plan itself creates complications to your ability to get care.</p>
+                <p>If you accepted all the glossy insurance marketing at face value, you would never believe this. This is because all healthcare marketing focuses on giving you a sense of reassurance that everything is going to be ok. But this assurance gets quickly dispelled the moment you begin to deal with health issues, and you find that the services promised to you are terribly limited.</p>
+                <p>A good agent will be able to assist you when you run into any number of insurance issues. And they will be there to help you even when you are hospitalized. If you feel confident your agent will do this for you, keep working with your agent. Otherwise, know that everything I listed previously is how I operate.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How Healthcare Technology & Innovation Has Improved Your Health Section -->
+        <div class="row mb-4" [hidden]="!showHealthcareTechnologySection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                How Healthcare Technology & Innovation Has Improved Your Health
+              </div>
+              <div class="card-body">
+                <img src="/assets/senior-couple-attending-online-meeting-with-doctor-digital-tablet-doing-remote-consultation-home-elder-people-using-videoconference-call-modern-gadget-internet-telemedicine.jpg">
+                <p>The healthcare industry generates about 30% of the world’s data. Every time you visit a doctor and have your vitals checked, or your blood tested, a snapshot of your health is made that can be referenced in the decades to come. Doctors can see where your health has changed, and by how much.</p>
+                <p>Expand those data snapshots to a particular city where the health of hundreds of thousands or millions of people live, and you can begin to see health patterns across a broad spectrum such as race, gender, and age. We have in many respects, entered a golden age of data and knowledge, and this is transforming our ability to fight disease.</p>
+                <p>Technological breakthroughs have the ability to improve health outcomes and decrease the amount of time and money spent on fighting against disease. Until relatively recently for example, surgeries were conducted by providing them with alcohol and a leather bit to bite on, then holding down the patient until complete. When anesthesia was first discovered in the 1840’s, it allowed individuals to be able to undergo surgery without pain for the first time in history. In the early 1900’s, arthroscopic surgery was invented, which allowed certain surgeries to take place through pinpoint needles entering the skin, instead of having to make large and deep cuts into the skin, which required many additional months to fully recover. Today, such surgeries are now made even more precise with the 3D data mapping created by MRis and the use of robotic surgical technology.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Future of Healthcare Section -->
+        <div class="row mb-4" [hidden]="!showFutureOfHealthcareSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                The Future of Healthcare
+              </div>
+              <div class="card-body">
+                <img src="/assets/retired-woman-using-vr-glasses-nurse-assisting.jpg" />
+                <p>The development of healthcare began in ancient times as a need to care for our precious loved ones. This is, and must always remain, at the heart of healthcare. However, as new innovations develop, the medical industry must keep up.</p>
+                <p>There are many trends that are shaping the flow of the healthcare industry for the foreseeable future. Particularly, it will be possible for a patient to receive healthcare diagnoses and prescriptions from Artificial Intelligence, based on their recorded health history and current medical methods and understanding of disease treatment. While there is no replacement for a truly human to human interaction, this will allow many more individuals to get medical help quickly and accurately.</p>
+                <p>Genomic sequencing has already made it possible to fine-tune one’s risk for certain diseases. While it is well known that African Americans, for instance, are more at risk for developing high blood pressure and diabetes, lesser-known genetic attributes may make some of us more prone to rarer diseases than others. Genomic data is already proving its value. As more individuals access their genomic data, it makes it possible to receive fine-tuned and tailored health advice.</p>
+                <p>Rare genetic disorders can be caught and prevented at an early age in a child’s life, and gene therapy can help correct a genetic abnormality at its source. In the realm of Pharmacogenomics, prescription drugs can be tailored to each individual, limiting adverse side effects.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

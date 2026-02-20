@@ -1,0 +1,153 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Life Insurance
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showTermVsWhole && !showRiders && !showFinalExpense && !showHowMuchIsEnough }">
+                <a href="/insurance-options/life-insurance?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showTermVsWhole }">
+                <a href="/insurance-options/life-insurance?numbers=1">Term Life vs. Whole Life</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showRiders }">
+                <a href="/insurance-options/life-insurance?numbers=2">Riders</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showFinalExpense }">
+                <a href="/insurance-options/life-insurance?numbers=4">Final Expense Policies</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showHowMuchIsEnough }">
+                <a href="/insurance-options/life-insurance?numbers=8">How Much Life Insurance Is Enough?</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showTermVsWhole && !showRiders && !showFinalExpense && !showHowMuchIsEnough">
+          <div class="container">
+            <h2 class="display-4">Life Insurance</h2>
+            <p class="lead">Secure your family's future with comprehensive life insurance plans.</p>
+          </div>
+        </div>
+
+        <!-- Life Insurance Overview Section -->
+        <div class="row mb-4" *ngIf="!showTermVsWhole && !showRiders && !showFinalExpense && !showHowMuchIsEnough">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Is Life Insurance Even Worth it These Days?
+              </div>
+              <div class="card-body">
+                <img src="/assets/happy-family-asian-senior-couple-using-laptop-computer-technology-retirement-smile-nature-park-re.jpg" />
+                <p>Insurance is about managing your risks. And while the modern risk of death is lower than at any time in history, life insurance continues to play an important role at affordable costs, allowing you to significantly reduce the burden on your surviving family and leave a legacy. It is a practical way to create peace of mind for you and your family. If you were to depart earth today, are you ready? Are your affairs in order? Can your family survive without your income?</p>
+                <p>Life insurance will definitively resolve a part of those questions.</p>
+                <p>Modern life insurance products offer the ability to accrue financial value from your premiums which you can tap into while you live. While the traditional policy, which provides a financial benefit upon death remains, modern policies provide more options for the savvy-minded. Life Insurance is not typically seen as an investment vehicle, nor is it defined as one. It is a smart way to route some of your income and develop, in some cases, a tax-free source of income for you and your family.</p>
+                <p><a href="/about-us/contact-us" class="btn btn-primary">Contact us for a Quote</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Term Life vs Whole Life Section -->
+        <div class="row mb-4" [hidden]="!showTermVsWhole">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Term Life vs. Whole Life
+              </div>
+              <div class="card-body">
+                <img src="/assets/life-insurance-policy-terms-use-concept.jpg" />
+                <h5>Term Life Insurance</h5>
+                <p>A Term Life Insurance policy is the lowest cost option. It provides a specific death benefit which will pay out if you die within a specific number of years. These policies have clearly outlined limitations, including what type of occupations, hobbies, and health risks would void the policy. Once the policy has been approved, it cannot be terminated except for a lack of premium payment, until the 10, 20, or 30 year term is over. Term Life policies tend to favor the young; the older you get, the riskier it is for an insurance company to cover you. Term policies will typically end by the time the policyholder is in their 70s.</p>
+                <p>While we cannot predict our lifespan, we can mitigate the risks. A policyholder in Southern California purchased a million-dollar Term Life policy at an affordable rate while in her late 40s. She selected a ten-year term period, which means that the policy would expire after ten years. Two years later, she was diagnosed with cancer and passed away unexpectedly within 9 months of her diagnosis, leaving behind her three young children. This policy allowed her children to keep her home and make it through this painful experience without putting the family in dire financial straits. Life insurance proves its value when the unexpected takes place.</p>
+                <h5>Whole Life Insurance</h5>
+                <p>A Whole Life Insurance policy offers two main advantages that differentiate it from a Term Life policy: Flexibility and Cash Value Accrual.</p>
+                <p>Whole Life policies provide a death benefit, just as Term Life policies do. If you had a $200,000 Whole Life policy, this would mean that your death benefit is $200,000. However, unlike a Term Life policy, there is no termination date for the policy, meaning that this type of life insurance guarantees a benefit to your surviving family, even after you cross the hundred-year mark in age.</p>
+                <p>Whole Life policies accrue cash value from the premiums you pay in the form of dividends or interest. So as the years pass, the total worth of your policy (the death benefit plus the added cash value) may significantly increase.</p>
+                <p>Perhaps you opened a Whole Life policy while you were employed, but years later, you lost your job and have no means to continue paying for your policy. Unlike Term policies, which will terminate if you default on payments, a Whole Life policy will begin tapping into your accrued cash value in order to make your premium payments.</p>
+                <p>Further, you can withdraw the cash value of your Whole Life policy or use it as collateral if you were to apply for a loan. This flexibility makes a Whole Life policy a very attractive financial vehicle as you prepare for retirement.</p>
+                <p>Whole Life policies also typically include an added feature that allows you to utilize your death benefit if you have been incapacitated or have been diagnosed with a terminal illness.</p>
+                <p><a href="/about-us/contact-us" class="btn btn-primary">Get a Quote for Life Insurance</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Riders Section -->
+        <div class="row mb-4" [hidden]="!showRiders">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Riders
+              </div>
+              <div class="card-body">
+                <img src="/assets/studying-details-happy-concentrated-old-couple-sitting-home-discussing-contract-with-real-estate-agent-while-exchanging-opinions.jpg" />
+                <p>The beauty of life insurance is that, depending on your policy, you can include features that address important scenarios.</p>
+                <h5>Accelerated Death Benefit</h5>
+                <p>Say you have been diagnosed with a terminal illness which leaves you incapacitated and unable to work. A life insurance policy that only pays out when you pass is not going to help you. An Accelerated Death Benefit addresses this by providing you or your beneficiaries with a payout to cover your costs, as if you had already passed away.</p>
+                <h5>Child Policy Rider</h5>
+                <p>While you may have bought the policy for yourself, it is deeply uncomfortable to consider the possibility of our children passing away before us. A Child Policy Rider would provide you with funding to pay for expenses if your child were to pass away.</p>
+                <h5>Loans</h5>
+                <p>Many whole life insurance policies also include the option for you to borrow against your policy as collateral. Your life insurance policy is only as strong as it is funded with your premiums. Let’s say you have accumulated a cash value of $20,000. In this scenario, you could borrow this $20,000 from your life insurance policy at a low-interest rate if you are in desperate circumstances. It will however be important that you pay it back or else your policy can default.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Final Expense Policies Section -->
+        <div class="row mb-4" id="FinalExpensePolicies" [hidden]="!showFinalExpense">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Final Expense Policies
+              </div>
+              <div class="card-body">
+                <img src="/assets/focused-greyhaired-elderly-man-sit-couch-reading-bank-notifications-calculating-domestic-expenditures-concentrated-modern-mature-male-consider-financial-paperwork-pay-bills-laptop-online.jpg" />
+                <p>Final Expense Policies are small life insurance policies with a lower premium.</p>
+                <p>For some seniors on a fixed income that wish to avoid leaving a burden for their surviving family, a Final Expense life insurance policy may be the answer. Due to age, seniors will typically not be approved for a Term Life policy, and Whole Life may be cost prohibitive. Consider the following factors when choosing your Final Expense policy:</p>
+                <ul>
+                  <li>Funeral service</li>
+                  <li>Cemetery plot and headstone</li>
+                  <li>Cost of casket</li>
+                  <li>Funeral procession</li>
+                  <li>Travel expenses</li>
+                </ul>
+                <p>The average cost for all funeral expenses combined ranges between $15,000 – $20,000. But many seniors lack the accrued savings to cover these expenses. Final Expense policies are small life insurance policies that are designed specifically for this scenario.</p>
+                <p><a href="/about-us/contact-us" class="btn btn-primary">Get a Quote for a Final Expense Policy</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How Much Life Insurance Is Enough Section -->
+        <div class="row mb-4" [hidden]="!showHowMuchIsEnough">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                How Much Life Insurance Is Enough?
+              </div>
+              <div class="card-body">
+                <img src="/assets/adult-with-loths-money.jpg" />
+                <p>It’s important to consider how much life insurance you will need in order to pay off your debts if you were to pass away unexpectedly. Consider three factors when determining the size of your policy.</p>
+                <ol>
+                  <li><strong>Current Debt:</strong> If you add up your outstanding loans, including mortgage, credit cards, and car payments, how much would you need to pay these off in full? Add this amount to the next factor.</li>
+                  <li><strong>Income Replacement:</strong> How will your family survive without your income? Over what crucial period of time would your family, particularly your children, benefit most from your financial support? Consider a policy that includes ten years’ of your existing income.</li>
+                  <li><strong>Future Obligations:</strong> Do you wish to pay for your children’s college tuition? Wedding? Down payment on a home?</li>
+                </ol>
+                <p>These factors will be essential to prepare you to find the right policy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,72 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Industry News
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showLatestUpdatesSection && !showMarketTrendsSection }">
+              <a href="/for-providers/news?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showLatestUpdatesSection }">
+              <a href="/for-providers/news?numbers=1">Latest Updates</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showMarketTrendsSection }">
+              <a href="/for-providers/news?numbers=2">Market Trends</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showLatestUpdatesSection && !showMarketTrendsSection">
+          <div class="container">
+            <h2 class="display-4">Industry News</h2>
+            <p class="lead">Stay updated with the latest news and trends in the healthcare industry.</p>
+          </div>
+        </div>
+
+        <!-- News Section -->
+        <div class="row mb-4 justify-content-start" [hidden]="!showLatestUpdatesSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Latest Updates
+              </div>
+              <div class="card-body">
+                <p>Stay updated with the latest news and trends in the healthcare industry. From policy changes to technological advancements, we provide you with timely information to help you stay ahead in your practice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Market Trends Section -->
+        <div class="row mb-4" [hidden]="!showMarketTrendsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Market Trends
+              </div>
+              <div class="card-body">
+                <p>Stay ahead by understanding the latest market trends in the healthcare industry. Knowledge of market dynamics can help you make informed decisions and strategically plan for the future of your practice.</p>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Shifts in patient demographics and needs</li>
+                  <li class="list-group-item">Trends in healthcare spending and investments</li>
+                  <li class="list-group-item">Emerging healthcare business models</li>
+                  <li class="list-group-item">Impact of global health events on the industry</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

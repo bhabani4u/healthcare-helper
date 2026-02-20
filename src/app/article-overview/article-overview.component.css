@@ -1,0 +1,25 @@
+.custom-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.custom-card img {
+  max-width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+.custom-card h5 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+.custom-card p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+.custom-card a {
+  text-decoration: none;
+  color: #007bff;
+}
+.custom-card a:hover {
+  text-decoration: underline;
+}

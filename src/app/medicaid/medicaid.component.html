@@ -1,0 +1,145 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Medicaid Information
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showEligibilityEnrollment && !showBaseBenefits && !showExpandedBenefits && !showCombinedBenefits && !showMedicareAdvantage }">
+                <a href="/for-patients/medicaid?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showEligibilityEnrollment }">
+                <a href="/for-patients/medicaid?numbers=1">Medicaid Eligibility & Enrollment</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showBaseBenefits }">
+                <a href="/for-patients/medicaid?numbers=2">Base Medicaid Benefits</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showExpandedBenefits }">
+                <a href="/for-patients/medicaid?numbers=4">Expanded Medicaid Benefits</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showCombinedBenefits }">
+                <a href="/for-patients/medicaid?numbers=8">Medicaid and Medicare Combined</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showMedicareAdvantage }">
+                <a href="/for-patients/medicaid?numbers=16">Medicare & Medicare Advantage</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+<div class="container m-0">
+  <!-- Hero Section -->
+  <div class="jumbotron jumbotron-fluid" *ngIf="!showEligibilityEnrollment && !showBaseBenefits && !showExpandedBenefits && !showCombinedBenefits && !showMedicareAdvantage">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-12">
+          <h2 class="display-4">Medicaid</h2>
+          <p class="lead">Understanding Medicaid Eligibility and Benefits.</p>
+          <img src="/assets/high-five-my-little-brave-patient.jpg" />
+        </div>
+        <div class="col-lg-12">
+          <p>Medicare is a Federal program for seniors and the disabled. Medicaid is a State program for those near the Federal Poverty Level, and includes coverage for pregnant women, people with disabilities, and children. Every state has its own unique version of Medicaid which often goes by a nickname. For instance, in Pennsylvania Medicaid is known as Access while in California it is called Medi-Cal.</p>
+          <p>Enrollment into Medicaid provides a safety net for individuals under 65 that do not have other health insurance. If an individual has another form of health care insurance, they will not qualify to retain their Medicaid. For those over 65 years old, Medicaid also supplements the coverage provided by Medicare.</p>
+          <p>Qualifying for Medicaid is based on Federal Poverty Level guidelines. If you believe you or your family may qualify for Medicaid, please contact your local county health office to apply.</p>
+          <p>Individuals who earn above the Federal Poverty Level may still qualify for partial Medicaid, which means their coverage may be restricted with a deductible they must pay in order for Medicaid to be active. It could also limit participation in some of the additional plans offered by Medicaid.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Medicaid Eligibility & Enrollment Section -->
+  <div class="row mb-4" *ngIf="showEligibilityEnrollment">
+    <img src="/assets/realistic-scene-with-elderly-care-senior-people.jpg" />
+    <p>Medicaid is offered to individuals of all age, with programs specific to each County and each state. For most adults, the criteria for Medicaid is a financial one; if you fall at or around the Federal Poverty Line, you will qualify for Medicaid. However, because this is insurance offered by the State, you must submit paperwork every year in order to keep your Medicaid active. Failure to do so will result in your Medicaid terminating.</p>
+    <p>All children under the age of 18, and pregnant mothers are automatically eligible for Medicaid as well.</p>
+    <p>Because Medicaid is administered differently by each state and each county, you must contact your local County office to apply. You may apply in-person, or online. Applications may take months to be approved, but they typically may cover costs incurred retroactively.</p>
+    <p>Once enrolled into Medicaid, a private insurance company may be assigned to administer your Medicaid and manage all of the billing. They may assign you to a primary care physician and a medical network. Not all doctors accept Medicaid, and not all costs are covered by Medicaid. Be sure to get clarity on the following questions before using your coverage:</p>
+    <p>"Do I have an insurance company assigned to administer my Medicaid?"</p>
+    <p>"Do I have a Medical Network I must go through for care?"</p>
+    <p>"How can I be sure my (tests/procedure/doctor visit/surgery) will be covered by Medicaid?"</p>
+  </div>
+
+  <!-- Base Medicaid Benefits Section -->
+  <div class="row mb-4" *ngIf="showBaseBenefits">
+    <div class="col-lg-12">
+      <div class="card full-width m-0">
+        <div class="card-header bg-primary text-white">
+          Base Medicaid Benefits
+        </div>
+        <div class="card-body">
+          <img src="/assets/father-holding-his-son-park.jpg" />
+          <p>Benefits of Medicaid vary by state but generally include the following:</p>
+          <ul>
+            <li>Doctor Visits</li>
+            <li>Hospitalization</li>
+            <li>Prescription Drugs</li>
+            <li>Dental & Vision coverage</li>
+          </ul>
+          <p>As a state funded program, there are limitations compared to what private health insurance offers. Medicaid is also requiring that members enroll in a Managed Care Plan, which is roughly equivalent to HMO coverage. The network of doctors you are able to see, and the hospital you can visit will be limited to those providers that accept Medicaid patients. There is also less flexibility as to which prescription drugs are covered, and what dental procedures are approved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Expanded Medicaid Benefits Section -->
+  <div class="row mb-4" *ngIf="showExpandedBenefits">
+    <div class="col-lg-12">
+      <div class="card full-width m-0">
+        <div class="card-header bg-primary text-white">
+          Expanded Medicaid Benefits
+        </div>
+        <div class="card-body">
+          <img src="/assets/embracing-patient-smiling-adult.jpg" />
+          <p>Those individuals who qualify for Medicaid are at or near the Federal Poverty Level, which is often associated with a lack of healthy food options, poor nutrition, lack of transportation, potential behavioral health or physical health issues, as well as a greater risk of homelessness and repeat hospitalization for chronic health conditions such as diabetes or heart failure. As a result, there are additional benefits some individuals may qualify to receive.</p>
+          <h5>Assisted Living and Rental Assistance</h5>
+          <p>To combat the risk of homelessness, some Medicaid programs offer to provide limited rental assistance to pay for a deposit and first month’s rent. Additionally, there are Assisted Living Facilities, including Senior Housing Facilities, which require that their residents are enrolled into Medicaid.</p>
+          <h5>In-Home Support Services</h5>
+          <p>Long-term care is typically provided by family members for most Americans. But what do you do when your family member suffers from so many health conditions that it becomes nearly a full-time job to assist them? Do you quit your work or limit your hours? In-Home Support Services (IHSS) provides funding to pay for a worker to assist the recipient with Activities of Daily Living, which include Bathing, Dressing, Eating, Transferring, and Toileting.</p>
+          <h5>Case Management</h5>
+          <p>Public Programs are often underfunded and complicated by design, which sets the barrier to entry quite high. To access any number of expanded Medicaid benefits, an individual must understand the system and be persistent in order to ensure their requests do not fall through the cracks. Medicaid can assign a case manager to a recipient, and while this does not guarantee speedy resolutions, a case manager can provide some assistance in gaining access to the needed programs.</p>
+          <h5>Transportation, Home Safety Modifications, and Home Health Care</h5>
+          <p>Individuals on Medicaid may require special adaptations in order to live with dignity. This may include access to basic or specialized transportation for their medical appointment, ramps and safety bars to prevent falls in their home, and visits by nurses or doctors to their home in order to receive medical care.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Medicaid and Medicare Combined Section -->
+  <div class="row mb-4" *ngIf="showCombinedBenefits">
+    <div class="col-lg-12">
+      <div class="card full-width m-0">
+        <div class="card-header bg-primary text-white">
+          Medicaid and Medicare Combined
+        </div>
+        <div class="card-body">
+          <img src="/assets/grandfather-with-wheelchair-assisted-by-nurse-outdoor-senior-man-young-caregiver-park.jpg" />
+          <p>Medicaid is a State Program, in contrast to Medicare. While qualifications vary, Medicaid may cover 20% of your costs while Original Medicare will cover 80%.</p>
+          <p>Individuals who are eligible for Medicare and qualify for Medicaid are known by the term, Medi-Medi.</p>
+          <p>When an individual possesses both Medicare and Medicaid, this means that Medicare will cover the bulk of their healthcare costs and Medicaid may pick up the tab. At one time, Medi-Medi individuals had the ability to see any doctor they wanted without being tied to a network. This is no longer the case in some states.</p>
+          <p>For example, California’s Medi-Cal now requires patients to be enrolled into a Managed Care Plan, which is essentially an HMO. Medi-Medi patients are now required to get their care through a network provider, the same as they would in a Medicare Advantage plan. This has taken away the primary reason that some Medi-Medi patients have sought to avoid Medicare Advantage.</p>
+          <p>Medi-Medi individuals are our most vulnerable population. Poverty is strongly linked with chronic health problems such as diabetes and heart disease, a poor diet, lack of access to quality food, and lack of quality education. These individuals, struggling with financial difficulties and seeking promises of greater healthcare, are highly sought after by salespeople because they are easier to persuade to change their plan, earning a commission for the salesperson.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Medicare & Medicare Advantage Section -->
+  <div class="row mb-4" *ngIf="showMedicareAdvantage">
+    <div class="col-lg-12">
+      <div class="card full-width m-0">
+        <div class="card-header bg-primary text-white">
+          Medicare & Medicare Advantage
+        </div>
+        <div class="card-body">
+          <img src="/assets/asian-careful-caregiver-nurse-happy-patient-wheelchair-are-walking-garden-concept-happy-retirement-with-care-from-caregiver-savings-senior-health-insurance.jpg" />
+          <p>While it is entirely fine to retain Original Medicare and Medicaid so you have more flexibility on which doctors you see, the reality is that this can be counterproductive to your health. This is because there is no managed care system that is monitoring your healthcare; it is only you and your doctor. If your doctor fails to detect an illness early, this could lead to greater health risks.</p>
+          <p>Some Medicare Advantage (Part C) plans are designed specifically for individuals on Medicaid. They include a clinical team that is proactively looking at your health records in order to ensure you do not get sicker. And they provide additional funding, above what typical Medicare Advantage members can receive, in order to improve your health.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div></div></div>

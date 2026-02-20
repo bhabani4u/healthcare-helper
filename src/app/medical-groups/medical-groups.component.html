@@ -1,0 +1,92 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Medical Groups
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showAgentKnowledgeSection && !showUtilizeAgentSection && !showNewsSection }">
+                <a href="/for-providers/medical-groups?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showAgentKnowledgeSection }">
+                <a href="/for-providers/medical-groups?numbers=1">What a Good Agent Should Know</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showUtilizeAgentSection }">
+                <a href="/for-providers/medical-groups?numbers=2">How to Utilize an Agent</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showAgentKnowledgeSection && !showUtilizeAgentSection && !showNewsSection">
+          <div class="container">
+            <div class="col-lg-12">
+              <h2 class="display-4">Medical Groups</h2>
+              <p class="lead">Strategies and insights for navigating the challenges faced by medical groups today.</p>
+              <div class="card full-width m-0">
+                <div class="card-header bg-primary text-white">
+                  Industry Challenges
+                </div>
+                <div class="card-body">
+                  <img src="/assets/covid-19-frontline-healthcare-essential-workers.jpg" />
+                  <p>With the industry continuing its aggressive consolidation, and CMS raising the bar on health outcomes - thus reducing revenue - medical groups are feeling the pressure from both sides. Providers have been saturated by groups, and lists exhausted for conversion, resulting in limited growth. Once patients get themselves settled and established in a group, it is unlikely they will change unless faced with disruption. We are just a few years away from peak MAPD adoption, which means growth will also continue to wane. Further, with limited time to personally visit providers, developing and maintaining a mutual loyalty and personal trust can be challenging for any group, further impeding network growth.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- What a Good Agent Should Know Section -->
+        <div class="row mb-4" [hidden]="!showAgentKnowledgeSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                What a Good Agent Should Know
+              </div>
+              <div class="card-body">
+                <img src="/assets/young-smiling-guy-aged-man-with-cups-room.jpg" />
+                <p>The reality is that there is not one surefire path to development. All growth is painstaking. And all enduring growth comes from timeless and unglamorous behavior such as honesty, prompt communication, sincerity, and competence. A good agent will put in the hard work without complaint and will be effective in their campaigns.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to Utilize an Agent Section -->
+        <div class="row mb-4" [hidden]="!showUtilizeAgentSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                How to Utilize an Agent
+              </div>
+              <div class="card-body">
+                <img src="/assets/close-up-senior-couple-while-learning.jpg" />
+                <p>The most effective agents gain their sales through trust, and not through direct selling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- News Section -->
+        <!-- <div class="row mb-4" [hidden]="!showNewsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                News
+              </div>
+              <div class="card-body">
+                <p>Coming soon</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+

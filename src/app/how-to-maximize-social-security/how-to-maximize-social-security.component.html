@@ -1,0 +1,308 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          How to Maximize Social Security
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showImportantConsiderations && !showOtherHealthcare && !showRetirementAgeMilestones && !showRetirementFactorsToConsider && !showSurvivingSpouseBenefits }">
+                <a href="/planning-your-retirement/how-to-maximize-social-security?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showImportantConsiderations }">
+                <a href="/planning-your-retirement/how-to-maximize-social-security?numbers=1">Important Considerations</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showOtherHealthcare }">
+                <a href="/planning-your-retirement/how-to-maximize-social-security?numbers=2">Retirement Ages & Income</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showRetirementAgeMilestones }">
+                <a href="/planning-your-retirement/how-to-maximize-social-security?numbers=4">Retirement Age Milestones</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showRetirementFactorsToConsider }">
+                <a href="/planning-your-retirement/how-to-maximize-social-security?numbers=8">Retirement Factors To Consider</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showSurvivingSpouseBenefits }">
+                <a href="/planning-your-retirement/how-to-maximize-social-security?numbers=16">Surviving Spouse Benefits</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid"
+          *ngIf="!showImportantConsiderations && !showOtherHealthcare && !showRetirementAgeMilestones && !showRetirementFactorsToConsider && !showSurvivingSpouseBenefits">
+          <div class="container">
+            <h2 class="display-4">How to Maximize Social Security</h2>
+            <p class="lead">There are ways to Maximize Social Security.</p>
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                How to Maximize Social Security
+              </div>
+              <div class="card-body">
+                <img src="/assets/affectionate-senior-couple-showing-love-towards-each-other.jpg" />
+                <p>In planning for your retirement, you need to know what your projected future expenses will be, how
+                  you will fund these expenses, and what your timing will be for each program.</p>
+                <p>Data is critical in all of these considerations. Creating a retirement plan for yourself and your
+                  spouse requires that you consider your <a target="_blank"
+                    href="https://www.ssa.gov/benefits/retirement/planner/agereduction.html">life expectancy</a>,
+                  calculate your <a target="_blank" href="https://www.ssa.gov/benefits/calculators/">Social Security
+                    benefits</a> amount in addition to your other forms of income, determine what form your Medicare
+                  will take, and what costs you will expect to pay, and finally, calculate all current expenses in order
+                  to budget properly.</p>
+                <p>For most retirees, Social Security Retirement Income is the largest source of retirement income. But
+                  Social Security will not tell you which retirement option to take, nor which will provide the greatest
+                  payout. You must know in advance before you begin your Social Security retirement in order to make the
+                  right financial decision. Healthcare Helper uses propriety software to help you accurately project and
+                  maximize your Social Security retirement.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Important Considerations Section -->
+        <div class="row mb-4" *ngIf="showImportantConsiderations">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Important Considerations
+              </div>
+              <div class="card-body">
+                <img src="/assets/retirement-plan-with-banknote-glasses-pen.jpg" />
+                <p>Social Security is the primary source of income for most retirees today. With traditional pensions
+                  declining and seniors living decades longer than previous generations, we are undergoing an aging in
+                  society that we have yet to manage properly both from a health and financial standpoint. One of the most
+                  important questions you must ask yourself is, “when should I begin to collect my Social Security
+                  Retirement?” Should you wait until you can receive full retirement benefits before collecting? Are you
+                  eligible to collect, based on your spouse’s income? Or will your own retirement benefit be higher?</p>
+                <p>As of {{currentYear}}, the Full Retirement Age is 67 years old for people born in 1960. The Early Retirement Age
+                  is 62 years old. The Delayed Retirement Age is 70. There is a dramatic financial difference between
+                  taking Social Security at age 62 compared to age 70.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Retirement Ages & Income Section -->
+        <div class="row mb-4" *ngIf="showOtherHealthcare">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Retirement Ages & Income
+              </div>
+              <div class="card-body">
+                <img src="/assets/medium-shot-smiley-couple-outside.jpg" />
+              <p>Simply put, the earlier you begin collecting your Social Security Retirement, the less money you will
+                collect over the course of your life. The longer you wait to collect Social Security Retirement, the
+                more money you will collect over the course of your life. This assumes you live into your 80’s, which is
+                very likely.</p>
+              <p>Once you begin collecting Social Security Benefits, the amount you receive is essentially permanent,
+                minus a Cost of Living Allowance each year, and a slight adjustment that may take place if you continue
+                to work after retiring.</p>
+              <p>There are three Social Security retirement milestones you must consider:</p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Retirement Classification</th>
+                    <th>If a worker claims retirement benefits at age…</th>
+                    <th>His/her benefits will be…</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Early Retirement Age</td>
+                    <td>62</td>
+                    <td>30% lower</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>63</td>
+                    <td>25% lower</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>64</td>
+                    <td>20% lower</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>65</td>
+                    <td>13.3% lower</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>66</td>
+                    <td>6.7% lower</td>
+                  </tr>
+                  <tr>
+                    <td>Full Retirement Age</td>
+                    <td>67</td>
+                    <td>No Change</td>
+                  </tr>
+                  <tr>
+                    <td>Delayed Retirement Age</td>
+                    <td>68</td>
+                    <td>8% higher</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>69</td>
+                    <td>16% higher</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>70</td>
+                    <td>24% higher</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p><small>* Assume a worker’s FRA is 67; actual reduction is 5/9 of 1 percent for each of the first 36
+                  months, plus 5/12 of 1 percent for each month beyond 36 months. (Social Security Administration,
+                  Effect of Early or Delayed Retirement Benefits.)</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Retirement Age Milestones Section -->
+        <div class="row mb-4" *ngIf="showRetirementAgeMilestones">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Retirement Age Milestones
+              </div>
+              <div class="card-body">
+                <img src="/assets/seniors-reviewing-their-retirement-plan-budget-surrounded-by-bills-financial-statements.jpg" />
+                <h5>Early Retirement Age (ERA)</h5>
+              <p>1/3 of retirees claim their benefits early (at age 62), opting for a permanently lower retirement
+                income. They may decide this after carefully considering their own life span and need for Social
+                Security income as early as possible. As seen below, the permanent reduction in income can be
+                significant if you take Social Security benefits early:</p>
+              <p>It is possible to retire early while not taking a permanent hit to your social security payments. For
+                those that retire early but continue to receive employment income, they must be subject to an Earnings
+                Test, which will temporarily decrease your Social Security payments until you stop earning an employment
+                income.</p>
+
+              <h5>Full Retirement Age (FRA)</h5>
+              <p>Full Retirement Age (age 67) is when you are entitled to 100% of your factored retirement income, which
+                you will receive in perpetuity for the rest of your life. Your Full Retirement Income is calculated by
+                looking back throughout your entire working career, taking your 35 highest earning years, and
+                calculating your retirement income from there. For the self-employed take note! If you are depending on
+                your Social Security income, yet you are able to write off most of your business expenses and pay lower
+                income taxes as a result, this will adversely affect your retirement income.</p>
+
+              <h5>Delayed Retirement Age (DRA)</h5>
+              <p>Delayed Retirement Age is 70 years old. It may be possible to maximize your retirement income by
+                earning Delayed Retirement Credits. For every year after your Full Retirement Age (age 67) until age 70,
+                you can permanently increase your Full Retirement Age income by 8%, for a total income increase of 24%
+                per paycheck.</p>
+              <p>So which should you choose?</p>
+              <p>Healthcare Helpers offers an in-depth Social Security analysis and will provide you with your report as
+                you begin making the right decisions. Please contact us.</p>
+              <p><a href="/about-us/contact-us" class="btn btn-primary">Contact Us</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Retirement Factors To Consider Section -->
+        <div class="row mb-4" *ngIf="showRetirementFactorsToConsider">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Retirement Factors To Consider
+              </div>
+              <div class="card-body">
+                <img src="/assets/close-up-senior-couple-while-learning (1).jpg" />
+                <p>Your Life Expectancy and your ability to pay your Expenses are the two biggest factors you must
+                  consider when determining when to collect.</p>
+                <h5>Life Expectancy</h5>
+                <p>There are many people who live long lives while also managing long term health issues. So while your
+                  health itself must be considered, it is your life expectancy that matters most when considering when to
+                  collect.</p>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Break-Even Age for Claiming Retirement Benefits</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>62 vs. 67</td>
+                      <td>Between ages 78 and 79</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>62 vs. 70</td>
+                      <td>Between ages 79 and 80</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>67 vs. 70</td>
+                      <td>Between ages 81 and 82</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>In order to benefit from delaying your Social Security Retirement, you must live into your 80’s. If you
+                  do not believe you will be able to live that long, it makes more sense to begin collecting early.</p>
+                <p>If you retire at age 62, while you will receive a lower retirement benefit, you will have a head start
+                  by collecting benefits for five years (or 60 months of benefits) longer than someone who waits until
+                  they are age 67 or older to begin collecting.</p>
+                <p>If you retire at age 67, you will collect 30% more per month than early retirees, but it won’t be until
+                  you are age 78 or 79 before the total amount you have collected matches what early retirees have also
+                  collected. The same goes for those that delay benefits until age 70. Those that will live through their
+                  80s and 90s will therefore collect significantly more during their lifetime than early retirees.</p>
+
+                <h5>Expenses</h5>
+                <p>You can continue to work long after you are eligible for Social Security Retirement. But do you want
+                  to? Or do you need to?</p>
+                <p>There are some who have no choice, and due to injury or health problems you must retire from your job.
+                  This does not necessarily mean that you must collect your Social Security Retirement however. If you can
+                  delay collecting on your Social Security and you expect to live a long life, it pays to delay.</p>
+                <p>But if you are unable to pay for your expenses without relying on your Social Security income, you are
+                  better off taking an early retirement. You can ease some of your financial loss from Early Retirement by
+                  continuing to work. However, this will not necessarily increase your Social Security Retirement
+                  entitlement.</p>
+                <p>Healthcare Helpers offers an in-depth Social Security analysis and will provide you with your report as
+                  you begin making the right decisions. Please contact us.</p>
+                <p><a href="/about-us/contact-us" class="btn btn-primary">Contact Us</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Surviving Spouse Benefits Section -->
+        <div class="row mb-4" *ngIf="showSurvivingSpouseBenefits">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Surviving Spouse Benefits
+              </div>
+              <div class="card-body">
+                <img src="/assets/human-facial-expressions-feelings-emotions-reaction-close-up-beautiful-middle-aged-female-pensioner-with-short-gray-hair-frowning-eyebrows-having-concentrated-serious-look.jpg" />
+                <p>A worker may opt to elect their own Social Security retirement earnings, or the earnings of their
+                  spouse. Social Security calculates your retirement income by factoring in your 35 most profitable
+                  earnings years. If you were self-employed and deducted most of your earnings due to business expenses,
+                  you can expect to receive a reduced retirement income compared to a similarly earning W-2 worker. Or
+                  perhaps you are unable to work but your spouse can. In both scenarios, it is important to assess what
+                  your spouse will earn from his or her Social Security Retirement, and consider which one will provide
+                  the greater payout.</p>
+                <p>You can only elect one Social Security retirement; you are unable to collect on both incomes, and if
+                  you opt to collect on a spouse’s income who later dies, the surviving spouse will only receive their
+                  deceased spouses reduced benefit.</p>
+                <p>Healthcare Helpers offers an in-depth Social Security analysis and will provide you with your report as
+                  you begin making the right decisions. Please contact us.</p>
+                <p><a href="/about-us/contact-us" class="btn btn-primary">Contact Us</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

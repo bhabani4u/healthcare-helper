@@ -1,0 +1,100 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Annuities
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showTypes && !showBenefits }">
+                <a href="/insurance-options/annuities?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showTypes }">
+                <a href="/insurance-options/annuities?numbers=1">Types of Annuities</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showBenefits }">
+                <a href="/insurance-options/annuities?numbers=2">Benefits of Annuitization</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showTypes && !showBenefits">
+          <div class="container">
+            <h2 class="display-4">Annuities</h2>
+            <p class="lead">Secure your financial future with annuities, a self-funded pension plan.</p>
+          </div>
+        </div>
+
+        <!-- Annuities Overview Section -->
+        <div class="row mb-4" *ngIf="!showTypes && !showBenefits">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Annuities Overview
+              </div>
+              <div class="card-body">
+                <img src="/assets/view-man-handling-money-funds-wealth-prosperity (1).jpg" />
+                <p>An annuity is a self-directed pension which will fund you for the rest of your life, provided you place a significant amount of money upfront in order to fund it.</p>
+                <p>Long Term Care is one of the largest significant single costs that an individual can expect to have during their lifetime. Today, there are very few Long Term Care policies that are not hybridized.</p>
+                <p>A Long Term Care/Annuity Hybrid policy combines the financial benefit of long term care with the ability to provide a steady and guaranteed stream of income to you that is guaranteed to outlive you. This type of policy works by providing this income, while also guaranteeing a set amount of additional money that would be paid to you once the long term care aspect of the policy gets triggered.</p>
+                <p>In basic terms, an annuity is a financial instrument that provides a means to accumulate funds for the future and then systematically distribute those funds over a given period. Annuities are issued by insurance companies; their provisions and the rights they convey are set forth in the form of a contract between the owner and the insurance company.</p>
+                <p>With an annuity, the owner deposits money into the contract in the form of premiums. The insurer then invests these funds, which are credited with interest earnings or grow in value in relation to the performance of the investments in which they are deposited. At a certain point in the contract’s life, the insurance company—at the owner’s direction—will convert all or a portion of the contract’s funds into a series of periodic income payments. These payments are calculated actuarially and guaranteed to extend for a certain number of years or for the duration of the owner’s life. This process is annuitization—applying capital to purchase income. By design, annuities can serve as both asset accumulation vehicles and asset distribution vehicles.</p>
+                <p>An annuity is an agreement you make with an insurance company, where you provide them with a lump-sum payment (or a series of payments), and in return, you become eligible to collect on your annuity once you reach the age of 59 ½, at which point the insurance company will begin to provide you with a steady and predictable stream of income for a decade or more, and even through your lifetime.</p>
+                <p><a href="http://www.sec.gov/answers/annuity.htm" target="_blank">Annuities often provide tax-deferred growth</a>, meaning that any earnings on the investment are not taxed until the money is withdrawn. This can be advantageous for retirement planning.</p>
+                <p>Insurance companies invest annuity assets in government securities and high-grade corporate bonds. They offer a guaranteed* rate, typically over a period of one to ten years. Variable annuities provide you more control over where your premium goes, such as securities portfolios, fixed interest accounts, and money market securities.</p>
+                <p><a href="/about-us/contact-us" class="btn btn-primary">Explore Annuity Costs</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Types of Annuities Section -->
+        <div class="row mb-4" [hidden]="!showTypes">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Types of Annuities
+              </div>
+              <div class="card-body">
+                <img src="/assets/full-shot-people-coins.jpg" />
+                <p>There are many different types of annuities. The primary distinctions among these types, and what separates one type of annuity from another, have historically been based on two fundamental factors:</p>
+                <ul>
+                  <li>When the contract is scheduled to convert its funds into a series of income payments: this is the distinction between immediate annuities and deferred annuities</li>
+                  <li>How the contract’s funds are invested, how the funds grow, and how the funds are paid out upon annuitization: this is the distinction between traditional fixed annuities, indexed annuities, and variable annuities</li>
+                </ul>
+                <h5>Immediate Annuities</h5>
+                <p>An Immediate Annuity is an income distribution vehicle. The owner places a large amount of money into the annuity, which then begins to distribute income typically within one month of opening.</p>
+                <h5>Deferred Annuities</h5>
+                <p>In contrast, a Deferred Annuity is an investment vehicle. It accumulates funds on a tax-deferred basis for the long term. Deferred Annuities have an accumulation stage which lasts at least 8-10 years, during which time the initial investment grows before distributions begin.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefits of Annuitization Section -->
+        <div class="row mb-4" [hidden]="!showBenefits">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Benefits of Annuitization
+              </div>
+              <div class="card-body">
+                <img src="/assets/business-confident-man-yacht-generative-ai.jpg" />
+                <p>The primary benefit of annuitization is the guarantee that the income stream will continue and income will be received as long as the owner wishes, which in most retirement planning cases is for life. These payments can be used to generate a “threshold” of income which, in conjunction with other guaranteed income (such as Social Security), will cover the owner’s basic ongoing monthly expenses: mortgage, taxes, utilities, groceries, association dues, etc. Depending on the owner’s investment timeline, this leaves him or her free to invest other assets, perhaps more aggressively, for continued growth, accumulation, and withdrawals.</p>
+                <p>Having a guaranteed income threshold can also create a safety net for the annuity owner in the event that market downturns or unforeseen events jeopardize his or her savings or investments. With a guaranteed income stream, annuitization offers the distinct advantage of peace of mind and security. Because the income stream is guaranteed, it lessens one of the most challenging aspects of retirement income planning: not knowing how long retirement will last.</p>
+                <p><a href="/about-us/contact-us" class="btn btn-primary">Explore Annuity Costs</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,87 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Turning 65?
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showMedicareEnrollment && !showMedicareAndSocialSecurity }">
+                <a href="/planning-your-retirement/turning-65?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showMedicareAndSocialSecurity }">
+                <a href="/planning-your-retirement/turning-65?numbers=1">Still Working?</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showMedicareEnrollment }">
+                <a href="/planning-your-retirement/turning-65?numbers=2">Medicare Enrollment</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showMedicareEnrollment && !showMedicareAndSocialSecurity">
+          <div class="container">
+            <h2 class="display-4">Maximize Your Social Security Retirement</h2>
+            <p class="lead">Plan for your future with the right Medicare and Social Security decisions.</p>
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Turning 65?
+              </div>
+              <div class="card-body">
+                <img src="/assets/turning-65-retirement.jpg" />
+                <p>The first thing you must determine is whether you will apply for Medicare the moment you turn 65, or if you will defer your Medicare until a future date because you receive coverage elsewhere, such as a company health plan. If you are in a private insurance plan, such as through the Affordable Care Act, Medicare will not allow you to defer enrollment into Medicare. If you are uncertain about your timing for enrollment, speak to your trusted agent.</p>
+                <p>Once you have decided to enroll into Medicare, it is advised that you do it at least two months prior to the date you want it to start. Social Security may take 2-3 months to put your Medicare into effect.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4" *ngIf="showMedicareAndSocialSecurity">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Still Working?
+              </div>
+              <div class="card-body">
+                <img src="/assets/indoor-shot-unhappy-sad-senior-bearded-male-entrepreneur-sitting-desk-with-laptop-papers-having-depressed-facial-expression-frustrated-with-financial-problems-holding-hands-his-chin.jpg" />
+                <p class="lead">Learn about healthcare and retirement options while continuing to work.</p>
+                <p>You can enroll in Medicare at age 65 while you continue to work. You can also enroll in Medicare
+                  without applying for Social Security benefits.</p>
+                <p>To maximize your Social Security benefits, you may prefer to wait until age 70 before retiring. While
+                  Social Security will allow you to begin receiving benefits at age 62, the longer you delay receiving
+                  benefits, the larger your monthly benefit will be. Currently, the longest you may wait to maximize
+                  your
+                  benefits is age 70.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medicare Enrollment Section -->
+        <div class="row mb-4" *ngIf="showMedicareEnrollment">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Medicare Enrollment
+              </div>
+              <div class="card-body">
+                <img style="width: 100%;" src="/assets/turning-65.png" alt="Retirement Planning" class="img-fluid mt-3">
+                <p>Enrollment is fairly simple. You can enroll two different ways:</p>
+                <ol>
+                  <li><strong>Call Social Security to schedule an appointment</strong><br>
+                    <a href="tel:800-772-1213">800-772-1213</a></li>
+                  <li><strong>Sign up at <a href="https://www.ssa.gov" target="_blank">ssa.gov</a></strong></li>
+                </ol>
+                <p>Once you create an account at <a href="https://www.ssa.gov" target="_blank">ssa.gov</a>, you can select to enroll in Medicare Part A (Hospital coverage) at no cost. If you plan to continue receiving healthcare from another source, such as the VA or your employer, you do not have to sign up for Medicare Part B (Medical coverage).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

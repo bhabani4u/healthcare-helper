@@ -1,0 +1,23 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          For Patients
+        </div>
+        <div class="card-body">
+          <p>Welcome to the For Patients section. Here you will find various resources and information tailored for patients.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/for-patients/medical-industry-overview">Medical Industry Overview</a></li>
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/for-patients/medicare">Medicare</a></li>
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/insurance-options/medicare">Medicaid</a></li>
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/for-patients/individual-family-health-insurance">Individual & Family Health Insurance</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

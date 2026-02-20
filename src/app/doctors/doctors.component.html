@@ -1,0 +1,178 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Doctors
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showAgentKnowledgeSection && !showAgentPracticeSection && !showRetentionDevelopmentSection && !showFFSManagedCareSection && !showIPADoctorsSection && !showStaffDoctorsSection && !showPharmacySection && !showBehavioralHealthSection }">
+                <a href="/for-providers/doctors?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showAgentKnowledgeSection }">
+                <a href="/for-providers/doctors?numbers=1">What a Good Agent Should Know</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showAgentPracticeSection }">
+                <a href="/for-providers/doctors?numbers=2">What a Good Agent Should Do for Your Practice</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showRetentionDevelopmentSection }">
+                <a href="/for-providers/doctors?numbers=4">Retention & Professional Development</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showFFSManagedCareSection }">
+                <a href="/for-providers/doctors?numbers=8">FFS vs Managed Care</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showIPADoctorsSection }">
+                <a href="/for-providers/doctors?numbers=16">IPA Doctors</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showPharmacySection }">
+                <a href="/for-providers/doctors?numbers=64">Pharmacy</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showAgentKnowledgeSection && !showAgentPracticeSection && !showRetentionDevelopmentSection && !showFFSManagedCareSection && !showIPADoctorsSection && !showPharmacySection && !showBehavioralHealthSection">
+          <div class="container p-0">
+            <div class="col-lg-12">
+              <h2 class="display-4">Doctors</h2>
+              <div class="card full-width m-0">
+                <div class="card-header bg-primary text-white">
+                  Doctors
+                </div>
+                <div class="card-body">
+                  <img src="/assets/side-view-doctor-explaining-radiography.jpg" />
+                  <p>Doctors today face headwinds in a medical landscape quite different from just one generation ago. The medical industry is consolidating more rapidly, making it hard for independent providers to maintain a lucrative practice. The staff model continues to be the path taken by new doctors.</p>
+                  <p>Nevertheless, providers with a solid financial footing and sound business management continue to thrive. With disruption comes opportunity, as the saying goes, and there is significant opportunity for savvy providers to capitalize on the changes taking place within the industry. An important component of your team is a good agent.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- What a Good Agent Should Know Section -->
+        <div class="row mb-4" [hidden]="!showAgentKnowledgeSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                What a Good Agent Should Know
+              </div>
+              <div class="card-body">
+                <img src="/assets/person-presenting-information-meeting-white-board.jpg" />
+                <p>The barriers to entry for insurance agents are low, resulting in a high number of poorly trained and poorly educated sales agents whose primary objective is to meet sales targets and earn commission. These agents typically sell based on insurance plan marketing, which provide individuals with a deep sense of assurance that is never borne out of reality.</p>
+                <p>A good agent will have a deep grasp of the internal workings of both insurance carriers and medical groups because this agent operates at the nexus between both. If you ask your agent to create a marketing plan to increase lives, they should be able to identify where to leverage resources and have experience with negotiations.</p>
+                <p>For practices with an open panel, a customized marketing strategy is important, which may include mailers, public speaking engagements, flyers, and leveraging strategic relationships to funnel new patients into the practice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- What a Good Agent Should Do for Your Practice Section -->
+        <div class="row mb-4" [hidden]="!showAgentPracticeSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                What a Good Agent Should Do for Your Practice
+              </div>
+              <div class="card-body">
+                <img src="/assets/young-man-working-office.jpg" />
+                <p>An agent is an extension to your practice and should be utilized to handle all insurance related issues, big or small. As much as agents or agencies promise a windfall of new patients on a monthly basis, the truth is this never happens. 70% of patients are satisfied with their primary care doctors. This number goes up to 83% for seniors in Medicare Advantage plans. For an agent to pull new members into your practice – that stick – that agent must be operating at such a high volume that they do not need to work closely with you. Put another way, for every 100 enrollments an agent makes, perhaps 17 will be willing to change their doctor. If that agent operates over a broad geographic region, how likely is it that they will all be located around your practice?</p>
+                <p>The best agents will accumulate between 100-200 new enrollments per year, spanning several different marketing strategies. On average, a competent agent may enroll about 100 individuals annually.</p>
+                <p>The more accurate way to frame your relationship with your agent is to develop the mutual trust whereby all insurance-related issues can get handled by your agent, resulting in freed up staff time, quick patient resolution, high retention, and therefore improved HEDIS measure.</p>
+                <p>Successful brokers by nature must be capable in a wide array of skills, and in particular: Operational Efficiency, Relationship Management, and Marketing and Communications.</p>
+                <p>Operational Efficiency. It takes about five years for a broker to really understand the scope of their job, as complex as it is. To succeed as a broker requires high enrollment volume, which can only come through their ability to navigate the many pitfalls that lead members to disenroll and look elsewhere for insurance help.</p>
+                <h5>Relationship Management</h5>
+                <p>Former Secretary of State George Shultz' favorite motto was, "Trust is the coin of the realm." Nothing meaningful can last without trust.</p>
+                <p>For an agent to succeed therefore, he or she must be enduringly trustworthy, both so you know that your members are in good hands, and your members see the agent as an extension to your practice.</p>
+                <h5>Marketing & Communications</h5>
+                <p>With the ability to gain trust from others, and a proven capability to handle volume, a good broker will have relationships with insurance carrier representatives and medical group managers who will be willing to  collaborate with in order to increase their footprint and draw in new membership.</p>
+                <p>Altogether, an agent with these skills will be able to help providers by offering Professional Development to staff, propose an effective retention program for existing lives, and advance a strategy to bring in new lives.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Retention & Professional Development Section -->
+        <div class="row mb-4" [hidden]="!showRetentionDevelopmentSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Retention & Professional Development
+              </div>
+              <div class="card-body">
+                <img src="/assets/young-female-healthcare-student-blue-scrubs-holding-tablet-with-stethoscope-around-her-neck-standing-hospital-corridor-with-other-healthcare-workers-background.jpg" />
+                <h5>Retention</h5>
+                <p>With tens of thousands of charts over the span of your career, it becomes impossible to provide adequate attention to all lives in a practice. Those patients who are most loyal will never leave, but those who have never developed a strong bond of trust will quickly be transferred to a new doctor the moment they change their insurance plan. Annual patient attrition rate averages 17%. It is therefore far less costly to engage in a retention strategy than to always seek to fill this loss.</p>
+                <p>To address this, a retention strategy needs to be created which will allow for regular engagement with your patients in order to remind them of the value you bring to their lives and ensure that any insurance changes they wish to make be vetted by your insurance specialist. There are many ways to engage patients which do not require much of your time. Doing this will reduce your attrition rate below 10%.</p>
+                <h5>Staff Professional Development</h5>
+                <p>Hiring and maintaining good medical staff is a challenge everywhere. Compounding this challenge is the need to educate staff on proper ways to triage issues. The reality is most medical staff and even doctors have extremely limited understanding of how insurance works. An insurance agent should be able to provide clear and simple professional development to staff in order to quickly resolve insurance problems and get back to the many tasks at hand.</p>
+                <p>A good agent should be able to implement these strategies quickly and efficiently and bring a marked relief to issues you face at the office, all the while improving the bottom line of your practice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FFS vs Managed Care Section -->
+        <div class="row mb-4" [hidden]="!showFFSManagedCareSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                FFS vs Managed Care
+              </div>
+              <div class="card-body">
+                <img src="/assets/doctor-showing-x-ray-scan-senior-woman-laying-hospital-bed-medic-explaining-radiography-retired-patient-with-illness-diagnosis-treatment-sick-old-adult-with-health-issues.jpg" />
+                <p>While it is ultimately up to the patient to decide what is in his or her best interest, you as a provider know your patients, and what they need to improve their health. The statistics make clear that managed care plans provide superior health outcomes over fee for service members.</p>
+                <p>There are still many issues that dampen the effectiveness of managed care plans, but carriers, medical groups, and regulators are seizing on the opportunity with laser focus, resulting in marked improvements to the managed care experience in previous years.</p>
+                <p>Expect the trend to continue, as the machine behind the carriers continue to improve and fine-tune plans to appeal the members.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- IPA Doctors Section -->
+        <div class="row mb-4" [hidden]="!showIPADoctorsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                IPA Doctors
+              </div>
+              <div class="card-body">
+                <p>Independent Physicians Association Doctors, by necessity, must be extremely savvy business-minded individuals in addition to providing excellent patient care. Particularly as the medical industry continues to consolidate, there are two particular areas in which an IPA doctor must excel in order to remain successful:</p>
+                <h5>1. Clear Internal Organization: Policies, Autonomy, and Compensation</h5>
+                <p>A well-run office must have an office manager who sees eye to eye with the provider, and has the ability to take initiative on setting internal policies for all front and back office staff.</p>
+                <p>Provider must be willing to provide clear direction on certain non-negotiables, while allowing the office manager to lead the handling of day to day processes. Universal in all business is the need for standard operating procedure that eliminates guess-work.</p>
+                <p>Professional Development and Equitable Pay are a must in order to hire and maintain quality staff. Despite the high cost of managing a practice, investing in ones staff will determine whether the practice has the capacity to grow the panel while keeping patients satisfied, or maintaining or losing lives. To this end, Professional Development not only adds to the capacity of individual staff, but it also provides staff with a tangible feeling that they are advancing in their skillset at their job. Ensuring that pay is competitive is also critical if you are looking to hire and maintain quality staff.</p>
+                <p>Staff turnover averages 50% over a two-year period, but well run offices do not have to experience this.</p>
+                <h5>2. Extending One's Practice by Utilizing a Broker</h5>
+                <p>As mentioned in What a Good Agent Should Know, a broker can be utilized as an extension to your practice to handle insurance issues, thereby freeing staff to focus exclusively on their work.</p>
+                <p>While it is not realistic to expect a successful broker to bring in a significant number of new patients, it is reasonable to expect them to generate a marketing plan and leverage relationships with medical groups and insurance carriers to promote your practice.</p>
+                <p>One of the most valuable assets provided by a good agent is their ability to retain your existing patients by addressing insurance issues immediately, and communicating patiently and effectively to the member why certain issues occurred. It is impossible for a doctor to have a deep understanding of the complexities of the insurance industry and have the time to explain this to patients. This is the job of a good agent.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pharmacy Section -->
+        <div class="row mb-4" [hidden]="!showPharmacySection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Pharmacy
+              </div>
+              <div class="card-body">
+                <p>Coming soon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

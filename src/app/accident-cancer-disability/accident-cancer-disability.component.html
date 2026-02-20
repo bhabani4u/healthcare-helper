@@ -1,0 +1,171 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Other Insurance
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"
+              [ngClass]="{ 'active': !showDentalAndVisionCoverageSection && !showIncomeProtectionInsuranceSection && !showDifferFromMedicalInsuranceSection && !showAccidentPoliciesSection && !showCancerPoliciesSection && !showDisabilityPoliciesSection }">
+              <a href="/insurance-options/other-insurance?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showDentalAndVisionCoverageSection }">
+              <a href="/insurance-options/other-insurance?numbers=1">Dental & Vision Coverage</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showIncomeProtectionInsuranceSection }">
+              <a href="/insurance-options/other-insurance?numbers=2">Income Protection Insurance</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showDifferFromMedicalInsuranceSection }">
+              <a href="/insurance-options/other-insurance?numbers=4">How Do These Differ From My Medical
+                Insurance?</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showAccidentPoliciesSection }">
+              <a href="/insurance-options/other-insurance?numbers=8">Accident, Critical Illness, & Hospital
+                Indemnity Policies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid"
+          *ngIf="!showDentalAndVisionCoverageSection && !showIncomeProtectionInsuranceSection && !showDifferFromMedicalInsuranceSection && !showAccidentPoliciesSection && !showCancerPoliciesSection && !showDisabilityPoliciesSection">
+          <div class="container">
+            <p class="lead">Protect your income and secure your future with specialized insurance plans.</p>
+            <p>Despite having health insurance and life insurance, there are specific areas in your life where added insurance may make sense. While this is not always the case, it is a personal decision that you will want to make based on your level of risk tolerance, and financial ability to pay for additional types of insurance that you may find necessary.</p>
+            <img src="/assets/portrait-sad-thinking-senior-man.jpg" />
+          </div>
+        </div>
+        <div class="row mb-4" *ngIf="showDentalAndVisionCoverageSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Dental & Vision Coverage
+              </div>
+              <div class="card-body">
+                <div class="container">
+                  <div class="row text-center">
+                    <div class="col-12 col-lg-12 pt-5 pb-5">
+                      <p><strong>Dental & Vision</strong></p>
+                      <p class="lead">Explore dental and vision insurance options to ensure comprehensive healthcare coverage.
+                      </p>
+                      <p>Medical Insurance includes dental and vision that is considered medically necessary. For instance, an
+                        individual who broke his jaw would be provided medically necessary dental coverage. A patient
+                        suffering from blindness due to diabetes would also receive the services of medically necessary vision
+                        care.</p>
+                      <p>Routine dental and vision is generally an option benefit. A patient in need of a cleaning or a crown
+                        would get this care under a routine dental plan. Eye tests and a small allowance to pay for contacts
+                        or eyeglasses would also be considered routine vision care.</p>
+                      <p>Routine Dental and Vision policies are typically bundled together and may range from under $20 for
+                        HMO dental to $100 for a PPO with a larger cash allowance.</p>
+                      <img src="/assets/elderly-man-joyfully-laughing-dental-examination-portrays-happiness-comfort-healthcare-setting.jpg" />
+                    </div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://www.blueshieldca.com/bwa/unauth/broker/buyblue?param=JeM49p61o2rj" class="btn btn-success btn-sm">Compare Dental & Vision Plans from Blue Shield</a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://cignasupplemental.com/equotes/startInterview.action?&cid=sbl&campaign_ID=BROKERAGE&ee=ANCORG&agentWritingNo=CB62892&companyCode=12" class="btn btn-success btn-sm">Compare Dental & Vision Plans from Cigna</a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://shop.uhone.com/en/quote/census/dental?brokerid=AA5131640" class="btn btn-success btn-sm">Compare Dental & Vision Plans from United Healthcare</a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://www.deltadentalins.com/shopping/delta/get-a-quote?issuerCode=DELTA&brokerId=214165" class="btn btn-success btn-sm">Compare Dental Plans from Delta Dental</a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://individualbrokervision.com/Enroll/MbrEnroll.aspx?AgtCode=VSP31113" class="btn btn-success btn-sm">Compare Vision Plans from VSP</a></div>
+                    <div class="col-12 col-lg-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Overview Section -->
+        <div class="row mb-4" *ngIf="showIncomeProtectionInsuranceSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Income Protection Insurance
+              </div>
+              <div class="card-body">
+                <img src="/assets/woman-interacting-with-money.jpg" />
+                <p>How will you pay your bills if you are unable to earn an income, even for a short period of time?
+                  Medical insurance will help you treat your health problems, but it will not replace your income if you
+                  cannot work. Accident, Cancer, and Disability insurance policies provide you with an allowance to pay
+                  for your expenses as you and your family navigate through your challenging circumstances, so you can
+                  focus on recovery instead of bills.</p>
+                <p>These policies typically apply to the following conditions:</p>
+                <ul>
+                  <li>Alzheimer’s Disease</li>
+                  <li>Heart Attack</li>
+                  <li>Kidney Failure</li>
+                  <li>Blindness</li>
+                  <li>Cancer</li>
+                  <li>Major Organ Transplant</li>
+                  <li>Stroke</li>
+                  <li>HIV/AIDs</li>
+                  <li>Coma</li>
+                  <li>Paralysis</li>
+                  <li>Parkinson’s Disease</li>
+                  <li>Brain Tumor</li>
+                  <li>Coronary Artery Bypass</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4" *ngIf="showDifferFromMedicalInsuranceSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                How Do These Differ From My Medical Insurance?
+              </div>
+              <div class="card-body">
+                <p>Financial security is the wild card that insurance is designed to manage, or more precisely, the costs of living for an individual and family. Financial security is essential for living in modern society, because with it comes the ability to plan and manage your future. Financial insecurity is devastating; ask anyone who has had to forfeit their meals, or turn down opportunities due to a lack of money.</p>
+                <p>Insurance appeals to all of us because it can manage uncertainty to an extent, thereby allowing us to plot our future with fewer obstructions.</p>
+                <p>The most critical form of health insurance is of course, medical insurance. We cannot predict when an accident may occur. Short of this, all other forms of health insurance can fill in the gaps. What if we are so physically injured we are unable to work for a few months? How will we pay our bills and support our family.</p>
+                <p>What if such a disability is long term? What if it is terminal? Are we prepared? The other forms of insurance included here exist to help fill in these gaps in ways in which traditional health insurance will not.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4" *ngIf="showAccidentPoliciesSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Accident, Critical Illness, & Hospital Indemnity Policies
+              </div>
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <p>Imagine being diagnosed with a serious illness. While you are fortunate to have your medical
+                        insurance to cover it, what are your options for picking up your income if you are unable to
+                        work temporarily.</p>
+                      <p>There are a category of policies that fill this gap.</p>
+                      <p>If you are in an accident which may temporarily place you out of work, an Accident Insurance
+                        Policy will pay a lump sum to help you cover your expenses. </p>
+                      <p>For those dealing with cancer, heart disease, or another serious health problem, a Critical
+                        Illness Insurance Policy will also pay a lump sum to help you cover your expenses.</p>
+                      <p>And for those that are hospitalized for short or long periods of time, a Hospital Indemnity
+                        Insurance Policy will pay you a per diem amount, no questions asked, for your time spent in the
+                        hospital.</p>
+                      <p>These policies are best understood by looking at the monthly premium and how much they will
+                        cover during unforeseen circumstances. Note they are not available in all regions of the United
+                        States. Please check below if policies are offered in your state.</p>
+                    </div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://shop.uhone.com/en/quote/plans/accidentpro?brokerid=AA5131640" class="btn btn-success btn-sm">Compare Accident policy options and costs from United Healthcare</a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://shop.uhone.com/en/quote/census/dental?brokerid=AA5131640" class="btn btn-success btn-sm">Compare Critical Illness policy options and costs from United Healthcare</a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://cignasupplemental.com/equotes/startInterview.action?&cid=sbl&campaign_ID=BROKERAGE&ee=ANCORG&agentWritingNo=CB62892&companyCode=12" class="btn btn-success btn-sm">Compare policy options and costs from Cigna</a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://shop.uhone.com/en/quote/plans/supplementalindemnity?brokerid=AA5131640" class="btn btn-success btn-sm">Compare Hospital Indemnity options and costs from United Healthcare</a></div>
+                    <div class="col-12 col-lg-4"></div>
+                    <div class="col-12 col-lg-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

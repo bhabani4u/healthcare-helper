@@ -1,0 +1,171 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Preparing Your Estate
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showLivingTrustSection && !showCreateWillSection && !showDifferenceWillTrustSection && !showPowerOfAttorneySection && !showEndOfLifeExpensesSection }">
+                <a href="/planning-your-retirement/preparing-your-estate?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showLivingTrustSection }">
+                <a href="/planning-your-retirement/preparing-your-estate?numbers=1">Create a Living Trust</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showCreateWillSection }">
+                <a href="/planning-your-retirement/preparing-your-estate?numbers=2">Create a Will</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showDifferenceWillTrustSection }">
+                <a href="/planning-your-retirement/preparing-your-estate?numbers=4">Will vs. Living Trust</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showPowerOfAttorneySection }">
+                <a href="/planning-your-retirement/preparing-your-estate?numbers=8">Establish your Power of Attorney</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showEndOfLifeExpensesSection }">
+                <a href="/planning-your-retirement/preparing-your-estate?numbers=16">End of Life Expenses</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container">
+
+        <div class="row mb-4" *ngIf="!showLivingTrustSection && !showCreateWillSection && !showDifferenceWillTrustSection && !showPowerOfAttorneySection && !showEndOfLifeExpensesSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Preparing Your Estate
+              </div>
+              <div class="card-body">
+                <img src="/assets/young-guy-with-hand-shoulder-aged-sad-man-sofa.jpg" />
+                <p>Estate Planning consists of three parts:</p>
+                <ul>
+                  <li>How to take care of your life and your assets</li>
+                  <li>How to take care of your remains</li>
+                  <li>How to pay for everything</li>
+                </ul>
+                <p>If you own property or you have family whom you do not want to burden in your final years, there are several things you must put in place to create a smooth transition:</p>
+                <ul>
+                  <li>Create a Living Trust</li>
+                  <li>Create Your Will</li>
+                  <li>Establish your Power of Attorney</li>
+                  <li>Fund your End of Life Expenses</li>
+                </ul>
+                <p>Grieving for a loved one after they are gone requires a tremendous amount of time and work. Grief is an essential part of the healing process, and failure to grieve can create chronic health issues as a result of the untreated stress and emotional burden that has yet to be released. For some, grieving becomes impossible if they are responsible for managing your estate when you are gone, or being forced to make decisions concerning your life that you have never discussed with them, such as what to do if you alive, but functionally brain dead. It is crucial that you face the end of your life squarely, and make decisions that will allow your family to heal as quickly as possible.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Preparing Your Estate Section -->
+        <div class="row mb-4 justify-content-start" *ngIf="showLivingTrustSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Create a Living Trust
+              </div>
+              <div class="card-body">
+                <img src="/assets/notary-consulting-senior-couple-about-last-will-testament-office.jpg" />
+                <p>A Living Trust is a form of estate planning that allows you to control your assets (your money and property) while you are still alive, but have it distributed to people or organizations you select when you die. Think of it like a family version of a corporate company which will live on after you. A Living Trust will become the owner of your property, while at the same time, you and your spouse remain as executives that manage the trust so long as you remain alive.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4 justify-content-start" *ngIf="showLivingTrustSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Inheritance Taxes with a Living Trust?
+              </div>
+              <div class="card-body">
+                <p>Living Trusts also allow your children to inherit your property, but not directly. Because your Living Trust technically owns your property, there is no property for your children to inherit. In effect, they own your property by way of the trust, but they are not subject to estate inheritance taxes as a result.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4 justify-content-start" *ngIf="showCreateWillSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Create a Will
+              </div>
+              <div class="card-body">
+                <img src="/assets/mature-expert-meeting-with-young-customer-cup-coffee-co-working-holding-documents-shaking-hands.jpg" />
+                <p>A will is a legal document that makes clear your wishes and desires when you are fully incapacitated and immediately after your death. This document should make clear how family members should manage your life if you are no longer able to make decisions for yourself.</p>
+                <p>Immediately following your death, your will should also specify what you wish your family to do with your remains. Do you wish to be buried? Do you have land set aside for burial? Or do you wish to be cremated?</p>
+                <p>Leaving these decisions to your already grieving family members will place unnecessary burden on them.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4 justify-content-start" *ngIf="showDifferenceWillTrustSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                The Difference Between a Will and a Living Trust
+              </div>
+              <div class="card-body">
+                <img src="/assets/people-looking-picture-albums.jpg" />
+                <p>A living trust and a will are both estate planning documents that outline how your assets should be distributed after your death. However, they have several key differences:</p>
+                <ul>
+                  <li><strong>When they take effect:</strong> A will only takes effect after your death, while a living trust goes into effect immediately after you sign it.</li>
+                  <li><strong>Probate:</strong> A will usually goes through probate after your death, but a living trust can avoid probate. Probate can be costly and time-consuming, so some people prefer to use a living trust to avoid it.</li>
+                  <li><strong>Control:</strong> A living trust can give you more control over how and when your assets are distributed than a will. For example, you can set terms for how a trustee manages your assets, and the trustee has a fiduciary duty to act in the beneficiaries' best interests.</li>
+                  <li><strong>Privacy:</strong> Living trusts are private documents, but wills become public record when they go through probate.</li>
+                  <li><strong>Other options:</strong> A will can also allow you to name a guardian for dependents or minor children, designate power of attorney, and outline end-of-life wishes. A living trust doesn't offer these options.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4 justify-content-start" *ngIf="showPowerOfAttorneySection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Establish your Power of Attorney
+              </div>
+              <div class="card-body">
+                <img src="/assets/female-nurse-taking-care-elderly-person.jpg" />
+                <p>There are two primary types of Powers of Attorney:</p>
+                <ul>
+                  <li>Advanced Directive for Health Decisions</li>
+                  <li>Durable Power of Attorney for Financial Decisions</li>
+                </ul>
+                <p>These are not the same, and both are necessary.</p>
+                <p><strong>Advanced Directive for Health Decisions</strong></p>
+                <p>If you are in a car accident and receive brain damage to the point that you cannot survive except under expensive life support, do you know how your family will handle that? Is it the same as what you would wish? Although this is not a common scenario, it is a scenario that comes up and can put a tremendous burden on a family member. Feelings of guilt in making a tough decision will compound their turmoil when making such a hard decision.</p>
+                <p>As uncomfortable as these conversations are, they must be made. An Advanced Directive designates an individual to operate as your Power of Attorney for Health-related purposes once you are unable to make decisions for yourself.</p>
+                <p>You can access a copy of a general Advanced Directive from our Resources Page <a href="/resources/resource-library" class="text-primary">Resource Library</a>.</p>
+                <p>Having your Advanced Directive signed and notarized will make your life far easier for someone you care about to manage, in the event you cannot care for yourself.</p>
+                <p><strong>Durable Power of Attorney for Financial Decisions</strong></p>
+                <p>What should be done with your bills and accounts if you are still alive but incapacitated? A bank will not recognize your family member to speak on your behalf unless a legal and notarized Power of Attorney form has been signed by you, granting them the rights to make financial transactions on your behalf.</p>
+                <p>A Durable Power of Attorney (DPOA) is a legal document that grants someone the authority to act on behalf of another person in legal, financial, or other matters, even if the person granting the power becomes incapacitated or unable to make decisions. The term "durable" implies that the power of attorney remains in effect even if the person who granted it becomes mentally incompetent or unable to make decisions.</p>
+                <p>A Durable Power of Attorney can cover a range of powers, including financial decisions, healthcare decisions, property transactions, and more. The specific powers granted can be tailored to meet the needs and preferences of the person creating the document.</p>
+                <p>The durability aspect is crucial because it ensures that the power of attorney remains valid and effective even if the person becomes incapacitated. Without the durability clause, a standard power of attorney may become ineffective if the person loses mental capacity.</p>
+                <p>In healthcare, a specific type of Durable Power of Attorney is often used, known as a Healthcare Power of Attorney or Medical Power of Attorney. This grants the agent the authority to make medical decisions on behalf of the individual, especially when they are unable to communicate their wishes.</p>
+                <p>You can access a copy of a general Power of Attorney form from our Resources Page <a target="_blank" href="/resources/resource-library" class="text-primary">Resource Library)</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4 justify-content-start" *ngIf="showEndOfLifeExpensesSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Fund your End of Life Expenses
+              </div>
+              <div class="card-body">
+                <img src="/assets/little-boy-playing-with-his-grandfather.jpg" />
+                <p>Estate Planning needs to be funded. If you have family members that will need to clean up your home or hold a funeral after you pass, you can significantly ease their burden by allocating funding to pay for it. If you have the expenses readily available, then your will can accommodate this. You can also take out a <a href="/insurance-options/life-insurance?numbers=4" target="_blank">Life Insurance Policy</a> that can cover all of your estimated costs, including funeral expenses, cleanup costs, and even flying in friends and family from out of town.</p>
+                <p>If you already have a Life Insurance policy, be sure you have an accelerated death benefits rider which may pay out to your beneficiaries or your trust in advance, so plans can be made before you pass.</p>
+                <p>If you do not have a life insurance policy which addresses your financial needs, please provide your information here to receive a <a href="/about-us/contact-us" target="_blank">quote</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

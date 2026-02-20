@@ -1,0 +1,94 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Pharmacists
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showOverviewSection && !showRoleOfAgentsSection && !showImprovingEfficiencySection }">
+                <a href="/for-providers/pharmacists?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showRoleOfAgentsSection }">
+                <a href="/for-providers/pharmacists?numbers=1">Role of Agents</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showImprovingEfficiencySection }">
+                <a href="/for-providers/pharmacists?numbers=2">Medicare Enrollment</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showOverviewSection && !showRoleOfAgentsSection && !showImprovingEfficiencySection">
+          <div class="container">
+            <h2 class="display-4">For Pharmacists</h2>
+            <p class="lead">Enhancing pharmacy operations through effective insurance management.</p>
+          </div>
+        </div>
+
+        <!-- Overview Section -->
+        <div class="row mb-4" *ngIf="!showOverviewSection && !showRoleOfAgentsSection && !showImprovingEfficiencySection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Overview
+              </div>
+              <div class="card-body">
+                <img src="/assets/senior-man-consulting-female-pharmacist-medication.jpg" />
+                <p>A good agent will vet all patient prescriptions and recommend a plan that covers prescriptions at an affordable cost. This ensures that pharmacists can focus on patient care rather than dealing with insurance issues.</p>
+                <p>Establishing a trusted agent relationship allows for easy communication and quick resolution of insurance-related problems, ultimately improving the efficiency of the pharmacy operations.</p>
+                <p>The Inflation Reduction Act has make dramatic changes to Part D payors. While carriers must now pick up more of the cost of medication, this has meant they are shifting costs downstream. Members who were used to receiving particular benefits from their plan are now experiencing a reduction, both in these benefits, and the amount of money that was made available for them.</p>
+                <p>While the highest utilizers will see a significant drop in their cost of prescriptions, this will not be the case for all members. There will be lower utilizers who will see an increase in their costs.</p>
+                <p>To add to this, while carriers were already resistant to approving brand name drugs for use, the rules for this have gotten even more stringent. These changes have generated a lot of confusion for members, and inevitably they will bring their concerns to you, the pharmacist. When they ask why their medication is costing more, how will you respond? And when they ask how the Prescription Payment Plan works, are you ready to discuss the finer points?</p>
+                <p>The end result of many of these changes means that you will see an increase in customer service issues.</p>
+                <p>To resolve this, you need an agent that is capable at pricing out all medications annually for each of your patients in order for them to be sure that they are in the right plan, and that plan continues to work with you as their provider.</p>
+                <p>It is natural to be resistant to working with brokers. They have rightfully earned an ambiguous reputation due to their often pushy sales demeanor, or their inability to protect members from making mistakes with their healthcare. But it would be unwise to avoid forming a close relationship with a broker, particularly if you own your own pharmacy and are looking to increase capacity to serve your customers.</p>
+                <p>A good agent can be utilized as a guard dog to ensure all customers who trust you are protected. All insurance related issues should be sent to your agent, and you should expect a report back on whether and how the issues were resolved.</p>
+                <p>A good agent will vet all patient prescriptions and recommend a plan that covers prescriptions at an affordable cost. This ensures that pharmacists can focus on patient care rather than dealing with insurance issues.</p>
+                <p>Establishing a trusted agent relationship allows for easy communication and quick resolution of insurance-related problems, ultimately improving the efficiency of the pharmacy operations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role of Agents Section -->
+        <div class="row mb-4" [hidden]="!showRoleOfAgentsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Role of Agents
+              </div>
+              <div class="card-body">
+                <img src="/assets/portrait-female-pharmacist-working-drugstore.jpg" />
+                <p>For all new enrollees to a drug plan, prescriptions should be priced, and the drug portion of the plan should be explained well enough that a patient has a sense of what to expect, and therefore will not be surprised by the unexpected. To do this properly for each patient is painstaking, yet this is the role of the agent.</p>
+                <p>In your capacity, by encouraging customers to contact the agent, you also have created a release valve to quickly resolve prescription drug issues with someone you personally know, and who can be held accountable by you. A good agent will do what is best for the customer, which at times means encouraging the customer to remain in their existing drug plan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medicare Enrollment Section -->
+        <div class="row mb-4" [hidden]="!showImprovingEfficiencySection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Medicare Enrollment
+              </div>
+              <div class="card-body">
+                <img src="/assets/pharmacist-day-celebration-with-male-pharmacist.jpg" />
+                <p>Due to the Inflation Reduction Act, significant changes to prescription drug coverage makes it absolutely necessary for Medicare recipients to  check the price of their medication annually to be sure their current insurance plan is covering their prescriptions at the most acceptable price.</p>
+                <p>In order to maximize the possibility that an agent will do what is in the best interest of the patient, you must seek to develop a long-term relationship with your broker. The security of this long term relationship ensures that the broker will be more invested in keeping their relationship with you solid as opposed to focusing on the possibility of losing or gaining one new customer. This ensures they do what is in the best interest of the customer.</p>
+                <p>With the Annual Enrollment Period every October, this relationship with a broker will allow you to have a prompt way to handle prescription drug related insurance issues, confusion, and concerns without holding up your work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

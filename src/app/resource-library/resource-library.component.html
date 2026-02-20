@@ -1,0 +1,176 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Resource Library
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"
+              [ngClass]="{ 'active': !showPowerOfAttorneyFormsSection && !showSocialSecurityFormsSection && !showMedicareFormsSection }">
+              <a href="/resources/resource-library">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showPowerOfAttorneyFormsSection }">
+              <a href="/resources/resource-library?section=power-of-attorney-forms">Power of Attorney Forms</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showSocialSecurityFormsSection }">
+              <a href="/resources/resource-library?section=social-security-forms">Social Security Forms</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showMedicareFormsSection }">
+              <a href="/resources/resource-library?section=medicare-forms">Medicare Forms</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid"
+          *ngIf="!showPowerOfAttorneyFormsSection && !showSocialSecurityFormsSection && !showMedicareFormsSection">
+          <div class="container">
+            <h2 class="display-4">Resource Library</h2>
+            <p>Healthcare Helpers is your one-stop shop for all of your healthcare and retirement planning needs.</p>
+            <p>Here you will find important Social Security forms, healthcare documents, and legal forms you will need.
+            </p>
+            <img
+              src="/assets/side-view-aged-men-actively-studying-two-grey-haired-men-glasses-sitting-table-focused-making-notes-with-pens-preparing-their-computer-courses-education-adult-people-concept.jpg" />
+          </div>
+        </div>
+        <div class="row mb-4 justify-content-start" *ngIf="showPowerOfAttorneyFormsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Power of Attorney Forms
+              </div>
+              <div class="card-body">
+                <img src="/assets/man-is-writing-document-with-pen-it.jpg" />
+                <p>Who will make decisions for you if you are incapacitated? A Power of Attorney greatly reduces the
+                  amount of stress your loved ones will have to experience if they were put in a position to make
+                  decisions for you...but couldn't because they don't have the legal right.</p>
+                <div class="resource-item">
+                  <a href="https://oag.ca.gov/system/files/media/ProbateCodeAdvanceHealthCareDirectiveForm-fillable.pdf"
+                    target="_blank">Advanced Directive</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://eforms.com/download/2015/09/Durable-Power-of-Attorney-Form.pdf"
+                    target="_blank">Durable
+                    Power of Attorney for Financial Decisions</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4 justify-content-start" *ngIf="showSocialSecurityFormsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Social Security Forms
+              </div>
+              <div class="card-body">
+                <img src="/assets/social-security-enrollment-form-concept.jpg" />
+                <div class="resource-item">
+                  <a href="https://www.ssa.gov/myaccount/" target="_blank">Create My Social Security Online Account</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.ssa.gov/forms/ss-5.pdf" target="_blank">Application for a Social Security Card
+                    (SS-5)</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://secure.ssa.gov/iClaim/dib" target="_blank">Apply for Social Security Benefits</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.ssa.gov/forms/ssa-2-bk.pdf" target="_blank">Application for Spouse’s Insurance
+                    Benefits (SS-2-BK)</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.ssa.gov/forms/ssa-10.pdf" target="_blank">Application for Widow or Widower’s
+                    Insurance
+                    Benefits (SSA-10)</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.ssa.gov/forms/ssa-16-bk.pdf" target="_blank">Application for Disability Insurance
+                    Benefits (SSA-16-BK)</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://secure.ssa.gov/i1020/Ee006bView.action" target="_blank">Apply for Extra Help/Low
+                    Income Subsidy</a>
+                </div>
+                <div class="resource-item">
+                  <a href="/assets/healthcare-resources/resource-library/IRMAA-Appeal-Template.docx" target="_blank">IRMAA-Appeal-Template.docx</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4 justify-content-start" *ngIf="showMedicareFormsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Medicare Forms
+              </div>
+              <div class="card-body">
+                <img src="/assets/happy-beautiful-women-sitting-bowling-club.jpg" />
+                <div class="resource-item">
+                  <a href="https://secure.ssa.gov/iClaim/dib" target="_blank">Apply for Medicare Benefits</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://secure.ssa.gov/mpboa/medicare-part-b-online-application/form" target="_blank">Apply for Medicare Part B Only (SSA-40B)</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://secure.ssa.gov/i1020/start" target="_blank">Apply for Prescription Drug Extra Help
+                    Program</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.ssa.gov/forms/ssa-1021.pdf" target="_blank">Appeal Extra Help Determination
+                    (SSA-1021)</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://faq.ssa.gov/en-us/Topic/article/KA-01735" target="_blank">Replace My Medicare ID
+                    Card</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/sf5510english.pdf"
+                    target="_blank">Apply for Medicare Part B Autopay (SF-5510)</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/Downloads/CMS1763.pdf?utm_source=tmf_com&utm_medium=website&utm_campaign=https://themedicarefamily.com/forms/"
+                    target="_blank">Application For Termination of Medicare Part A and/or Part B (CMS-1763)</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/Downloads/cms10287.pdf?utm_source=tmf_com&utm_medium=website&utm_campaign=https://themedicarefamily.com/forms/"
+                    target="_blank">File A Healthcare Quality Complaint (CMS-10287)</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/downloads/cms1490s-english.pdf?utm_source=tmf_com&utm_medium=website&utm_campaign=https://themedicarefamily.com/forms/"
+                    target="_blank">File A Medicare Request For Medical Payment (CMS-1490S)</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.ssa.gov/forms/ssa-634.pdf?utm_source=tmf_com&utm_medium=website&utm_campaign=https://themedicarefamily.com/forms/"
+                    target="_blank">Request for Change in Overpayment Recovery Rate (SSA-634)</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.cms.gov/cms-l564-request-employment-information" target="_blank">Request for
+                    Employment Information to Delay Part B and Part D Penalty (CMS-L564)</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.ssa.gov/forms/ssa-721.pdf" target="_blank">Statement of Death by Funeral
+                    Director</a>
+                </div>
+                <div class="resource-item">
+                  <a href="https://www.dhcs.ca.gov/formsandpubs/forms/Forms/MC14A-Eng.pdf" target="_blank">Apply for QMB
+                    (CA)</a>
+                </div>
+                <div class="resource-item" style="display: none;">
+                  <a href="https://www.ssa.gov/forms/ssa-44.pdf" target="_blank">IRMAA Reduction Application
+                    (SSA-44)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

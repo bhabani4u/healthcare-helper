@@ -1,0 +1,154 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Other Forms of Healthcare
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showMedicareAndSS && !showOtherHealthcare && !showSSMaximization && !showCOBRA }">
+                <a href="/planning-your-retirement/other-forms-of-healthcare?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showMedicareAndSS }">
+                <a href="/planning-your-retirement/other-forms-of-healthcare?numbers=1">Veteran’s Affairs (VA) Healthcare</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showOtherHealthcare }">
+                <a href="/planning-your-retirement/other-forms-of-healthcare?numbers=2">TRICARE For Life</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showSSMaximization }">
+                <a href="/planning-your-retirement/other-forms-of-healthcare?numbers=4">Retirement Plans, Union Coverage, and Public Employees' Retirement System (PERS)</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showCOBRA }">
+                <a href="/planning-your-retirement/other-forms-of-healthcare?numbers=8">COBRA</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid"
+          *ngIf="!showMedicareAndSS && !showOtherHealthcare && !showSSMaximization && !showCOBRA">
+          <div class="container">
+            <h2 class="display-4">Other Forms of Healthcare After Age 65</h2>
+            <p class="lead">There are other forms of healthcare after the age of 65.</p>
+            <img src="/assets/senior-woman-standing-indoors-doctor.jpg" />
+          </div>
+        </div>
+
+        <!-- Veteran’s Affairs (VA) Healthcare Section -->
+        <div class="row mb-4" *ngIf="showMedicareAndSS">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Veteran’s Affairs (VA) Healthcare
+              </div>
+              <div class="card-body">
+                <img src="/assets/mature-counselor-making-notes-while-stressed-man-describing-his-problems.jpg" />
+                <p>For veterans enrolled in the VA Healthcare System, you may not have to enroll in a prescription drug
+                  plan through Medicare, as the VA provides you with prescription coverage. Further, the VA Healthcare
+                  System may mean that you do not need to enroll in Medicare Part B, allowing you to avoid paying the
+                  monthly premium. However, you must expect to get all of your healthcare coverage through the VA if you
+                  go this route, and the VA does not cover routine dental and vision.</p>
+                <p>You may plan to enroll in Medicare Part B and also enroll in a Medicare Advantage plan which provides
+                  additional benefits and would allow you to have coverage outside of VA facilities. Some Medicare
+                  Advantage plans are made specifically with users of the VA Healthcare System in mind.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRICARE For Life Section -->
+        <div class="row mb-4" *ngIf="showOtherHealthcare">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                TRICARE For Life
+              </div>
+              <div class="card-body">
+                <img src="/assets/man-wearing-sweater-that-says-dry-day-day-day.jpg" />
+                <p>TRICARE members receive supplemental coverage that works similarly to Medicare Supplement. This means
+                  that Original Medicare will cover 80% of your healthcare expenses, and TRICARE For Life will cover the
+                  remaining 20%, with certain stipulations. Like VA coverage, TRICARE for Life does not include added
+                  benefits such as dental coverage, and some retired veterans may find it appealing to enroll in a
+                  Medicare Advantage plan.</p>
+                <p>TRICARE may work with Medicare Advantage plans as well if you have certain copays. It is best to
+                  consult with a seasoned agent to be sure you fully understand how these two programs may and may not
+                  work together.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRICARE For Life Section -->
+      <div class="row mb-4" *ngIf="showSSMaximization">
+        <div class="col-lg-12">
+          <div class="card full-width m-0">
+            <div class="card-header bg-primary text-white">
+              Retirement Plans, Union Coverage, and Public Employees' Retirement System (PERS)
+            </div>
+            <div class="card-body">
+              <img src="/assets/worker-protesting-working-rights.jpg" />
+              <p>If you belong to a company that provides you with an employee retirement plan, or a union with a
+                retirement program such as PERS, please consult with your benefits manager long in advance before you
+                plan to retire. What they actually provide and how this limits or expands your healthcare options when
+                you retire will take time to absorb.</p>
+              <p>In order to qualify for Medicare Part A, you need to have paid into the Medicare system via your taxes
+                for a ten-year period (40 quarterly periods). Some public employee systems such as PERS do not pay into
+                the Medicare system, which means that you will not immediately qualify for Medicare during retirement.
+                If you worked and paid taxes into Medicare outside of the PERS system, you may even qualify for both.
+              </p>
+              <p>Retirement healthcare plans offer coverage that is different from and often an alternative to the open
+                Medicare market. <a href="/for-patients/medicare" target="_blank">As explained in our Medicare
+                  training</a> Original Medicare has a required monthly premium, includes a deductible, and only covers
+                80% of approved expenses. You must build on top of Original Medicare in order to cover the remaining
+                20%.</p>
+              <p>Your Retirement Plan may offer any of the following:</p>
+              <ul>
+                <li>Employer payment or reimbursement for the Part B premium</li>
+                <li>Employer payment or reimbursement for a Medicare Supplement and Part D plan</li>
+                <li>Employer-sponsored Medicare Advantage (HMO/PPO) for retirees</li>
+              </ul>
+              <p>What your employer offers should always be compared to the pricing and drug coverage offered by
+                Medicare plans in the public market. You may find that your monthly premiums or your costs for medical
+                service may be significantly lower outside of your employer or union plan.</p>
+              <p>Here are some questions you will want to ask your employer or union benefits coordinator as you look to
+                compare apples to apples:</p>
+              <ul>
+                <li>Do you pay for my monthly Medicare Part B premium?</li>
+                <li>Do you offer HMO or PPO plans? Do you offer Medicare Supplement plans?</li>
+                <li>If I were to choose a plan with Medicare outside of what you offer, do you provide any financial
+                  assistance?</li>
+                <li>Can I re-enroll in my employer retirement plan if I ever left?</li>
+                <li>For HMO or PPO coverage, can you provide me with the Summary of Benefits so I can compare?</li>
+              </ul>
+              <p>Knowing the answers to these questions, and having a copy of the Summary of Benefits, will ensure that
+                you can make a wise decision.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <!-- TRICARE For Life Section -->
+        <div class="row mb-4" *ngIf="showCOBRA">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                COBRA
+              </div>
+              <div class="card-body">
+                <p>The Consolidated Omnibus Budget Reconciliation Act, better known by its acronym, COBRA, is a form of insurance you can qualify for once you leave your current employer. COBRA insurance is temporary, lasting anywhere between 18 to 36 months depending on your employer. It matches your current plan benefits and copays. However, it does this at a much steeper price than you would have paid while you are working.</p>
+                <p>COBRA is not considered Creditable Coverage, which means that while you can take COBRA after you turn 65 and are qualified for Medicare, it does not fulfill your requirement to enroll into Medicare. So, even though you have health insurance through COBRA, you will be subject to Medicare's Late Enrollment Penalty.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>

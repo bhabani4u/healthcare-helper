@@ -1,0 +1,21 @@
+.resource-header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px 5px 0 0;
+}
+.resource-list {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 0 0 5px 5px;
+}
+.resource-item {
+  margin-bottom: 10px;
+}
+.resource-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+.resource-item a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,204 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Individual & Family Health Insurance
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" [ngClass]="{ 'active': !showHealthInsuranceMarketsSection && !showPlanCostsSection && !showHMOsPPOsHDHPsSection && !showPremiumsDeductiblesSection && !showDentalInsuranceSection && !showVisionInsuranceSection && !showSupplementalInsuranceSection }">
+                <a href="/for-patients/individual-family-health-insurance?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showHealthInsuranceMarketsSection }">
+                <a href="/for-patients/individual-family-health-insurance?numbers=2">Health Insurance Markets</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showPlanCostsSection }">
+                <a href="/for-patients/individual-family-health-insurance?numbers=4">How Do Plan Costs Work?</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showHMOsPPOsHDHPsSection }">
+                <a href="/for-patients/individual-family-health-insurance?numbers=8">HMOs, PPOs, and HDHPs</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showPremiumsDeductiblesSection }">
+                <a href="/for-patients/individual-family-health-insurance?numbers=16">Premiums, Deductibles, & Maximum Out of Pocket</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showDentalInsuranceSection }">
+                <a href="/for-patients/individual-family-health-insurance?numbers=32">Dental Insurance</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showVisionInsuranceSection }">
+                <a href="/for-patients/individual-family-health-insurance?numbers=64">Vision Insurance</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showSupplementalInsuranceSection }">
+                <a href="/for-patients/individual-family-health-insurance?numbers=128">Supplemental Insurance</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showHealthInsuranceMarketsSection && !showPlanCostsSection && !showHMOsPPOsHDHPsSection && !showPremiumsDeductiblesSection && !showDentalInsuranceSection && !showVisionInsuranceSection && !showSupplementalInsuranceSection">
+          <div class="container">
+            <h2 class="display-4">Individual & Family Health Insurance</h2>
+            <p class="lead">Explore health insurance options for individuals and families.</p>
+            <img src="/assets/kids-having-fun-jungle-themed-party.jpg" >
+            <p>While we are young and have had fewer experiences with tragedy in life, it's hard to justify the need for healthcare. Yet no one who has faced a serious health crisis would disagree about its critical importance. There is no way to predict the future, or avoid accidents. All we can do is minimize their impact. The worst experience, particularly when dealing with those we are responsible to protect, is to regret being so risky with their lives.</p>
+            <p>The Affordable Care Act, also known as Obamacare, established an insurance system throughout the US that allows individuals to purchase a health insurance plan, regardless of pre-existing conditions. While statistically it is unlikely that you may find yourself in an accident that requires critical hospital care, having health insurance will put a maximum cap on how much your care would cost. For example, even if your hospital bill amounts to $300,000, insurance plans will guarantee that your costs are limited to around $10,000. Your life is worth it.</p>
+          </div>
+        </div>
+
+        <!-- Health Insurance Markets Section -->
+        <div class="row mb-4" [hidden]="!showHealthInsuranceMarketsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Health Insurance Markets
+              </div>
+              <div class="card-body">
+                <img src="/assets/close-up-doctor-with-stethoscope.jpg" />
+                <p>Health Insurance markets vary by the county you live in. These insurance plans are standardized in their coverage from one particular plan set to another, are provided in the form of a Bronze, Silver, Gold, or Platinum plan, and are offered by private insurance companies. Plans include prescription drug coverage, and offer medically necessary dental and vision coverage. The Open Enrollment Period begins November 1 of each year and typically runs until January 31st.</p>
+                <p>Each county in the United States has its own health insurance market, where various insurance companies create different plan options, and determine how much these plans will cost.</p>
+                <p>Because health insurance plans are heavily regulated, the most apparent differences between two insurance company plans is how much they charge for their monthly premium, which doctors are covered under the plan, and the quality of the company's customer service.</p>
+                <p>Each year, insurance companies reassess their plans and decide whether or not they must raise their rates, and confirm which medical networks they will contract with. For example, while you may have two plans that appear exactly the same except for their monthly cost, one difference may be that the higher cost plan includes your preferred hospital, while the other doesn't.</p>
+                <p>The Open Enrollment Period begins November 1 of each year and typically runs until January 31st. During this period, the new plan costs are released. Enrollment outside of Open Enrollment is often limited to very specific circumstances.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plan Costs Section -->
+        <div class="row mb-4" [hidden]="!showPlanCostsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                How Do Plan Costs Work?
+              </div>
+              <div class="card-body">
+                <img src="/assets/premium-price.jpg" alt="Medicare Card" class="img-fluid mt-3" style="width: 100%;">
+                <p>Insurance plans are standardized in their coverage from one particular plan set to another. Generally, plays are offered by private insurance companies in the form of a Bronze, Silver, Gold, or Platinum version. They include prescription drug coverage, and may offer routine dental and vision coverage for an extra cost.</p>
+                <ul>
+                  <li>A Bronze Plan will cover 60% of your health insurance costs, leaving you with 40% coinsurance</li>
+                  <li>A Silver Plan will cover 70% of your health insurance costs, leaving you with 30% coinsurance</li>
+                  <li>A Gold Plan will cover 80% of your health insurance costs, leaving you with 20% coinsurance</li>
+                  <li>A Platinum Plan will cover 90% of your health insurance costs, leaving you with 10% coinsurance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HMOs, PPOs, and HDHPs Section -->
+        <div class="row mb-4" [hidden]="!showHMOsPPOsHDHPsSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                HMOs, PPOs, and HDHPs
+              </div>
+              <div class="card-body">
+                <img src="/assets/health-plan-information-examination-concept.jpg" />
+                <h5>Health Maintenance Organizations (HMOs)</h5>
+                <p>HMOs mean that you will have to select a primary doctor, and your primary doctor will be part of a medical network. This network of doctors is your only choice for doctors you can see. This also means you will usually have one pre-assigned hospital you can go to for surgery or long-term stays. HMOs typically require prior approval from a doctor before you can see a specialist. HMOs manage health costs most efficiently, and so costs of HMOs tend to be lowest.</p>
+                <h5>Preferred Provider Organizations (PPOs)</h5>
+                <p>PPOs operate just like an HMO, except that you can go out of network to visit other doctors or other hospitals, so long as you are willing to pay a higher price for care. PPOs typically do not require prior approval if you wanted to see a specialist. Because PPOs provide significant flexibility to patients to choose the doctors and hospitals they wish to visit, PPOs cannot manage health costs as efficiently as an HMO. Therefore the cost of PPOs are significantly higher.</p>
+                <h5>Exclusive Provider Organization (EPOs)</h5>
+                <p>EPOs fit a space between HMOs and PPOs. Patients are part of a network like an HMO which limits the doctors and hospitals they are able to visit. At the same time, an EPO patient does not require a primary doctor or referrals from a primary doctor in order to see specialists. Costs within an EPO are higher than an HMO, but lower than a PPO.</p>
+                <h5>High Deductible Health Plans (HDHPs)</h5>
+                <p>HDHPs are plans with a relatively small premium each month. But they require you to open up a separate Health Savings Account (HSA), which you must also privately fund each month. As the name implies, these plans have a high deductible, meaning your out-of-pocket costs for all medical care are going to be higher than with an HMO or PPO. On the flip side, if you are healthy and do not require much medical care, these plans will allow you to accumulate a medical fund via your HSA which you can use anywhere at any time in your life.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Premiums, Deductibles, & Maximum Out of Pocket Section -->
+        <div class="row mb-4" [hidden]="!showPremiumsDeductiblesSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Premiums, Deductibles, & Maximum Out of Pocket
+              </div>
+              <div class="card-body">
+                <img src="/assets/view-man-handling-money-funds-wealth-prosperity.jpg" />
+                <p>These plans can get complicated and overwhelming fast. So it’s important to know some <a href="/healthcare-resources/medicare-calculators">basic definitions</a> which you can reference as you try to grasp your health insurance plan.</p>
+                <p>Note that you may make a mistake if you look at healthcare the same way you may compare the price of two similar-looking items on Amazon. The lowest price option is not necessarily the best option. For HMOs and PPOs, it’s important to determine whether the doctors you want to see and hospital you want to go to are covered under your plan. In some cases, the plan with the more well-known hospital may charge more for you to have that option.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dental Insurance Section -->
+        <div class="row mb-4" [hidden]="!showDentalInsuranceSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Dental Insurance
+              </div>
+              <div class="card-body">
+                <img src="/assets/old-man-sitting-dentist-s-office.jpg" />
+                <p>It’s important to clarify what type of dental coverage you have. There are two main types: Routine Coverage and Medically Necessary Coverage. Routine coverage means you can use your insurance to lower your costs for routine care, such as check-ups, x-rays, and cleanings. Routine dental insurance plans typically have a cap for how much the insurance plan is willing to spend for your care each year. Dental insurance plans are generally a good investment if you have dental concerns or require frequent visits to your dentist. If you only have two cleanings a year and take excellent care of your teeth, dental insurance may not be worth purchasing. Routine Care is typically not included in health insurance plans.</p>
+                <p>Medically Necessary Coverage is often what is included in health insurance plans. If you are in an accident and need emergency dental care, this would be considered medically necessary.</p>
+                <p>Dental health plays an important role in your life. As you age, your teeth are at greater risk due to surface exposure and jawbone density loss. Your gums naturally recede, creating triangle “pockets” between your teeth where food debris can settle and create periodontal disease, further eroding your gums and causing tooth pain and decay. Getting a cleaning every three months as you age, including deep cleaning, will help keep your teeth healthy.</p>
+                <p>As you lose teeth, your diet changes, requiring you to eat softer foods. So much joy comes from what we eat, and without the ability to eat the things that bring us joy, our lives may lose some color. Socially, the loss of teeth causes some people to feel embarrassed when they smile and speak. This can also have a negative effect on a person’s mental well-being, causing them to retreat and become less social and more isolated.</p>
+                <p>There are typically three main tiers which dental insurance covers:</p>
+                <ol>
+                  <li><strong>Preventive Care.</strong> This coverage is immediate in all dental plans, and includes exams, x-rays, and cleanings.</li>
+                  <li><strong>Minor Dental Care.</strong> This coverage typically requires a six-month waiting period, and would cover fillings, deep cleanings, and extractions.</li>
+                  <li><strong>Major Dental Care.</strong> This coverage includes crowns, root canals, dental implants, braces, and dentures. Plans typically require that you are enrolled for twelve months before accessing these benefits.</li>
+                </ol>
+                <p>Please <a href="/insurance-options/other-insurance?numbers=1">click here</a> to shop for dental plan options.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision Insurance Section -->
+        <div class="row mb-4" [hidden]="!showVisionInsuranceSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Vision Insurance
+              </div>
+              <div class="card-body">
+                <img src="/assets/man-having-eye-sight-check-ophthalmology-clinic.jpg">
+                <p>There are two types of Vision coverage: Medically Necessary and Routine Vision Care. Medically necessary coverage is included in health insurance plans and covers visits to the Ophthalmologist, who treats issues such as glaucoma or cataracts. Routine vision includes a visit to the Optometrist, who tests your vision and prescribes eyeglasses. Vision insurance is typically optional and is often bundled with Dental Insurance.</p>
+                <p>A Vision policy will typically cover the following:</p>
+                <ul>
+                  <li>Yearly eye examination</li>
+                  <li>Eyeglass lenses</li>
+                  <li>Eyeglass frames</li>
+                  <li>Contact lenses</li>
+                  <li>LASIK and PRK vision correction procedures at a discounted rate</li>
+                </ul>
+                <p>Please <a href="/insurance-options/other-insurance?numbers=1">click here</a> to shop for vision plan options.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Supplemental Insurance Section -->
+        <div class="row mb-4" [hidden]="!showSupplementalInsuranceSection">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Supplemental Insurance
+              </div>
+              <div class="card-body">
+                <img src="/assets/young-woman-suffering-breast-cancer-talking-with-her-doctor.jpg" />
+                <p>Some individuals may wish to go above and beyond general health coverage by purchasing supplemental insurance for less common situations such as:</p>
+                <ul>
+                  <li><strong>Cancer Insurance:</strong> These plans provide the insured with a daily allowance to help cover costs when treated for cancer</li>
+                  <li><strong>Accident Insurance:</strong> These plans provide the insured with a daily allowance to help cover costs for lost income due to an accident.</li>
+                  <li><strong>Traveler’s Insurance:</strong> These plans provide a reimbursement to pay for medical expenses incurred while traveling overseas. This is different from travel insurance provided by your credit card company, which helps to pay for costs if your luggage was stolen or items damaged.</li>
+                </ul>
+                <p>Please <a href="/insurance-options/other-insurance?numbers=1">click here</a> to shop for supplemental plan options.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

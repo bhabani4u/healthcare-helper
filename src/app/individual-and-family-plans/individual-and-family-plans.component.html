@@ -1,0 +1,83 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Individual and Family Plans
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"
+              [ngClass]="{ 'active': !showComparePlans }">
+              <a href="/insurance-options/individual-and-family-plans?numbers=0">Overview</a>
+            </li>
+            <li class="list-group-item" [ngClass]="{ 'active': showComparePlans }">
+              <a href="/insurance-options/individual-and-family-plans?numbers=1">Compare plans</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="container m-0">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid" *ngIf="!showComparePlans">
+          <div class="container">
+            <h2 class="display-4">Individual and Family Plans</h2>
+            <p class="lead">Get the support you need to understand and choose health plans.</p>
+            <div class="row mb-4">
+              <div class="col-lg-12">
+                <div class="card full-width m-0">
+                  <div class="card-header bg-primary text-white">
+                    Need Help with Health Plans?
+                  </div>
+                  <div class="card-body">
+                    <img src="/assets/cute-family-playing-autumn-field.jpg" />
+                    <p>Need help learning about health plans and don’t know where to start?</p>
+                    <p>Health is not something guaranteed. The longer we live, it is inevitable we will face some health problems. And because accidents are never expected, it is not worth the risk to go without health insurance. The financial cost of paying for an accident out of pocket is too severe. Take a look at our plan options and ask us for help in comparing your options.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Health Plans Help Section -->
+        <div class="row mb-4" *ngIf="showComparePlans">
+          <div class="col-lg-12">
+            <div class="card full-width m-0">
+              <div class="card-header bg-primary text-white">
+                Compare plans
+              </div>
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://aetnacvshealth.softheon.com/qhp/shopping/zip-code?_agent_npn=18924333"><img src="/assets/IFP - Aetna.png" /></a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://agentsite.anthem.com/agentsite/ac/gordonwelty"><img src="/assets/IFP - Anthem.webp" /></a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://www.blueshieldca.com/bwa/unauth/broker/buyblue?param=JeM49p61o2rj"><img src="/assets/IFP - Blue Shield.webp" /></a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://enrollment.healthnetcalifornia.com/ifpoe/showQuoteCensus.do?brkID=BE097&brkFName=GORDON&brkLName=WELTY&brkFirmName=WELTY%2c+GORDON"><img src="/assets/IFP - Health Net.webp" /></a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://apply-individual-family.kaiserpermanente.org/validate-consumer?ln=en&guid=945096b1-f065-4afc-ab0d-9a67b5b19b75"><img src="/assets/IFP - Kaiser.webp" /></a></div>
+                    <div class="col-12 col-lg-4"></div>
+                    <div class="col-12 col-lg-12 pt-5 pb-5">
+                      <p>Are you just looking to compare plans so you can enroll?</p>
+                    </div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://aetnacvshealth.softheon.com/qhp/shopping/zip-code?_agent_npn=18924333" class="btn btn-success btn-sm">Compare Plans from Aetna</a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://agentsite.anthem.com/agentsite/ac/gordonwelty" class="btn btn-success btn-sm">Compare Plans from Anthem</a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://www.blueshieldca.com/bwa/unauth/broker/buyblue?param=JeM49p61o2rj" class="btn btn-success btn-sm">Compare Plans from Blue Shield</a></div>
+                    <div class="col-12 col-lg-4 pb-2"><a target="_blank" href="https://enrollment.healthnetcalifornia.com/ifpoe/showQuoteCensus.do?brkID=BE097&brkFName=GORDON&brkLName=WELTY&brkFirmName=WELTY%2c+GORDON" class="btn btn-success btn-sm">Compare Plans from Health Net</a></div>
+                    <div class="col-12 col-lg-8 pb-2"><a target="_blank" href="https://apply-individual-family.kaiserpermanente.org/validate-consumer?ln=en&guid=945096b1-f065-4afc-ab0d-9a67b5b19b75" class="btn btn-success btn-sm">Compare Plans from Kaiser Permanente</a></div>
+                    <div class="col-12 col-lg-8 pb-2"></div>
+                    <div class="col-12 col-lg-12 pt-5 pb-5">
+                      <img src="/assets/lovely-couple-having-date-outdoors.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

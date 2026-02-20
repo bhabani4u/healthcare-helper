@@ -1,0 +1,25 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Vaccines
+        </div>
+        <div class="card-body">
+          <p>Welcome to the Vaccines section. Here you will find various resources and articles related to vaccines and their importance.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/vaccines/overview">Overview</a></li>
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/vaccines/the-history-of-vaccines">The History of Vaccines</a></li>
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/vaccines/how-vaccines-stop-disease-from-spreading">How vaccines stop disease from spreading</a></li>
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/vaccines/how-the-covid-vaccine-works">How the COVID vaccine works</a></li>
+            <li class="list-group-item"><hr style="border: none;" /></li>
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/article">Back to Articles</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

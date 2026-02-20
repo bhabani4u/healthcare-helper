@@ -1,0 +1,24 @@
+<div class="container mt-4 p-0">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card full-width m-0">
+        <div class="card-header">
+          Medicare
+        </div>
+        <div class="card-body">
+          <p>Welcome to the Medicare section. Here you will find various resources and articles related to Medicare plans and options.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/medicare/overview">Overview</a></li>
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/medicare/how-to-choose-a-plan">How to Choose a Plan</a></li>
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/medicare/how-to-work-with-a-pharmacist">How to Work with a Pharmacist</a></li>
+            <li class="list-group-item"><hr style="border: none;" /></li>
+            <li class="list-group-item"><a routerLinkActive="active" routerLink="/article">Back to Articles</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,253 @@
+<div class="container mt-5">
+  <!-- Hero Section -->
+  <div class="jumbotron text-center">
+    <h2 class="display-4">Summer Survey</h2>
+    <p class="lead">Please fill out this survey to help us serve you better.</p>
+  </div>
+
+  <!-- Intro Paragraph -->
+  <div class="p-4 rounded shadow mb-4">
+    <p>Hello!</p>
+    <p>CMS, the organization that runs Medicare, recently made many changes that may affect you. One of the changes involves prescription drug coverage, and another involves extra benefits provided by your insurance company like dental and the over-the-counter allowance. In both cases, it is expected that insurance companies are going to cut back on benefits across the entire industry.</p>
+    <p>None of this means you need to change your plan. In fact, changing your plan could actually create more problems if it is not done properly. I will provide you with a recommendation once the new plans for {{currentYear}} have been released. But in order to assist you correctly, I've enclosed a survey that I would like you to fill out and return to me. Note, you can also complete this survey online if it is easier for you. Just use your phone to scan the QR code below or type in the following website address:</p>
+  </div>
+
+  <!-- Outro Paragraph -->
+  <div class="p-4 rounded shadow mt-4">
+    <p>Please contact me with any questions you have.</p>
+    <p>To help you, please fill out the survey. If it's easier for you to take this survey online, please go to the following URL:</p>
+    <p>And please encourage your friends or family to call me, especially if they are turning 65 or need help comparing plans. I would be glad to provide them with a formal Medicare 101 training so they are properly educated and empowered.</p>
+    <p>Thank you!</p>
+    <p>Gordon Welty</p>
+    <p>Gordon Welty | (844) 463-3435 | gw&#64;healthcarehelper.net</p>
+  </div>
+
+  <!-- Survey Form -->
+  <form class="p-4 rounded shadow" (submit)="submitForm($event)">
+    <h4 class="mb-4">Contact Information</h4>
+    <div class="form-row mt-4">
+      <div class="form-group col-md-6 mt-4">
+        <label for="name">Your Name</label>
+        <input type="text" class="form-control" id="name" name="Your Name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group col-md-6 mt-4">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" name="Phone" placeholder="Enter your phone number" required>
+      </div>
+    </div>
+    <div class="form-group mt-4">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="Email" placeholder="Enter your email" required>
+    </div>
+
+    <h4 class="mt-4 mb-4">Preferences</h4>
+    <div class="form-group mt-4">
+      <label>What’s the best way to contact you?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Best way to contact you" id="contactPhone" value="Phone" required>
+        <label class="form-check-label" for="contactPhone">Phone</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Best way to contact you" id="contactEmail" value="Email" required>
+        <label class="form-check-label" for="contactEmail">Email</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Best way to contact you" id="contactText" value="Text" required>
+        <label class="form-check-label" for="contactText">Text</label>
+      </div>
+    </div>
+
+    <div class="form-group mt-4">
+      <label>Do you have a family member/caretaker that helps make decisions for you?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Family member/caretaker helps make decisions" id="caretakerYes" value="Yes" required>
+        <label class="form-check-label" for="caretakerYes">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Family member/caretaker helps make decisions" id="caretakerNo" value="No" required>
+        <label class="form-check-label" for="caretakerNo">No</label>
+      </div>
+    </div>
+
+    <div class="form-group mt-4">
+      <label>If so, what is his/her name and contact information?</label>
+      <input type="text" class="form-control" id="caretakerName" name="Caretaker Name" placeholder="Enter name">
+      <input type="text" class="form-control mt-4" id="caretakerRelation" name="Caretaker Relation" placeholder="Relation">
+      <input type="text" class="form-control mt-4" id="caretakerPhone" name="Caretaker Phone" placeholder="Phone number">
+    </div>
+
+    <div class="form-group mt-4">
+      <label for="healthChanges">How has your health changed in the past year? Please describe:</label>
+      <textarea class="form-control" id="healthChanges" name="Health changes" rows="3" required></textarea>
+    </div>
+
+    <div class="form-group mt-4">
+      <label>Do you plan to move in the next year?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Plan to move in the next year" id="moveYes" value="Yes" required>
+        <label class="form-check-label" for="moveYes">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Plan to move in the next year" id="moveNo" value="No" required>
+        <label class="form-check-label" for="moveNo">No</label>
+      </div>
+    </div>
+
+    <div class="form-group mt-4">
+      <label>Are you happy with your plan?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Happy with your plan" id="happyPlanYes" value="Yes" required>
+        <label class="form-check-label" for="happyPlanYes">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Happy with your plan" id="happyPlanNo" value="No" required>
+        <label class="form-check-label" for="happyPlanNo">No</label>
+      </div>
+    </div>
+
+    <div class="form-group mt-4">
+      <label>Are you happy with your primary care doctor?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Happy with your primary care doctor" id="happyDoctorYes" value="Yes" required>
+        <label class="form-check-label" for="happyDoctorYes">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Happy with your primary care doctor" id="happyDoctorNo" value="No" required>
+        <label class="form-check-label" for="happyDoctorNo">No</label>
+      </div>
+    </div>
+
+    <div class="form-group mt-4">
+      <label>Are you happy with your hospital and specialists in your current plan?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Happy with your hospital and specialists" id="happyHospitalYes" value="Yes" required>
+        <label class="form-check-label" for="happyHospitalYes">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Happy with your hospital and specialists" id="happyHospitalNo" value="No" required>
+        <label class="form-check-label" for="happyHospitalNo">No</label>
+      </div>
+    </div>
+
+    <div class="form-group mt-4">
+      <label>Do you have any needs that are not being met by your current plan? Circle all that apply:</label>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="needsDrugCosts" name="Needs - Drug Costs" value="Drug Costs">
+        <label class="form-check-label" for="needsDrugCosts">Drug Costs</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="needsDental" name="Needs - Dental" value="Dental">
+        <label class="form-check-label" for="needsDental">Dental</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="needsTransportation" name="Needs - Transportation" value="Transportation">
+        <label class="form-check-label" for="needsTransportation">Transportation</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="needsMedicalCare" name="Needs - Medical Care" value="Medical Care">
+        <label class="form-check-label" for="needsMedicalCare">Medical Care</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="needsDoctors" name="Needs - Doctors" value="Doctors">
+        <label class="form-check-label" for="needsDoctors">Doctors</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="needsHospital" name="Needs - Hospital" value="Hospital">
+        <label class="form-check-label" for="needsHospital">Hospital</label>
+      </div>
+      <div class="form-group mt-4">
+        <label for="otherNeeds">Other:</label>
+        <input type="text" class="form-control" id="otherNeeds" name="Needs - Other">
+      </div>
+    </div>
+
+    <div class="form-group mt-4">
+      <label>Do you want to change your plan for next year?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Change your plan for next year" id="changePlanYes" value="Yes" required>
+        <label class="form-check-label" for="changePlanYes">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Change your plan for next year" id="changePlanNo" value="No" required>
+        <label class="form-check-label" for="changePlanNo">No</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Change your plan for next year" id="changePlanIfNecessary" value="Only if Necessary" required>
+        <label class="form-check-label" for="changePlanIfNecessary">Only if Necessary</label>
+      </div>
+    </div>
+
+    <div class="form-group mt-4">
+      <label>Do you have any upcoming surgeries?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Upcoming surgeries" id="surgeriesYes" value="Yes" required>
+        <label class="form-check-label" for="surgeriesYes">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Upcoming surgeries" id="surgeriesNo" value="No" required>
+        <label class="form-check-label" for="surgeriesNo">No</label>
+      </div>
+    </div>
+
+    <div class="form-group mt-4">
+      <label for="interestedPlan">Is there a particular plan or benefit that you are interested in learning about?</label>
+      <input type="text" class="form-control" id="interestedPlan" name="Interested in plan or benefit" placeholder="Enter plan or benefit">
+    </div>
+
+    <div class="form-group mt-4">
+      <label for="prescriptionDrugs">Please list your current prescription drugs below and I will run the costs and get back to you as soon as pricing for {{currentYear}} has been released.</label>
+      <textarea class="form-control" id="prescriptionDrugs" name="Prescription drugs" rows="3" required></textarea>
+    </div>
+
+    <h4 class="mt-4 mb-4">Referral Request</h4>
+    <div class="form-group mt-4">
+      <label>Do you have any friends or family that need help with their Medicare?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Friends or family need help with Medicare" id="friendsNeedHelpYes" value="Yes" required>
+        <label class="form-check-label" for="friendsNeedHelpYes">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Friends or family need help with Medicare" id="friendsNeedHelpNo" value="No" required>
+        <label class="form-check-label" for="friendsNeedHelpNo">No</label>
+      </div>
+    </div>
+
+    <div class="form-group mt-4">
+      <label>Do you have any friends or family that will turn 65 in the next 5 years?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Friends or family turning 65 in next 5 years" id="friendsTurn65Yes" value="Yes" required>
+        <label class="form-check-label" for="friendsTurn65Yes">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Friends or family turning 65 in next 5 years" id="friendsTurn65No" value="No" required>
+        <label class="form-check-label" for="friendsTurn65No">No</label>
+      </div>
+    </div>
+    <div class="form-group pt-2">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="featureUpdates" name="featureUpdates">
+        <label class="form-check-label" for="featureUpdates">
+          I want to receive new, feature updates, and marketing SMS and email messages. <span class="text-danger pl-2">*</span>
+        </label>
+      </div>
+    </div>
+    <div class="form-group pt-2">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="termsOfUse" name="termsOfUse" required>
+        <label class="form-check-label" for="termsOfUse">
+          I acknowledge that I agree to the <a href="/terms-and-conditions">Terms of Use</a> and have read the <a href="/privacy-policy">Privacy Policy</a>. <span class="text-danger pl-2">*</span>
+        </label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block mt-4" [disabled]="loading">Submit</button>
+  </form>
+
+  <div *ngIf="loading" class="spinner-overlay">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div *ngIf="submitted" class="alert alert-success mt-3 text-center" role="alert">
+    Thank you for completing the survey! You will be redirected to the landing page shortly.
+  </div>
+</div>
